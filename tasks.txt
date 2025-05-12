@@ -1,3 +1,4 @@
+[ ] Reference: https://i.imgur.com/6CZOpU3.png
 [ ] Rename website's title to "Bootcamp"
 [ ] Change Background color of whole website (body) to rgb(46, 46, 46)
 [ ] Change color of all texts to rgb(255, 255, 255)
