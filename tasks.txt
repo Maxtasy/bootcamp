@@ -1,0 +1,22 @@
+[ ] Rename website's title to "Bootcamp"
+[ ] Change Background color of whole website (body) to rgb(46, 46, 46)
+[ ] Change color of all texts to rgb(255, 255, 255)
+[ ] Change font family of all texts to "Arial"
+[ ] Add h1 element with text "Bootcamp"
+[ ] Add h2 element with text "Buttons"
+[ ] Add a Button component with two variants:
+  - Shared styles:
+    - Border radius: 8px
+    - Padding top & bottom: 8px
+    - Padding left & right: 16px
+    - Border width: 1px
+  - Button 1 (Primary Button): 
+    - Text "Primary"
+    - Background color rgb(255, 255, 255)
+    - Text color rgb(0, 0, 0)
+    - Border color rgb(0, 0, 0)
+  - Button 2 (Secondary Button):
+    - Text "Secondary"
+    - Background color rgb(0, 0, 0)
+    - Text color rgb(255, 255, 255)
+    - Border color rgb(255, 255, 255)
