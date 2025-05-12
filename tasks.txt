@@ -20,3 +20,4 @@
     - Background color rgb(0, 0, 0)
     - Text color rgb(255, 255, 255)
     - Border color rgb(255, 255, 255)
+[ ] Remove comments from index.html file
