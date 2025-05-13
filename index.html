@@ -7,10 +7,66 @@
     <title>Bootcamp</title>
   </head>
   <body>
-    <!-- TODO: Add "Bootcamp" heading here -->
+    <h1 style="text-align: center" title="im a header">Bootcamp</h1>
+    <br />
+    <h2 style="font-size: larger">Buttons</h2>
+    <br />
+    <button onclick="run()" class="btn">Primary</button>
+    <script>
+      function run() {
+        alert("well done!");
+      }
+    </script>
+    <br />
+    <br />
+    <button onclick="run2()" class="btn2">Secondary</button>
+    <script>
+      function run2() {
+        alert("next one!");
+      }
+    </script>
+    <style>
+      .btn {
+        padding: 16px 30px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 8px;
+        color: rgb(46, 46, 46);
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        font-size: 12px;
+        transition: 0.5s;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        font-family: arial;
+        font-size: large;
+        height: 100px;
+        width: 300px;
+      }
+      .btn2 {
+        padding: 16px 30px;
+        background-color: rgb(46, 46, 46);
+        border-radius: 8px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        font-size: 12px;
+        transition: 0.5s;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        font-family: arial;
+        font-size: large;
+        height: 100px;
+        width: 300px;
+      }
+      .btn:hover {
+        color: red;
+        border-radius: 10px;
+      }
 
-    <!-- TODO: Add "Buttons" heading here -->
-
-    <!-- TODO: Add two buttons here -->
+      .btn2:hover {
+        color: red;
+        border-radius: 10px;
+      }
+    </style>
   </body>
 </html>
