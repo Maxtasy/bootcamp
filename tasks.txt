@@ -23,3 +23,5 @@
     - Border color rgb(255, 255, 255)
 [x] Remove comments from index.html file
 [x] margin/flex
+[ ] Copy ID Card
+[ ] Add image instead of initials to the second ID card
