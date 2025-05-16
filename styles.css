@@ -107,7 +107,7 @@ h2 {
   justify-content: space-between;
 }
 
-.PassportPhoto {
+.Norman {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -136,8 +136,4 @@ h2 {
 
 .Gold {
   background-color: gold;
-}
-
-.Bundesadler {
-  max-width: 19%;
 }
