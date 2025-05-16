@@ -17,6 +17,10 @@ body {
   padding: 32px 64px;
 }
 
+.Section {
+  padding: 24px 0;
+}
+
 .ButtonGroup {
   display: flex;
   flex-direction: column;
@@ -103,6 +107,43 @@ h2 {
   justify-content: space-between;
 }
 
-.Section {
-  padding: 24px 0;
+.PassportPhoto {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.Color {
+  width: 400px;
+  height: 80px;
+}
+
+.ColorBlack {
+  background-color: black;
+}
+
+.ColorRed {
+  background-color: red;
+}
+
+.ColorGold {
+  background-color: gold;
+}
+
+.Flag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Bundesadler {
+  max-width: 20%;
+  flex-direction: row;
+  align-items: center;
+}
+
+.OutterBox {
+  display: flex;
+  align-items: center;
 }
