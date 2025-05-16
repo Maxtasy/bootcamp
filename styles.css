@@ -114,36 +114,30 @@ h2 {
   object-fit: cover;
 }
 
+.Flagbox {
+  display: flex;
+  flex-direction: column;
+}
+
 .Color {
+  display: flex;
   width: 400px;
   height: 80px;
 }
 
-.ColorBlack {
+.Black {
   background-color: black;
 }
 
-.ColorRed {
+.Red {
   background-color: red;
+  justify-content: center;
 }
 
-.ColorGold {
+.Gold {
   background-color: gold;
 }
 
-.Flag {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .Bundesadler {
-  max-width: 20%;
-  flex-direction: row;
-  align-items: center;
-}
-
-.OutterBox {
-  display: flex;
-  align-items: center;
+  max-width: 19%;
 }
