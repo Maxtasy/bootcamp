@@ -68,8 +68,8 @@ h2 {
 .Container {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .Item {
@@ -86,8 +86,8 @@ h2 {
   background-color: rgb(136, 130, 130);
   padding: 32px 32px;
   color: black;
-  max-width: 66%;
   font-size: large;
+  width: 100%;
 }
 
 .Circle {
@@ -114,15 +114,11 @@ h2 {
   object-fit: cover;
 }
 
-.Flagbox {
-  display: flex;
-  flex-direction: column;
-}
-
 .Color {
   display: flex;
   width: 400px;
   height: 80px;
+  width: 100%;
 }
 
 .Black {
@@ -139,5 +135,55 @@ h2 {
 }
 
 .Adler {
+  height: 100%;
+}
+
+.Colorbox {
+  display: flex;
+}
+
+.Fra {
+  display: flex;
+  width: 400px;
+  height: 240px;
+  width: 100%;
+}
+
+.ColorFra {
+  flex: 1;
+}
+
+.Blue {
+  background-color: blue;
+}
+
+.White {
+  background-color: white;
+}
+
+.RedFra {
+  background-color: red;
+}
+
+.Swe {
+  position: relative;
+  width: 400px;
+  height: 240px;
+  width: 100%;
+  background-color: rgb(19, 60, 172);
+}
+
+.CrossHorizontal {
+  position: absolute;
+  top: 0;
+  left: 80px;
+  width: 40px;
+  height: 100%;
+  background-color: yellow;
+}
+
+.CrossVertical {
+  position: absolute;
+  background-color: yellow;
   height: 100%;
 }
