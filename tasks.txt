@@ -25,7 +25,7 @@
 [x] margin/flex
 [x] Copy ID Card
 [x] Add image instead of initials to the second ID card
-[ ] Add flag for France
-[ ] Add flag for Sweden
-[ ] Add flag for Portugal
-[ ] Make flags dynamic. They should always take up 100% width of the body and still look good with their correct aspect-ratio.
+[x] Add flag for France
+[x] Add flag for Sweden
+[x] Add flag for Portugal
+[x] Make flags dynamic. They should always take up 100% width of the body and still look good with their correct aspect-ratio.

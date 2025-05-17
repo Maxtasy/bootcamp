@@ -68,8 +68,8 @@ h2 {
 .Container {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .Item {
@@ -86,8 +86,8 @@ h2 {
   background-color: rgb(136, 130, 130);
   padding: 32px 32px;
   color: black;
-  max-width: 66%;
   font-size: large;
+  width: 100%;
 }
 
 .Circle {
@@ -114,15 +114,35 @@ h2 {
   object-fit: cover;
 }
 
-.Flagbox {
+.FlagboxGer {
   display: flex;
   flex-direction: column;
+  aspect-ratio: 2/1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid black;
+}
+
+.Flagbox {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 2/1;
+  position: relative;
+  overflow: hidden;
+  border: 4px solid black;
 }
 
 .Color {
   display: flex;
-  width: 400px;
-  height: 80px;
+  width: 100%;
+  flex: 1;
+}
+
+.Bundesadler {
+  position: absolute;
+  top: 50;
+  width: 13%;
 }
 
 .Black {
@@ -131,13 +151,91 @@ h2 {
 
 .Red {
   background-color: red;
-  justify-content: center;
 }
 
 .Gold {
   background-color: gold;
 }
 
-.Adler {
+.Blue {
+  background-color: blue;
+}
+
+.White {
+  background-color: white;
+}
+
+.RedFra {
+  background-color: red;
+}
+
+.Flag {
+  background-color: rgb(27, 77, 185);
+  width: 100%;
+}
+
+.Cv {
+  position: absolute;
+  background-color: yellow;
+  top: 0;
+  left: 30%;
   height: 100%;
+  width: 10%;
+}
+
+.Ch {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background-color: yellow;
+}
+
+.Gruen {
+  background-color: green;
+  width: 40%;
+  height: 100%;
+}
+
+.Rot {
+  background-color: red;
+  width: 60%;
+  height: 100%;
+}
+
+.Wappen {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.GridContainer {
+  display: grid;
+  gap: 16px;
+  grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px;
+}
+
+.GridItem {
+  background-color: purple;
+  border: 4px solid yellow;
+}
+
+.Item-1 {
+  grid-row: 1 / 3;
+  grid-column: 1 / 5;
+}
+
+.Item-2 {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.Item-3 {
+  grid-area: 6 / 7 / 6 / 7;
 }
