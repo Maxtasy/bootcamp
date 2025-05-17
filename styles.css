@@ -114,11 +114,33 @@ h2 {
   object-fit: cover;
 }
 
+.FlagboxGer {
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 2/1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.Flagbox {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 2/1;
+  position: relative;
+  overflow: hidden;
+}
+
 .Color {
   display: flex;
-  width: 400px;
-  height: 80px;
   width: 100%;
+  flex: 1;
+}
+
+.Bundesadler {
+  position: absolute;
+  top: 50;
+  width: 13%;
 }
 
 .Black {
@@ -127,30 +149,10 @@ h2 {
 
 .Red {
   background-color: red;
-  justify-content: center;
 }
 
 .Gold {
   background-color: gold;
-}
-
-.Adler {
-  height: 100%;
-}
-
-.Colorbox {
-  display: flex;
-}
-
-.Fra {
-  display: flex;
-  width: 400px;
-  height: 240px;
-  width: 100%;
-}
-
-.ColorFra {
-  flex: 1;
 }
 
 .Blue {
@@ -165,25 +167,47 @@ h2 {
   background-color: red;
 }
 
-.Swe {
-  position: relative;
-  width: 400px;
-  height: 240px;
+.Flag {
+  background-color: rgb(27, 77, 185);
   width: 100%;
-  background-color: rgb(19, 60, 172);
 }
 
-.CrossHorizontal {
+.Cv {
   position: absolute;
+  background-color: yellow;
   top: 0;
-  left: 80px;
-  width: 40px;
+  left: 30%;
   height: 100%;
+  width: 10%;
+}
+
+.Ch {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  height: 20%;
   background-color: yellow;
 }
 
-.CrossVertical {
-  position: absolute;
-  background-color: yellow;
+.Gruen {
+  background-color: green;
+  width: 40%;
   height: 100%;
+}
+
+.Rot {
+  background-color: red;
+  width: 60%;
+  height: 100%;
+}
+
+.Wappen {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  height: auto;
+  border-radius: 50%;
 }
