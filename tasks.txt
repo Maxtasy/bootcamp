@@ -29,3 +29,12 @@
 [x] Add flag for Sweden
 [x] Add flag for Portugal
 [x] Make flags dynamic. They should always take up 100% width of the body and still look good with their correct aspect-ratio.
+[ ] Add Navigation Bar at the top of the page. Reference: https://i.imgur.com/BirpERn.png
+  - Use `header` element that contains the navigation bar
+  - Use `nav` element that contains an unsorted list
+  - Use `ul` element that contains the list items
+  - Use `li` elements that contain links to the sections `Buttons`, `ID Cards`, and `Flags`
+  - Use `a` elements for the links
+[ ] Make the Navigation Bar sticky at the top of the page.
+[ ] Find a way to add a scroll offset to the page, so the sticky Navigation Bar does not cover any content when scrolling to a section.
+[ ] Add `smooth` scroll behaviour to the body, so it scrolls smoothely to the sections when clicking the links. 
