@@ -8,6 +8,7 @@ html {
   margin: 0px;
   padding: 0px;
   scroll-behavior: smooth;
+  scroll-padding-top: 40px;
 }
 
 body {
@@ -18,59 +19,43 @@ body {
   padding: 32px 64px;
 }
 
-header {
+.SiteHeader {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1;
   background-color: rgb(27, 23, 23);
   border: 2px solid white;
 }
 
-.WebsiteHeader {
-  margin: 50px 50px;
-}
-
-.NavBar ul {
+.NavigationBar ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgb(27, 23, 23);
 }
 
-.NavBar ul li {
-  position: relative;
-  padding: 40px 40px;
-}
-
-.NavBar ul li:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 25%;
-  width: 2px;
-  height: 50%;
-  background-color: white;
-}
-
-.NavBar ul li a {
+.NavigationBar a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  padding: 8px;
+  padding: 16px;
 }
 
-.NavBar ul li a:hover {
+.NavigationBar li:not(:last-child) {
+  border-right: 1px solid white;
+}
+
+.NavigationBar ul li a:hover {
   color: red;
   transition: 0.5s;
-  border-bottom: 2px solid white;
+  text-decoration: underline;
 }
 
 .Section {
   padding: 24px 0;
-  scroll-margin-top: 80px;
 }
 
 .ButtonGroup {
