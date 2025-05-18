@@ -7,6 +7,8 @@
 html {
   margin: 0px;
   padding: 0px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 40px;
 }
 
 body {
@@ -15,6 +17,41 @@ body {
   font-family: arial;
   margin: 0px;
   padding: 32px 64px;
+}
+
+.SiteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: rgb(27, 23, 23);
+  border: 2px solid white;
+}
+
+.NavigationBar ul {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(27, 23, 23);
+}
+
+.NavigationBar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 16px;
+}
+
+.NavigationBar li:not(:last-child) {
+  border-right: 1px solid white;
+}
+
+.NavigationBar ul li a:hover {
+  color: red;
+  transition: 0.5s;
+  text-decoration: underline;
 }
 
 .Section {
