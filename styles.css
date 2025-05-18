@@ -217,8 +217,9 @@ h2 {
 .GridContainer {
   display: grid;
   gap: 16px;
-  grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px;
-  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px;
+  grid-auto-rows: 100px;
 }
 
 .GridItem {
@@ -237,5 +238,5 @@ h2 {
 }
 
 .Item-3 {
-  grid-area: 6 / 7 / 6 / 7;
+  grid-area: 3 / 3 / 2 / 3;
 }
