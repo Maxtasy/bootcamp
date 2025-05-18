@@ -23,6 +23,7 @@ header {
   top: 0;
   z-index: 1000;
   background-color: rgb(27, 23, 23);
+  border: 2px solid white;
 }
 
 .WebsiteHeader {
