@@ -35,7 +35,7 @@ header {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-color: rgb(27, 23, 23);
 }
@@ -48,15 +48,11 @@ header {
 .NavBar ul li:not(:last-child)::after {
   content: "";
   position: absolute;
-  right: -66%;
+  right: 0;
   top: 25%;
+  width: 2px;
   height: 50%;
-  width: 4px;
   background-color: white;
-}
-
-.NavBar ul li:first-child {
-  border-left: none;
 }
 
 .NavBar ul li a {
