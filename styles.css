@@ -163,7 +163,7 @@ h2 {
   justify-content: center;
   align-items: center;
   border: 4px solid black;
-  margin: 16px;
+  margin: 16px 0;
 }
 
 .Flagbox {
@@ -173,7 +173,7 @@ h2 {
   position: relative;
   overflow: hidden;
   border: 4px solid black;
-  margin: 16px;
+  margin: 16px 0;
 }
 
 .Color {
@@ -276,4 +276,61 @@ h2 {
 
 .BlackSquare {
   background-color: black;
+}
+
+.GooglePage {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  background-color: white;
+}
+
+.GoogleLogo {
+  width: 272px;
+  margin-bottom: 30px;
+}
+
+.SearchBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.SearchInput {
+  width: 500px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.SearchInput :hover {
+  box-shadow: 0 1px 1px rgba(32, 33, 36, 0.35);
+}
+
+.GoogleButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.GoogleButtons button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.GoogleButtons button:hover {
+  border: 1px solid #c6c6c6;
 }
