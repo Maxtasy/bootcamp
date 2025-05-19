@@ -163,6 +163,7 @@ h2 {
   justify-content: center;
   align-items: center;
   border: 4px solid black;
+  margin: 16px;
 }
 
 .Flagbox {
@@ -172,6 +173,7 @@ h2 {
   position: relative;
   overflow: hidden;
   border: 4px solid black;
+  margin: 16px;
 }
 
 .Color {
@@ -215,7 +217,7 @@ h2 {
   width: 100%;
 }
 
-.Cv {
+.CrossVertical {
   position: absolute;
   background-color: yellow;
   top: 0;
@@ -224,7 +226,7 @@ h2 {
   width: 10%;
 }
 
-.Ch {
+.CrossHorizontal {
   position: absolute;
   top: 40%;
   left: 0;
@@ -255,28 +257,23 @@ h2 {
   border-radius: 50%;
 }
 
-.GridContainer {
+.Chessboard {
   display: grid;
-  gap: 16px;
-  grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px;
-  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-columns: repeat(8, 60px);
+  grid-template-rows: repeat(8, 60px);
+  border: 4px solid black;
+  width: fit-content;
 }
 
-.GridItem {
-  background-color: purple;
-  border: 4px solid yellow;
+.Square {
+  width: 60px;
+  height: 60px;
 }
 
-.Item-1 {
-  grid-row: 1 / 3;
-  grid-column: 1 / 5;
+.WhiteSquare {
+  background-color: white;
 }
 
-.Item-2 {
-  grid-row: span 2;
-  grid-column: span 2;
-}
-
-.Item-3 {
-  grid-area: 6 / 7 / 6 / 7;
+.BlackSquare {
+  background-color: black;
 }
