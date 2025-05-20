@@ -17,19 +17,19 @@ removeButtonElement.addEventListener("click", () => {
   }
 });
 
-const board = document.getElementById("chessboard");
+const boardElement = document.getElementById("chessboard");
 
 for (let row = 0; row < 8; row++) {
   for (let col = 0; col < 8; col++) {
-    const square = document.createElement("div");
-    square.classList.add("Square");
+    const squareElement = document.createElement("div");
+    squareElement.classList.add("Square");
 
     if ((row + col) % 2 === 0) {
-      square.classList.add("WhiteSquare");
+      squareElement.classList.add("Square--White");
     } else {
-      square.classList.add("BlackSquare");
+      squareElement.classList.add("Square--Black");
     }
 
-    board.appendChild(square);
+    boardElement.appendChild(squareElement);
   }
 }

@@ -62,6 +62,12 @@ body {
   padding: 24px 0;
 }
 
+.Section--Vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .ButtonGroup {
   display: flex;
   flex-direction: column;
@@ -155,66 +161,31 @@ h2 {
   object-fit: cover;
 }
 
-.FlagboxGer {
-  display: flex;
-  flex-direction: column;
-  aspect-ratio: 2/1;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  border: 4px solid black;
-  margin: 16px 0;
-}
-
-.Flagbox {
+.FlagBox {
   display: flex;
   width: 100%;
   aspect-ratio: 2/1;
   position: relative;
   overflow: hidden;
   border: 4px solid black;
-  margin: 16px 0;
+  background-color: var(--color);
 }
 
-.Color {
-  display: flex;
-  width: 100%;
-  flex: 1;
+.FlagBox--Vertical {
+  flex-direction: column;
+}
+
+.FlagBar {
+  flex: var(--flex, 1);
+  background-color: var(--color);
 }
 
 .Bundesadler {
   position: absolute;
-  top: 50;
-  width: 13%;
-}
-
-.Black {
-  background-color: black;
-}
-
-.Red {
-  background-color: red;
-}
-
-.Gold {
-  background-color: gold;
-}
-
-.Blue {
-  background-color: blue;
-}
-
-.White {
-  background-color: white;
-}
-
-.RedFra {
-  background-color: red;
-}
-
-.Flag {
-  background-color: rgb(27, 77, 185);
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 30%;
 }
 
 .CrossVertical {
@@ -235,46 +206,30 @@ h2 {
   background-color: yellow;
 }
 
-.Gruen {
-  background-color: green;
-  width: 40%;
-  height: 100%;
-}
-
-.Rot {
-  background-color: red;
-  width: 60%;
-  height: 100%;
-}
-
 .Wappen {
   position: absolute;
   top: 50%;
   left: 40%;
   transform: translate(-50%, -50%);
   width: 25%;
-  height: auto;
-  border-radius: 50%;
+  aspect-ratio: 1;
 }
 
 .Chessboard {
   display: grid;
-  grid-template-columns: repeat(8, 60px);
-  grid-template-rows: repeat(8, 60px);
+  grid-template-columns: repeat(8, 1fr);
   border: 4px solid black;
-  width: fit-content;
 }
 
 .Square {
-  width: 60px;
-  height: 60px;
+  aspect-ratio: 1;
 }
 
-.WhiteSquare {
+.Square--White {
   background-color: white;
 }
 
-.BlackSquare {
+.Square--Black {
   background-color: black;
 }
 
@@ -308,14 +263,14 @@ h2 {
   font-size: 16px;
   border: 1px solid #dfe1e5;
   border-radius: 24px;
-  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  box-shadow: 0px 2px 8px 0px rgba(60, 64, 67, 0.25);
   background-color: #fff;
   margin-bottom: 20px;
   outline: none;
 }
 
-.SearchInput :hover {
-  box-shadow: 0 1px 1px rgba(32, 33, 36, 0.35);
+.SearchInput:hover {
+  box-shadow: 0 2px 8px 1px rgba(64, 60, 67, 0.24);
 }
 
 .SearchWrapper {
