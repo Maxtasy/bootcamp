@@ -20,7 +20,6 @@ body {
   color: var(--text-color-bright);
   font-family: arial;
   margin: 0px;
-  padding: 32px 64px;
 }
 
 .SiteHeader {
@@ -31,14 +30,43 @@ body {
   border: 2px solid white;
 }
 
+.Drawer {
+  position: absolute;
+  inset: 0;
+  background-color: grey;
+  z-index: 1;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.Drawer--Active {
+  transform: translateX(0);
+}
+
+@media screen and (min-width: 400px) {
+  .BurgerMenu {
+    display: none;
+  }
+}
+
 .NavigationBar ul {
   list-style: none;
   margin: 0;
-  padding: 20px;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgb(27, 23, 23);
+}
+
+.NavigationBar {
+  display: none;
+}
+
+@media screen and (min-width: 400px) {
+  .NavigationBar {
+    display: block;
+  }
 }
 
 .NavigationBar a {
@@ -56,6 +84,16 @@ body {
   color: red;
   transition: 0.5s;
   text-decoration: underline;
+}
+
+.PageContent {
+  padding: 32px 16px;
+}
+
+@media screen and (min-width: 400px) {
+  .PageContent {
+    padding: 64px 32px;
+  }
 }
 
 .Section {
@@ -258,7 +296,8 @@ h2 {
 }
 
 .SearchInput {
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
   padding: 12px 20px;
   font-size: 16px;
   border: 1px solid #dfe1e5;
