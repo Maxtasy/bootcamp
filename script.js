@@ -33,3 +33,10 @@ for (let row = 0; row < 8; row++) {
     boardElement.appendChild(squareElement);
   }
 }
+
+const burger = document.querySelector(".BurgerMenu");
+const drawer = document.querySelector(".Drawer");
+
+burger.addEventListener("click", function () {
+  drawer.classList.add("Drawer--Active");
+});
