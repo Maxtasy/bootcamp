@@ -9,6 +9,25 @@
   </head>
   <body>
     <header class="SiteHeader">
+      <div class="BurgerMenu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-menu-icon lucide-menu"
+        >
+          <path d="M4 12h16" />
+          <path d="M4 18h16" />
+          <path d="M4 6h16" />
+        </svg>
+      </div>
+
       <nav class="NavigationBar">
         <ul>
           <li><a href="#buttons">Buttons</a></li>
@@ -16,111 +35,153 @@
           <li>
             <a href="#flags">Flags</a>
           </li>
+          <li><a href="#chess-board">Chessboard</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="Section">
-      <h1 title="im a header">Bootcamp</h1>
-    </section>
+    <aside class="Drawer">
+      <ul>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#idcards">ID Cards</a></li>
+        <li>
+          <a href="#flags">Flags</a>
+        </li>
+        <li><a href="#chess-board">Chessboard</a></li>
+      </ul>
+      <button class="CloseButton">X</button>
+    </aside>
 
-    <div id="buttons" class="Section">
-      <h2>Buttons</h2>
-
-      <div class="ButtonGroup">
-        <button id="copy-button" class="Button Button--Primary">Primary</button>
-        <button id="remove-button" class="Button Button--Secondary">
-          Secondary
-        </button>
-      </div>
-    </div>
-
-    <section class="Section">
-      <section class="Container">
-        <div class="Item">1</div>
-        <div class="Item">2</div>
-        <div class="Item">3</div>
-        <div class="Item">4</div>
-        <div class="Item">5</div>
-        <div class="Item">6</div>
-        <div class="Item">7</div>
-        <div class="Item">8</div>
-        <div class="Item">9</div>
-        <div class="Item">10</div>
-        <div class="Item">11</div>
-        <div class="Item">12</div>
+    <div class="PageContent">
+      <section class="Section">
+        <h1 title="im a header">Bootcamp</h1>
       </section>
-    </section>
 
-    <section id="idcards" class="Section">
-      <div class="Box">
-        <div class="Box__Header">
-          <div class="Circle"><span>M.M.</span></div>
-          <p class="Text">Max Mustermann</p>
+      <div id="buttons" class="Section">
+        <h2>Buttons</h2>
+
+        <div class="ButtonGroup">
+          <button id="copy-button" class="Button Button--Primary">
+            Primary
+          </button>
+          <button id="remove-button" class="Button Button--Secondary">
+            Secondary
+          </button>
         </div>
-        <p class="Text">Lorem ipsum dolor sit fuller words.</p>
       </div>
-    </section>
 
-    <section class="Section">
-      <div class="Box">
-        <div class="Box__Header">
-          <div class="Circle">
-            <img class="Norman" src="images/norman.jpeg" alt="Norman" />
+      <section class="Section">
+        <section class="Container">
+          <div class="Item">1</div>
+          <div class="Item">2</div>
+          <div class="Item">3</div>
+          <div class="Item">4</div>
+          <div class="Item">5</div>
+          <div class="Item">6</div>
+          <div class="Item">7</div>
+          <div class="Item">8</div>
+          <div class="Item">9</div>
+          <div class="Item">10</div>
+          <div class="Item">11</div>
+          <div class="Item">12</div>
+        </section>
+      </section>
+
+      <section id="idcards" class="Section">
+        <div class="Box">
+          <div class="Box__Header">
+            <div class="Circle"><span>M.M.</span></div>
+            <p class="Text">Max Mustermann</p>
           </div>
-          <p class="Text">Norman Ritter</p>
+          <p class="Text">Lorem ipsum dolor sit fuller words.</p>
         </div>
-        <p class="Text">Was ist mit die Fische?</p>
-      </div>
-    </section>
+      </section>
 
-    <section id="flags" class="Section">
-      <div class="FlagboxGer">
-        <div class="Color Black"></div>
-        <div class="Color Red"></div>
-        <div class="Color Gold"></div>
-        <img
-          class="Bundesadler"
-          src="images/Bundesadler.png"
-          alt="Bundesadler"
-        />
-      </div>
-    </section>
+      <section class="Section">
+        <div class="Box">
+          <div class="Box__Header">
+            <div class="Circle">
+              <img class="Norman" src="images/norman.jpeg" alt="Norman" />
+            </div>
+            <p class="Text">Norman Ritter</p>
+          </div>
+          <p class="Text">Was ist mit die Fische?</p>
+        </div>
+      </section>
 
-    <section class="Section">
-      <div class="Flagbox">
-        <div class="Color Blue"></div>
-        <div class="Color White"></div>
-        <div class="Color RedFra"></div>
-      </div>
-    </section>
+      <section id="flags" class="Section Section--Vertical">
+        <div class="FlagBox FlagBox--Vertical">
+          <div class="FlagBar" style="--color: black"></div>
+          <div class="FlagBar" style="--color: red"></div>
+          <div class="FlagBar" style="--color: gold"></div>
+          <img
+            class="Bundesadler"
+            src="images/Bundesadler.png"
+            alt="Bundesadler"
+          />
+        </div>
 
-    <section class="Section">
-      <div class="Flagbox">
-        <div class="Flag"></div>
-        <div class="Cv"></div>
-        <div class="Ch"></div>
-      </div>
-    </section>
+        <div class="FlagBox">
+          <div class="FlagBar" style="--color: blue"></div>
+          <div class="FlagBar" style="--color: white"></div>
+          <div class="FlagBar" style="--color: red"></div>
+        </div>
 
-    <section class="Section">
-      <div class="Flagbox">
-        <div class="Gruen"></div>
-        <div class="Rot"></div>
-        <img
-          class="Wappen"
-          src="images/Portugal_Wappen.gif"
-          alt="PortugalWappen"
-        />
-      </div>
-    </section>
+        <div class="FlagBox" style="--color: rgb(27, 77, 185)">
+          <div class="CrossVertical"></div>
+          <div class="CrossHorizontal"></div>
+        </div>
 
-    <section class="Section">
-      <div class="GridContainer">
-        <div class="GridItem Item-1">1</div>
-        <div class="GridItem Item-2">2</div>
-        <div class="GridItem Item-3">3</div>
-      </div>
-    </section>
+        <div class="FlagBox">
+          <div class="FlagBar" style="--color: green; --flex: 0.4"></div>
+          <div class="FlagBar" style="--color: red; --flex: 0.6"></div>
+          <img
+            class="Wappen"
+            src="images/Portugal_Wappen.gif"
+            alt="PortugalWappen"
+          />
+        </div>
+      </section>
+
+      <section id="chess-board" class="Section">
+        <div id="chessboard" class="Chessboard"></div>
+      </section>
+
+      <section class="Section">
+        <div class="GooglePage">
+          <img class="GoogleLogo" src="images/Google.png" alt="GoogleLogo" />
+          <div class="SearchBox">
+            <div class="InputWrapper">
+              <input
+                type="text"
+                class="SearchInput"
+                placeholder="Google-Suche"
+              />
+              <svg
+                class="GoogleLens"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="grey"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-search-icon lucide-search"
+              >
+                <path d="m21 21-4.34-4.34" />
+                <circle cx="11" cy="11" r="8" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="GoogleButtons">
+            <button>Google-Suche</button>
+            <button>Auf gut Glück!</button>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

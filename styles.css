@@ -20,7 +20,6 @@ body {
   color: var(--text-color-bright);
   font-family: arial;
   margin: 0px;
-  padding: 32px 64px;
 }
 
 .SiteHeader {
@@ -31,14 +30,49 @@ body {
   border: 2px solid white;
 }
 
+.Drawer {
+  position: fixed;
+  inset: 0;
+  background-color: grey;
+  z-index: 1;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.Drawer--Active {
+  transform: translateX(0);
+}
+
+.CloseButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 400px) {
+  .BurgerMenu {
+    display: none;
+  }
+}
+
 .NavigationBar ul {
   list-style: none;
   margin: 0;
-  padding: 20px;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgb(27, 23, 23);
+}
+
+.NavigationBar {
+  display: none;
+}
+
+@media screen and (min-width: 400px) {
+  .NavigationBar {
+    display: block;
+  }
 }
 
 .NavigationBar a {
@@ -58,8 +92,24 @@ body {
   text-decoration: underline;
 }
 
+.PageContent {
+  padding: 32px 16px;
+}
+
+@media screen and (min-width: 400px) {
+  .PageContent {
+    padding: 64px 32px;
+  }
+}
+
 .Section {
   padding: 24px 0;
+}
+
+.Section--Vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .ButtonGroup {
@@ -155,67 +205,34 @@ h2 {
   object-fit: cover;
 }
 
-.FlagboxGer {
-  display: flex;
-  flex-direction: column;
-  aspect-ratio: 2/1;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  border: 4px solid black;
-}
-
-.Flagbox {
+.FlagBox {
   display: flex;
   width: 100%;
   aspect-ratio: 2/1;
   position: relative;
   overflow: hidden;
   border: 4px solid black;
+  background-color: var(--color);
 }
 
-.Color {
-  display: flex;
-  width: 100%;
-  flex: 1;
+.FlagBox--Vertical {
+  flex-direction: column;
+}
+
+.FlagBar {
+  flex: var(--flex, 1);
+  background-color: var(--color);
 }
 
 .Bundesadler {
   position: absolute;
-  top: 50;
-  width: 13%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 30%;
 }
 
-.Black {
-  background-color: black;
-}
-
-.Red {
-  background-color: red;
-}
-
-.Gold {
-  background-color: gold;
-}
-
-.Blue {
-  background-color: blue;
-}
-
-.White {
-  background-color: white;
-}
-
-.RedFra {
-  background-color: red;
-}
-
-.Flag {
-  background-color: rgb(27, 77, 185);
-  width: 100%;
-}
-
-.Cv {
+.CrossVertical {
   position: absolute;
   background-color: yellow;
   top: 0;
@@ -224,7 +241,7 @@ h2 {
   width: 10%;
 }
 
-.Ch {
+.CrossHorizontal {
   position: absolute;
   top: 40%;
   left: 0;
@@ -233,50 +250,105 @@ h2 {
   background-color: yellow;
 }
 
-.Gruen {
-  background-color: green;
-  width: 40%;
-  height: 100%;
-}
-
-.Rot {
-  background-color: red;
-  width: 60%;
-  height: 100%;
-}
-
 .Wappen {
   position: absolute;
   top: 50%;
   left: 40%;
   transform: translate(-50%, -50%);
   width: 25%;
-  height: auto;
-  border-radius: 50%;
+  aspect-ratio: 1;
 }
 
-.GridContainer {
+.Chessboard {
   display: grid;
-  gap: 16px;
-  grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px;
-  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-columns: repeat(8, 1fr);
+  border: 4px solid black;
 }
 
-.GridItem {
-  background-color: purple;
-  border: 4px solid yellow;
+.Square {
+  aspect-ratio: 1;
 }
 
-.Item-1 {
-  grid-row: 1 / 3;
-  grid-column: 1 / 5;
+.Square--White {
+  background-color: white;
 }
 
-.Item-2 {
-  grid-row: span 2;
-  grid-column: span 2;
+.Square--Black {
+  background-color: black;
 }
 
-.Item-3 {
-  grid-area: 6 / 7 / 6 / 7;
+.GooglePage {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  background-color: white;
+}
+
+.GoogleLogo {
+  width: 272px;
+  margin-bottom: 30px;
+}
+
+.SearchBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.SearchInput {
+  width: 100%;
+  height: 100%;
+  padding-left: 40px;
+  height: 40px;
+  font-size: 16px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  box-shadow: 0px 2px 8px 0px rgba(60, 64, 67, 0.25);
+  background-color: #fff;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.InputWrapper {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  height: 60px;
+}
+
+.GoogleLens {
+  position: absolute;
+  top: 35%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.SearchInput:hover {
+  box-shadow: 0 2px 8px 1px rgba(64, 60, 67, 0.24);
+}
+
+.GoogleButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.GoogleButtons button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.GoogleButtons button:hover {
+  border: 1px solid #c6c6c6;
 }
