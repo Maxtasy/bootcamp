@@ -43,3 +43,4 @@
 [ ] Add pointer cursors to burger menu button and close button.
 [ ] Add chess pieces to chess board.
 [ ] Add cart drawer to the website. Reference: https://i.imgur.com/TG5cJkS.png
+[ ] Close cart drawer when menu item was clicked.
