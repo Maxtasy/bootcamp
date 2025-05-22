@@ -8,6 +8,12 @@
   box-sizing: border-box;
 }
 
+.u-NoList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   margin: 0px;
   padding: 0px;
@@ -56,8 +62,6 @@ body {
 }
 
 .NavigationBar ul {
-  list-style: none;
-  margin: 0;
   padding: 20px 0;
   display: flex;
   justify-content: center;
@@ -75,20 +79,20 @@ body {
   }
 }
 
-.NavigationBar a {
+.Link {
   color: var(--text-color-bright);
   text-decoration: none;
   font-weight: bold;
   padding: 16px;
+  transition: 0.5s;
 }
 
 .NavigationBar li:not(:last-child) {
   border-right: 1px solid white;
 }
 
-.NavigationBar ul li a:hover {
-  color: red;
-  transition: 0.5s;
+.Link:hover {
+  color: rgb(158, 158, 158);
   text-decoration: underline;
 }
 
