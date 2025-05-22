@@ -1,3 +1,5 @@
+// Logic for copy buttons
+
 const copyButtonElement = document.querySelector("#copy-button");
 const removeButtonElement = document.querySelector("#remove-button");
 
@@ -17,6 +19,8 @@ removeButtonElement.addEventListener("click", () => {
   }
 });
 
+// Logic for chessboard
+
 const boardElement = document.getElementById("chessboard");
 
 for (let row = 0; row < 8; row++) {
@@ -34,9 +38,16 @@ for (let row = 0; row < 8; row++) {
   }
 }
 
-const burger = document.querySelector(".BurgerMenu");
-const drawer = document.querySelector(".Drawer");
+// Logic for menu drawer
 
-burger.addEventListener("click", function () {
-  drawer.classList.add("Drawer--Active");
+const burgerElement = document.querySelector(".BurgerMenu");
+const drawerElement = document.querySelector(".Drawer");
+const closeButtonElement = drawerElement.querySelector(".CloseButton");
+
+burgerElement.addEventListener("click", () => {
+  drawerElement.classList.add("Drawer--Active");
+});
+
+closeButtonElement.addEventListener("click", () => {
+  drawerElement.classList.remove("Drawer--Active");
 });

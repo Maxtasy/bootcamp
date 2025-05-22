@@ -31,7 +31,7 @@ body {
 }
 
 .Drawer {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background-color: grey;
   z-index: 1;
@@ -41,6 +41,12 @@ body {
 
 .Drawer--Active {
   transform: translateX(0);
+}
+
+.CloseButton {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 @media screen and (min-width: 400px) {
@@ -310,7 +316,7 @@ h2 {
 
 .InputWrapper {
   position: relative;
-  width: 100%;
+  width: 90%;
   max-width: 500px;
   height: 60px;
 }
