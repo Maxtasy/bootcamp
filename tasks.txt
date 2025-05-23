@@ -46,4 +46,9 @@
 [x] Close cart drawer when menu item was clicked.
 [x] Implement utility class that removes `list-style` and default margin from `ul` elements.
 [x] Use this new class for the desktop navigation list and mobile navigation list.
-
+[ ] Add following feature:
+  - When a user clicks on any of the green cells in the grid section. The cell changes background color from green to red.
+    And it changes the text color from red to green.
+  - When the user clicks on the inverted cell again, it changes back to the original colors.
+[ ] Add hover effect to ID cards. When the user hovers the card, it should get scales down to 98% of
+  its original size. This should also be transitioned smoothly.
