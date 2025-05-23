@@ -40,10 +40,10 @@
 [x] Add `smooth` scroll behaviour to the body, so it scrolls smoothely to the sections when clicking the links. 
 [x] Style close button and use icon instead of `X`.
 [x] Add favicon to website.
-[ ] Add pointer cursors to burger menu button and close button.
+[x] Add pointer cursors to burger menu button and close button.
 [x] Add chess pieces to chess board.
 [x] Add cart drawer to the website. Reference: https://i.imgur.com/TG5cJkS.png
-[ ] Close cart drawer when menu item was clicked.
+[x] Close cart drawer when menu item was clicked.
 [x] Implement utility class that removes `list-style` and default margin from `ul` elements.
 [x] Use this new class for the desktop navigation list and mobile navigation list.
 

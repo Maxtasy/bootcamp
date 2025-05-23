@@ -58,27 +58,36 @@ for (let row = 0; row < 8; row++) {
   }
 }
 
-// Logic for menu drawer
+// Logic for drawers
 
-const burgerElement = document.querySelector(".BurgerMenu");
-const drawerElement = document.querySelector(".Drawer");
-const closeButtonElement = drawerElement.querySelector(".CloseButton");
-const cartElement = document.querySelector(".Cart");
-const cartDrawerElement = document.querySelector(".CartDrawer");
-const closeButton2Element = cartDrawerElement.querySelector(".CloseButton2");
+const drawerTriggerElements = document.querySelectorAll(
+  "[data-drawer-trigger]"
+);
+const closeButtonElements = document.querySelectorAll(".Drawer .CloseButton");
+const linkElements = document.querySelectorAll(".Drawer .Link");
 
-burgerElement.addEventListener("click", () => {
-  drawerElement.classList.add("Drawer--Active");
+drawerTriggerElements.forEach((drawerTriggerElement) => {
+  drawerTriggerElement.addEventListener("click", () => {
+    const drawerHandle = drawerTriggerElement.getAttribute(
+      "data-drawer-trigger"
+    );
+    const drawerElement = document.querySelector(
+      `[data-drawer="${drawerHandle}"]`
+    );
+    drawerElement.classList.add("Drawer--Active");
+  });
 });
 
-closeButtonElement.addEventListener("click", () => {
-  drawerElement.classList.remove("Drawer--Active");
+closeButtonElements.forEach((closeButtonElement) => {
+  closeButtonElement.addEventListener("click", () => {
+    const drawerElement = closeButtonElement.closest(".Drawer");
+    drawerElement.classList.remove("Drawer--Active");
+  });
 });
 
-cartElement.addEventListener("click", () => {
-  cartDrawerElement.classList.add("CartDrawer--Active");
-});
-
-closeButton2Element.addEventListener("click", () => {
-  cartDrawerElement.classList.remove("CartDrawer--Active");
+linkElements.forEach((linkElement) => {
+  linkElement.addEventListener("click", () => {
+    const drawerElement = linkElement.closest(".Drawer");
+    drawerElement.classList.remove("Drawer--Active");
+  });
 });
