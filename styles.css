@@ -36,6 +36,25 @@ body {
   border: 2px solid white;
 }
 
+.Cart {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.CartDrawer {
+  position: fixed;
+  inset: 0;
+  background-color: grey;
+  z-index: 1;
+  transform: translateX(200%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.CartDrawer--Active {
+  transform: translateX(0);
+}
+
 .Drawer {
   position: fixed;
   inset: 0;
@@ -49,14 +68,30 @@ body {
   transform: translateX(0);
 }
 
+.CloseButton2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .CloseButton {
   position: absolute;
   top: 0;
   right: 0;
 }
 
+.CloseButton:hover {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 400px) {
   .BurgerMenu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .Cart {
     display: none;
   }
 }

@@ -43,6 +43,9 @@ for (let row = 0; row < 8; row++) {
 const burgerElement = document.querySelector(".BurgerMenu");
 const drawerElement = document.querySelector(".Drawer");
 const closeButtonElement = drawerElement.querySelector(".CloseButton");
+const cartElement = document.querySelector(".Cart");
+const cartDrawerElement = document.querySelector(".CartDrawer");
+const closeButton2Element = cartDrawerElement.querySelector(".CloseButton2");
 
 burgerElement.addEventListener("click", () => {
   drawerElement.classList.add("Drawer--Active");
@@ -50,4 +53,12 @@ burgerElement.addEventListener("click", () => {
 
 closeButtonElement.addEventListener("click", () => {
   drawerElement.classList.remove("Drawer--Active");
+});
+
+cartElement.addEventListener("click", () => {
+  cartDrawerElement.classList.add("CartDrawer--Active");
+});
+
+closeButton2Element.addEventListener("click", () => {
+  cartDrawerElement.classList.remove("CartDrawer--Active");
 });
