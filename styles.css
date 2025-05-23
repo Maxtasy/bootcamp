@@ -80,10 +80,6 @@ body {
   right: 0;
 }
 
-.CloseButton:hover {
-  cursor: pointer;
-}
-
 @media screen and (min-width: 400px) {
   .BurgerMenu {
     display: none;
