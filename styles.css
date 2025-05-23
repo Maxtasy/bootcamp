@@ -301,7 +301,6 @@ h2 {
 }
 
 .Square {
-  color: rgb(94, 79, 79);
   aspect-ratio: 1;
   display: flex;
   justify-content: center;
@@ -310,11 +309,11 @@ h2 {
 }
 
 .Square--White {
-  background-color: white;
+  background-color: lightgray;
 }
 
 .Square--Black {
-  background-color: black;
+  background-color: brown;
 }
 
 .GooglePage {

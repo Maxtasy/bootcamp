@@ -47,6 +47,11 @@ for (let row = 0; row < 8; row++) {
     const piece = startPosition[row][col];
     if (piece) {
       squareElement.innerText = piece;
+      if ("♜♞♝♚♛♟".includes(piece)) {
+        squareElement.style.color = "black";
+      } else {
+        squareElement.style.color = "white";
+      }
     }
 
     boardElement.appendChild(squareElement);
