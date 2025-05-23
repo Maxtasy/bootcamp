@@ -41,7 +41,7 @@
 [x] Style close button and use icon instead of `X`.
 [x] Add favicon to website.
 [ ] Add pointer cursors to burger menu button and close button.
-[ ] Add chess pieces to chess board.
+[x] Add chess pieces to chess board.
 [x] Add cart drawer to the website. Reference: https://i.imgur.com/TG5cJkS.png
 [ ] Close cart drawer when menu item was clicked.
 [x] Implement utility class that removes `list-style` and default margin from `ul` elements.

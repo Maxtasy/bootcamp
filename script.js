@@ -22,6 +22,16 @@ removeButtonElement.addEventListener("click", () => {
 // Logic for chessboard
 
 const boardElement = document.getElementById("chessboard");
+const startPosition = [
+  ["♜", "♞", "♝", "♚", "♛", "♝", "♞", "♜"],
+  ["♟", "♟", "♟", "♟", "♟", "♟", "♟", "♟"],
+  ["", "", "", "", "", "", "", ""],
+  ["", "", "", "", "", "", "", ""],
+  ["", "", "", "", "", "", "", ""],
+  ["", "", "", "", "", "", "", ""],
+  ["♙", "♙", "♙", "♙", "♙", "♙", "♙", "♙"],
+  ["♖", "♘", "♗", "♕", "♔", "♗", "♘", "♖"],
+];
 
 for (let row = 0; row < 8; row++) {
   for (let col = 0; col < 8; col++) {
@@ -32,6 +42,11 @@ for (let row = 0; row < 8; row++) {
       squareElement.classList.add("Square--White");
     } else {
       squareElement.classList.add("Square--Black");
+    }
+
+    const piece = startPosition[row][col];
+    if (piece) {
+      squareElement.innerText = piece;
     }
 
     boardElement.appendChild(squareElement);
