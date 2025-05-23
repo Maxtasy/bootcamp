@@ -8,6 +8,18 @@
   box-sizing: border-box;
 }
 
+.u-NoList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 400px) {
+  .u-HiddenDesktop {
+    display: none !important;
+  }
+}
+
 html {
   margin: 0px;
   padding: 0px;
@@ -22,21 +34,39 @@ body {
   margin: 0px;
 }
 
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
 .SiteHeader {
+  display: flex;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 1;
   background-color: rgb(27, 23, 23);
-  border: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
 .Drawer {
   position: fixed;
-  inset: 0;
+  top: 0;
+  height: 100%;
+  width: 80%;
   background-color: grey;
   z-index: 1;
-  transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
+}
+
+.Drawer--Left {
+  transform: translateX(-100%);
+}
+
+.Drawer--Right {
+  transform: translateX(100%);
+  right: 0;
 }
 
 .Drawer--Active {
@@ -49,15 +79,7 @@ body {
   right: 0;
 }
 
-@media screen and (min-width: 400px) {
-  .BurgerMenu {
-    display: none;
-  }
-}
-
 .NavigationBar ul {
-  list-style: none;
-  margin: 0;
   padding: 20px 0;
   display: flex;
   justify-content: center;
@@ -67,6 +89,7 @@ body {
 
 .NavigationBar {
   display: none;
+  width: 100%;
 }
 
 @media screen and (min-width: 400px) {
@@ -75,20 +98,20 @@ body {
   }
 }
 
-.NavigationBar a {
+.Link {
   color: var(--text-color-bright);
   text-decoration: none;
   font-weight: bold;
-  padding: 16px;
+  transition: 0.5s;
+  padding: 0 16px;
 }
 
 .NavigationBar li:not(:last-child) {
   border-right: 1px solid white;
 }
 
-.NavigationBar ul li a:hover {
-  color: red;
-  transition: 0.5s;
+.Link:hover {
+  color: rgb(158, 158, 158);
   text-decoration: underline;
 }
 
@@ -140,6 +163,11 @@ body {
 .Button--Secondary {
   background-color: rgb(46, 46, 46);
   color: var(--text-color-bright);
+}
+
+.Button--Icon {
+  color: white;
+  padding: 4px;
 }
 
 .Button:hover {
@@ -267,14 +295,24 @@ h2 {
 
 .Square {
   aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+@media screen and (min-width: 400px) {
+  .Square {
+    font-size: 48px;
+  }
 }
 
 .Square--White {
-  background-color: white;
+  background-color: lightgray;
 }
 
 .Square--Black {
-  background-color: black;
+  background-color: brown;
 }
 
 .GooglePage {
