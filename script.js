@@ -19,6 +19,8 @@ removeButtonElement.addEventListener("click", () => {
   }
 });
 
+// Logic for Flexbox Items
+
 // Logic for chessboard
 
 const boardElement = document.getElementById("chessboard");
