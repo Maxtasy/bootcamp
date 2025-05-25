@@ -10,6 +10,25 @@
   </head>
   <body>
     <header class="SiteHeader">
+      <button class="Button--Icon u-HiddenDesktop" data-drawer-trigger="menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-menu-icon lucide-menu"
+        >
+          <path d="M4 12h16" />
+          <path d="M4 18h16" />
+          <path d="M4 6h16" />
+        </svg>
+      </button>
+
       <button class="Button--Icon u-HiddenDesktop" data-drawer-trigger="cart">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -28,25 +47,6 @@
           <path
             d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
           />
-        </svg>
-      </button>
-
-      <button class="Button--Icon u-HiddenDesktop" data-drawer-trigger="menu">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-menu-icon lucide-menu"
-        >
-          <path d="M4 12h16" />
-          <path d="M4 18h16" />
-          <path d="M4 6h16" />
         </svg>
       </button>
 
@@ -247,6 +247,13 @@
             <button>Auf gut Glück!</button>
           </div>
         </div>
+      </section>
+
+      <section class="Section">
+        <button id="get-cat-image" class="Button Button--Primary">
+          Get cat image
+        </button>
+        <input id="image-count" type="number" value="1" max="9" min="1" />
       </section>
     </div>
   </body>
