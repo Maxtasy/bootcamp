@@ -128,5 +128,11 @@ catButtonElement.addEventListener("click", () => {
 });
 
 removeCatButtonElement.addEventListener("click", () => {
-  imageElement.classList.remove("Cat-Image");
+  const allCatImageElements = document.querySelectorAll(".CatImage");
+  const imageCount = parseInt(imageCountElement.value);
+
+  allCatImageElements.forEach((allCatImageElement, index) => {
+    if (index >= imageCount) return;
+    allCatImageElement.remove();
+  });
 });
