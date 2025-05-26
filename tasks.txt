@@ -55,3 +55,5 @@
 [x] Add another button that removes the amount of cat images set in the input field.
   - Make sure no console errors occur.
 [x] Style the cat number input to look similar to the google search input. Ignore the 500px width.
+[ ] Make the google search work!
+  - When the user clicks on the search button, it should open a new tab with the google search results for the input value.
