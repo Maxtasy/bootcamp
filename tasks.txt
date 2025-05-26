@@ -52,6 +52,6 @@
   - When the user clicks on the inverted cell again, it changes back to the original colors.
 [x] Add hover effect to ID cards. When the user hovers the card, it should get scales down to 98% of
   its original size. This should also be transitioned smoothly.
-[ ] Add another button that removes the amount of cat images set in the input field.
+[x] Add another button that removes the amount of cat images set in the input field.
   - Make sure no console errors occur.
-[ ] Style the cat number input to look similar to the google search input. Ignore the 500px width.
+[x] Style the cat number input to look similar to the google search input. Ignore the 500px width.

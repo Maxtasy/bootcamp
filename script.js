@@ -106,6 +106,7 @@ linkElements.forEach((linkElement) => {
 
 const catButtonElement = document.querySelector("#get-cat-image");
 const imageCountElement = document.querySelector("#image-count");
+const removeCatButtonElement = document.querySelector("#remove-cat-image");
 
 catButtonElement.addEventListener("click", () => {
   const imageCount = imageCountElement.value;
@@ -124,4 +125,14 @@ catButtonElement.addEventListener("click", () => {
         catSectionElement.appendChild(imageElement);
       });
     });
+});
+
+removeCatButtonElement.addEventListener("click", () => {
+  const allCatImageElements = document.querySelectorAll(".CatImage");
+  const imageCount = parseInt(imageCountElement.value);
+
+  allCatImageElements.forEach((allCatImageElement, index) => {
+    if (index >= imageCount) return;
+    allCatImageElement.remove();
+  });
 });
