@@ -124,8 +124,9 @@ catButtonElement.addEventListener("click", () => {
         const catSectionElement = catButtonElement.closest(".Section");
         catSectionElement.appendChild(imageElement);
       });
-      removeCatButtonElement.addEventListener("click", () => {
-        imageElement.classList.remove("Cat-Image");
-      });
     });
+});
+
+removeCatButtonElement.addEventListener("click", () => {
+  imageElement.classList.remove("Cat-Image");
 });
