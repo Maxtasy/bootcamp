@@ -106,6 +106,7 @@ linkElements.forEach((linkElement) => {
 
 const catButtonElement = document.querySelector("#get-cat-image");
 const imageCountElement = document.querySelector("#image-count");
+const removeCatButtonElement = document.querySelector("#remove-cat-image");
 
 catButtonElement.addEventListener("click", () => {
   const imageCount = imageCountElement.value;
@@ -122,6 +123,9 @@ catButtonElement.addEventListener("click", () => {
         imageElement.classList.add("CatImage");
         const catSectionElement = catButtonElement.closest(".Section");
         catSectionElement.appendChild(imageElement);
+      });
+      removeCatButtonElement.addEventListener("click", () => {
+        imageElement.classList.remove("Cat-Image");
       });
     });
 });
