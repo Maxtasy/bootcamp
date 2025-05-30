@@ -137,7 +137,7 @@ removeCatButtonElement.addEventListener("click", () => {
   });
 });
 
-//Logic for google search
+// Logic for google search
 
 const googleInputElement = document.querySelector("#google-input");
 const googleSearchButtonElement = document.querySelector(
