@@ -418,24 +418,24 @@ h2 {
   display: grid;
   justify-content: center;
   align-content: center;
-  min-height: 100vh;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-.CalculatorGrid > button {
+.GridItem {
   cursor: pointer;
   font-size: 2rem;
   border: 1px solid white;
   outline: none;
   background-color: rgba(255, 255, 255, 0.75);
+  padding: 0;
 }
 
-.CalculatorGrid > button:hover {
+.GridItem:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.SpanTwo {
+.GridItem--SpanTwo {
   grid-column: span 2;
 }
 
