@@ -1,5 +1,15 @@
 :root {
-  --text-color-bright: rgb(255, 255, 255);
+  --text-color-bright: rgb(0, 0, 0);
+  --background-primary: rgb(179, 179, 179);
+  --background-secondary: rgb(255, 255, 255);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color-bright: rgb(255, 255, 255);
+    --background-primary: rgb(46, 46, 46);
+    --background-secondary: rgb(27, 23, 23);
+  }
 }
 
 *,
@@ -28,7 +38,7 @@ html {
 }
 
 body {
-  background-color: rgb(46, 46, 46);
+  background-color: var(--background-primary);
   color: var(--text-color-bright);
   font-family: arial;
   margin: 0px;
@@ -46,7 +56,7 @@ button {
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: rgb(27, 23, 23);
+  background-color: var(--background-secondary);
   border-bottom: 2px solid white;
 }
 
@@ -84,7 +94,6 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(27, 23, 23);
 }
 
 .NavigationBar {
@@ -107,7 +116,7 @@ button {
 }
 
 .NavigationBar li:not(:last-child) {
-  border-right: 1px solid white;
+  border-right: 1px solid black;
 }
 
 .Link:hover {
