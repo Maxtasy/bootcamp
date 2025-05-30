@@ -57,3 +57,6 @@
 [x] Style the cat number input to look similar to the google search input. Ignore the 500px width.
 [x] Make the google search work!
   - When the user clicks on the search button, it should open a new tab with the google search results for the input value.
+[ ] Create new "Shop The Look" Section (Reference: https://i.imgur.com/roUp8A9.png)
+[ ] Add backdrop to drawers in rgba(0, 0, 0, 0.5). When clicked the drawer closes.
+[ ] (Optional) Implement dark/light mode toggle in site header.
