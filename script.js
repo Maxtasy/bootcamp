@@ -332,4 +332,33 @@ function randomGreeting(name) {
 }
 
 const result = randomGreeting("Elex");
-console.log(result);
+
+// Logic for Shop the look section
+
+const indicatorElements = document.querySelectorAll(".ShopTheLook .Indicator");
+const xRangeElement = document.querySelector("[name='x-position']");
+const yRangeElement = document.querySelector("[name='y-position']");
+const controlsElement = document.querySelector(".Controls");
+
+indicatorElements.forEach((indicatorElement) => {
+  indicatorElement.addEventListener("click", (event) => {
+    const clickedIndicator = event.target;
+
+    // Handle active state for each indicator element
+
+    indicatorElements.forEach((element) => {
+      const shouldBeActive =
+        element === clickedIndicator &&
+        !element.classList.contains("Indicator--Active");
+      element.classList.toggle("Indicator--Active", shouldBeActive);
+    });
+
+    // Set controls to clicked indicator element
+
+    const xValue = clickedIndicator.getAttribute("data-x-position");
+    const yValue = clickedIndicator.getAttribute("data-y-position");
+
+    xRangeElement.value = xValue;
+    yRangeElement.value = yValue;
+  });
+});
