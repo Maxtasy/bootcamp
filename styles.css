@@ -1,14 +1,26 @@
 :root {
-  --text-color-bright: rgb(0, 0, 0);
+  --text-color-primary: rgb(0, 0, 0);
   --background-primary: rgb(179, 179, 179);
   --background-secondary: rgb(255, 255, 255);
+  --border: rgb(0, 0, 0);
+  --icon: rgb(0, 0, 0);
+  --button-primary-text: rgb(255, 255, 255);
+  --button-primary-background: rgb(0, 0, 0);
+  --button-secondary-text: rgb(0, 0, 0);
+  --button-secondary-background: rgb(255, 255, 255);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color-bright: rgb(255, 255, 255);
+    --text-color-primary: rgb(255, 255, 255);
     --background-primary: rgb(46, 46, 46);
     --background-secondary: rgb(27, 23, 23);
+    --border: rgb(255, 255, 255);
+    --icon: rgb(255, 255, 255);
+    --button-primary-text: rgb(0, 0, 0);
+    --button-primary-background: rgb(255, 255, 255);
+    --button-secondary-text: rgb(255, 255, 255);
+    --button-secondary-background: rgb(0, 0, 0);
   }
 }
 
@@ -39,7 +51,7 @@ html {
 
 body {
   background-color: var(--background-primary);
-  color: var(--text-color-bright);
+  color: var(--text-color-primary);
   font-family: arial;
   margin: 0px;
 }
@@ -57,7 +69,7 @@ button {
   top: 0;
   z-index: 1;
   background-color: var(--background-secondary);
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--border);
 }
 
 .Drawer {
@@ -65,7 +77,7 @@ button {
   top: 0;
   height: 100%;
   width: 80%;
-  background-color: grey;
+  background: linear-gradient(to right, rgb(105, 85, 91), rgb(36, 139, 134));
   z-index: 1;
   transition: transform 0.5s ease-in-out;
 }
@@ -108,7 +120,7 @@ button {
 }
 
 .Link {
-  color: var(--text-color-bright);
+  color: var(--text-color-primary);
   text-decoration: none;
   font-weight: bold;
   transition: 0.5s;
@@ -116,7 +128,7 @@ button {
 }
 
 .NavigationBar li:not(:last-child) {
-  border-right: 1px solid black;
+  border-right: 1px solid var(--border);
 }
 
 .Link:hover {
@@ -153,7 +165,6 @@ button {
 
 .Button {
   padding: 16px 32px;
-  background-color: rgb(255, 255, 255);
   border-radius: 8px;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -166,16 +177,17 @@ button {
 }
 
 .Button--Primary {
-  color: rgb(46, 46, 46);
+  color: var(--button-primary-text);
+  background-color: var(--button-primary-background);
 }
 
 .Button--Secondary {
-  background-color: rgb(46, 46, 46);
-  color: var(--text-color-bright);
+  color: var(--button-secondary-text);
+  background-color: var(--button-secondary-background);
 }
 
 .Button--Icon {
-  color: white;
+  color: var(--icon);
   padding: 4px;
 }
 
@@ -217,9 +229,9 @@ h2 {
 
 .Box {
   border-radius: 48px;
-  background-color: rgb(136, 130, 130);
+  background-color: var(--background-secondary);
   padding: 32px 32px;
-  color: black;
+  color: var(--text-color-primary);
   font-size: large;
   width: 100%;
   transition: 0.5s;
