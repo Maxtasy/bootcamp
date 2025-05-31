@@ -339,6 +339,7 @@ const indicatorElements = document.querySelectorAll(".ShopTheLook .Indicator");
 const xRangeElement = document.querySelector("[name='x-position']");
 const yRangeElement = document.querySelector("[name='y-position']");
 const controlsElement = document.querySelector(".Controls");
+let activeIndicator = null;
 
 indicatorElements.forEach((indicatorElement) => {
   indicatorElement.addEventListener("click", (event) => {
@@ -350,6 +351,9 @@ indicatorElements.forEach((indicatorElement) => {
       const shouldBeActive =
         element === clickedIndicator &&
         !element.classList.contains("Indicator--Active");
+      if (shouldBeActive) {
+        activeIndicator = clickedIndicator;
+      }
       element.classList.toggle("Indicator--Active", shouldBeActive);
     });
 
@@ -360,5 +364,14 @@ indicatorElements.forEach((indicatorElement) => {
 
     xRangeElement.value = xValue;
     yRangeElement.value = yValue;
+    console.log(activeIndicator);
   });
+});
+
+// 1. Add event listener to range elements (input event)
+// 2. Read value from range slider
+// 3. Update CSS variable on activeIndicator and update data attribute on indicator with that value
+
+xRangeElement.addEventListener("input", (event) => {
+  console.log(event);
 });
