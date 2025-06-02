@@ -339,7 +339,31 @@ const indicatorElements = document.querySelectorAll(".ShopTheLook .Indicator");
 const xRangeElement = document.querySelector("[name='x-position']");
 const yRangeElement = document.querySelector("[name='y-position']");
 const controlsElement = document.querySelector(".Controls");
+const shopTheLookElements = document.querySelectorAll(".ShopTheLook");
+const paginationItemElements = document.querySelectorAll(".Pagination__Item");
+const previousButtonElement = document.querySelector("[data-action='prev']");
+const nextButtonElement = document.querySelector("[data-action='next']");
+
 let activeIndicator = null;
+let activeShopTheLookIndex = 0;
+
+function setActiveStates() {
+  shopTheLookElements.forEach((shopTheLookElement, index) => {
+    const isActiveShopTheLookElement = index === activeShopTheLookIndex;
+    shopTheLookElement.classList.toggle(
+      "ShopTheLook--Active",
+      isActiveShopTheLookElement
+    );
+  });
+
+  paginationItemElements.forEach((paginationItemElement, index) => {
+    const isActivePaginationItemElement = index === activeShopTheLookIndex;
+    paginationItemElement.classList.toggle(
+      "Pagination__Item--Active",
+      isActivePaginationItemElement
+    );
+  });
+}
 
 indicatorElements.forEach((indicatorElement) => {
   indicatorElement.addEventListener("click", (event) => {
@@ -359,19 +383,42 @@ indicatorElements.forEach((indicatorElement) => {
 
     // Set controls to clicked indicator element
 
-    const xValue = clickedIndicator.getAttribute("data-x-position");
-    const yValue = clickedIndicator.getAttribute("data-y-position");
+    const xValue = clickedIndicator.style.getPropertyValue("--x-position");
+    const yValue = clickedIndicator.style.getPropertyValue("--y-position");
 
     xRangeElement.value = xValue;
     yRangeElement.value = yValue;
-    console.log(activeIndicator);
   });
 });
 
-// 1. Add event listener to range elements (input event)
-// 2. Read value from range slider
-// 3. Update CSS variable on activeIndicator and update data attribute on indicator with that value
-
 xRangeElement.addEventListener("input", (event) => {
-  console.log(event);
+  const xValue = event.target.value;
+
+  activeIndicator.style.setProperty("--x-position", xValue);
+});
+
+yRangeElement.addEventListener("input", (event) => {
+  const yValue = event.target.value;
+
+  activeIndicator.style.setProperty("--y-position", yValue);
+});
+
+nextButtonElement.addEventListener("click", () => {
+  if (activeShopTheLookIndex >= shopTheLookElements.length - 1) {
+    activeShopTheLookIndex = 0;
+  } else {
+    activeShopTheLookIndex = activeShopTheLookIndex + 1;
+  }
+
+  setActiveStates();
+});
+
+previousButtonElement.addEventListener("click", () => {
+  if (activeShopTheLookIndex <= 0) {
+    activeShopTheLookIndex = shopTheLookElements.length - 1;
+  } else {
+    activeShopTheLookIndex = activeShopTheLookIndex - 1;
+  }
+
+  setActiveStates();
 });

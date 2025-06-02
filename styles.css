@@ -496,10 +496,16 @@ h2 {
 
 .ShopTheLook {
   position: relative;
+  display: none;
+}
+
+.ShopTheLook--Active {
+  display: block;
 }
 
 .ShopTheLook__Image {
   width: 100%;
+  display: block;
 }
 
 .Indicator {
@@ -512,6 +518,8 @@ h2 {
   border-radius: 50%;
   border: 1px solid rgb(0, 0, 0);
   animation: pulse 1s infinite alternate;
+  transform: translate(-50%, -50%) scale(1);
+  transform-origin: center;
 }
 
 .Indicator--Active {
@@ -521,17 +529,44 @@ h2 {
 
 @keyframes pulse {
   from {
-    scale: 1;
+    transform: translate(-50%, -50%) scale(1);
   }
   to {
-    scale: 1.5;
+    transform: translate(-50%, -50%) scale(1.5);
   }
 }
 
 .Controls {
   display: none;
+  justify-content: center;
 }
 
 .Section:has(.Indicator--Active) .Controls {
   display: flex;
+}
+
+.Carousel {
+  display: flex;
+}
+
+.Pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.Pagination__Item {
+  width: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border);
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
+}
+
+.Pagination__Item--Active {
+  opacity: 1;
+  transform: scale(1.1);
 }
