@@ -62,6 +62,10 @@ button {
   border: none;
 }
 
+p {
+  margin: 0;
+}
+
 .SiteHeader {
   display: flex;
   justify-content: space-between;
@@ -430,6 +434,7 @@ h2 {
   box-shadow: 0px 2px 8px 0px rgba(60, 64, 67, 0.25);
   background-color: #fff;
   outline: none;
+  padding: 0 16px;
 }
 
 .Input:hover {
@@ -574,5 +579,17 @@ h2 {
 .ToDo {
   display: flex;
   justify-content: space-between;
-  border: 1px solid grey;
+  border: 1px dashed var(--border);
+  padding: 16px;
+  background-color: var(--background-secondary);
+}
+
+.ToDoInput {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.ToDoInput .Input {
+  width: 100%;
 }
