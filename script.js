@@ -422,3 +422,37 @@ previousButtonElement.addEventListener("click", () => {
 
   setActiveStates();
 });
+
+// Logic for locale storage
+
+const toDoInputElement = document.querySelector("#to-do-input");
+const saveButtonElement = document.querySelector("#to-do-save-button");
+const toDoSectionElement = toDoInputElement.closest(".Section");
+
+const inputValueFromLocaleStorage = localStorage.getItem("input");
+
+toDoInputElement.value = inputValueFromLocaleStorage;
+
+toDoInputElement.addEventListener("input", (event) => {
+  const inputValue = event.target.value;
+  console.log(inputValue);
+
+  localStorage.setItem("input", inputValue);
+});
+
+saveButtonElement.addEventListener("click", () => {
+  const inputValue = toDoInputElement.value;
+  const toDoElement = document.createElement("div");
+  toDoElement.classList.add("ToDo");
+  toDoElement.innerHTML = `
+  <p>${inputValue}</p>
+  <button class="RemoveInputButton"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+  `;
+  toDoSectionElement.appendChild(toDoElement);
+
+  const removeInputButtonElement =
+    toDoElement.querySelector(".RemoveInputButton");
+  removeInputButtonElement.addEventListener("click", () => {
+    toDoElement.remove();
+  });
+});
