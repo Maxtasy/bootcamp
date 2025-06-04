@@ -343,6 +343,7 @@ const shopTheLookElements = document.querySelectorAll(".ShopTheLook");
 const paginationItemElements = document.querySelectorAll(".Pagination__Item");
 const previousButtonElement = document.querySelector("[data-action='prev']");
 const nextButtonElement = document.querySelector("[data-action='next']");
+const saveIndicatorsButtonElement = document.querySelector("#save-indicators");
 
 let activeIndicator = null;
 let activeShopTheLookIndex = 0;
@@ -365,7 +366,7 @@ function setActiveStates() {
   });
 }
 
-indicatorElements.forEach((indicatorElement) => {
+indicatorElements.forEach((indicatorElement, index) => {
   indicatorElement.addEventListener("click", (event) => {
     const clickedIndicator = event.target;
 
@@ -389,6 +390,23 @@ indicatorElements.forEach((indicatorElement) => {
     xRangeElement.value = xValue;
     yRangeElement.value = yValue;
   });
+
+  const indicatorPositionsRaw = localStorage.getItem("indicator-positions");
+
+  if (!indicatorPositionsRaw) return;
+
+  const indicatorPositions = JSON.parse(indicatorPositionsRaw);
+
+  const positionsForElement = indicatorPositions[index];
+
+  indicatorElement.style.setProperty(
+    "--x-position",
+    positionsForElement.xPosition
+  );
+  indicatorElement.style.setProperty(
+    "--y-position",
+    positionsForElement.yPosition
+  );
 });
 
 xRangeElement.addEventListener("input", (event) => {
@@ -423,7 +441,22 @@ previousButtonElement.addEventListener("click", () => {
   setActiveStates();
 });
 
-// Logic for locale storage
+saveIndicatorsButtonElement.addEventListener("click", () => {
+  const indicatorPositions = [];
+
+  indicatorElements.forEach((indicatorElement) => {
+    const xPosition = indicatorElement.style.getPropertyValue("--x-position");
+    const yPosition = indicatorElement.style.getPropertyValue("--y-position");
+
+    indicatorPositions.push({ xPosition, yPosition });
+  });
+  localStorage.setItem(
+    "indicator-positions",
+    JSON.stringify(indicatorPositions)
+  );
+});
+
+// Logic for ToDo section
 
 const toDoInputElement = document.querySelector("#to-do-input");
 const saveButtonElement = document.querySelector("#to-do-save-button");
@@ -433,7 +466,6 @@ const localStorageValueRaw = localStorage.getItem("todos");
 const currentToDos = localStorageValueRaw
   ? JSON.parse(localStorageValueRaw)
   : [];
-console.log(currentToDos);
 
 currentToDos.forEach((currentToDo) => {
   appendToDo(currentToDo);
