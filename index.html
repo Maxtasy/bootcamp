@@ -4,7 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/todo.js" defer></script>
+    <script src="scripts/calculator.js" defer></script>
+    <script src="scripts/cat-api.js" defer></script>
+    <script src="scripts/chess-board.js" defer></script>
+    <script src="scripts/copy-buttons.js" defer></script>
+    <script src="scripts/drawers.js" defer></script>
+    <script src="scripts/flex-box-items.js" defer></script>
+    <script src="scripts/function.js" defer></script>
+    <script src="scripts/google-search.js" defer></script>
+    <script src="scripts/shop-the-look.js" defer></script>
+
     <link rel="icon" type="image/jpg" href="images/Favicon.jpg" />
     <title>Bootcamp</title>
   </head>
@@ -306,7 +317,7 @@
 
       <section class="Section Section--Vertical">
         <div class="Carousel">
-          <button data-action="prev">
+          <button data-action="prev" class="Button--Icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -395,7 +406,7 @@
             ></button>
           </div>
 
-          <button data-action="next">
+          <button data-action="next" class="Button--Icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -422,6 +433,19 @@
         <div class="Controls">
           <input type="range" name="x-position" id="" min="0" max="100" />
           <input type="range" name="y-position" id="" min="0" max="100" />
+        </div>
+
+        <button id="save-indicators" class="Button Button--Primary">
+          Save indicator position
+        </button>
+      </section>
+
+      <section class="Section Section--Vertical">
+        <div class="ToDoInput">
+          <input class="Input" type="text" name="" id="to-do-input" />
+          <button id="to-do-save-button" class="Button Button--Primary">
+            Save
+          </button>
         </div>
       </section>
     </div>
