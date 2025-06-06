@@ -3,6 +3,7 @@
 const toDoInputElement = document.querySelector("#to-do-input");
 const saveButtonElement = document.querySelector("#to-do-save-button");
 const toDoSectionElement = toDoInputElement.closest(".Section");
+const toDoFormElement = document.querySelector(".ToDoForm");
 
 const localStorageValueRaw = localStorage.getItem("todos");
 const currentToDos = localStorageValueRaw
@@ -38,7 +39,8 @@ function appendToDo(text) {
   });
 }
 
-saveButtonElement.addEventListener("click", () => {
+toDoFormElement.addEventListener("submit", (event) => {
+  event.preventDefault();
   const inputValue = toDoInputElement.value;
 
   appendToDo(inputValue);

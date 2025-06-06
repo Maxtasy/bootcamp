@@ -584,12 +584,12 @@ h2 {
   background-color: var(--background-secondary);
 }
 
-.ToDoInput {
+.ToDoForm {
   display: flex;
   gap: 16px;
   align-items: center;
 }
 
-.ToDoInput .Input {
+.ToDoForm .Input {
   width: 100%;
 }
