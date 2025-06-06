@@ -9,6 +9,7 @@ const paginationItemElements = document.querySelectorAll(".Pagination__Item");
 const previousButtonElement = document.querySelector("[data-action='prev']");
 const nextButtonElement = document.querySelector("[data-action='next']");
 const saveIndicatorsButtonElement = document.querySelector("#save-indicators");
+const popUpElements = document.querySelectorAll(".PopUp");
 
 let activeIndicator = null;
 let activeShopTheLookIndex = 0;
@@ -54,6 +55,10 @@ indicatorElements.forEach((indicatorElement, index) => {
 
     xRangeElement.value = xValue;
     yRangeElement.value = yValue;
+
+    // Show connected pop up
+
+    popUpElements[index].classList.add("PopUp--Active");
   });
 
   const indicatorPositionsRaw = localStorage.getItem("indicator-positions");

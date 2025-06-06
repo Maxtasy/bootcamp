@@ -593,3 +593,45 @@ h2 {
 .ToDoForm .Input {
   width: 100%;
 }
+
+.PopUp {
+  display: none;
+  gap: 16px;
+  width: 75%;
+  padding: 16px;
+  border: 1px solid var(--border);
+  background-color: var(--background-secondary);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.PopUp--Active {
+  display: flex;
+}
+
+.PopUp__Details {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.PopUp__Image {
+  flex-shrink: 0;
+  width: 120px;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+.PriceList {
+  display: flex;
+  gap: 8px;
+}
+
+.PriceList p {
+  color: red;
+  font-size: larger;
+}
