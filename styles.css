@@ -598,7 +598,7 @@ h2 {
   display: none;
   gap: 16px;
   width: 75%;
-  padding: 16px;
+  padding: 20px;
   border: 1px solid var(--border);
   background-color: var(--background-secondary);
   position: fixed;
@@ -614,7 +614,6 @@ h2 {
 .PopUp__Details {
   display: flex;
   flex-direction: column;
-
   gap: 16px;
   justify-content: space-between;
 }
