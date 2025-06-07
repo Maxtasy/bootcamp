@@ -38,8 +38,20 @@ linkElements.forEach((linkElement) => {
 
 backdropElement.addEventListener("click", () => {
   backdropElement.classList.remove("Backdrop--Active");
+
+  // Close all drawer Elements
+
   const drawerElements = document.querySelectorAll(".Drawer");
+
   drawerElements.forEach((drawerElement) => {
     drawerElement.classList.remove("Drawer--Active");
+  });
+
+  // Close all pop up elements
+
+  const popUpElements = document.querySelectorAll(".PopUp");
+
+  popUpElements.forEach((popUpElement) => {
+    popUpElement.classList.remove("PopUp--Active");
   });
 });
