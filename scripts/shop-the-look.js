@@ -10,6 +10,9 @@ const previousButtonElement = document.querySelector("[data-action='prev']");
 const nextButtonElement = document.querySelector("[data-action='next']");
 const saveIndicatorsButtonElement = document.querySelector("#save-indicators");
 const popUpElements = document.querySelectorAll(".PopUp");
+const popUpCloseButtonElements = document.querySelectorAll(
+  ".PopUp .CloseButton"
+);
 
 let activeIndicator = null;
 let activeShopTheLookIndex = 0;
@@ -59,6 +62,11 @@ indicatorElements.forEach((indicatorElement, index) => {
     // Show connected pop up
 
     popUpElements[index].classList.add("PopUp--Active");
+
+    // Show page overlay
+
+    const backdropElement = document.querySelector(".Backdrop");
+    backdropElement.classList.add("Backdrop--Active");
   });
 
   const indicatorPositionsRaw = localStorage.getItem("indicator-positions");
@@ -124,4 +132,16 @@ saveIndicatorsButtonElement.addEventListener("click", () => {
     "indicator-positions",
     JSON.stringify(indicatorPositions)
   );
+});
+
+popUpCloseButtonElements.forEach((popUpCloseButtonElement) => {
+  popUpCloseButtonElement.addEventListener("click", () => {
+    const connectedPopUpElement = popUpCloseButtonElement.closest(".PopUp");
+
+    connectedPopUpElement.classList.remove("PopUp--Active");
+
+    const backdropElement = document.querySelector(".Backdrop");
+
+    backdropElement.classList.remove("Backdrop--Active");
+  });
 });
