@@ -47,4 +47,6 @@ toDoFormElement.addEventListener("submit", (event) => {
 
   currentToDos.push(inputValue);
   localStorage.setItem("todos", JSON.stringify(currentToDos));
+
+  toDoInputElement.value = "";
 });
