@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% include "partials/style-imports.html" %}
+
+    <script src="/scripts/chess-board.js" defer></script>
+
+    <title>Chess-board</title>
+  </head>
+  <body>
+    {% include "partials/header.html" %}
+
+    <div class="PageContent">
+      <section class="Section">
+        <div id="chessboard" class="Chessboard"></div>
+      </section>
+    </div>
+  </body>
+</html>

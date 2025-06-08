@@ -3,75 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="scripts/script.js" defer></script>
-    <script src="scripts/todo.js" defer></script>
-    <script src="scripts/calculator.js" defer></script>
-    <script src="scripts/cat-api.js" defer></script>
-    <script src="scripts/chess-board.js" defer></script>
-    <script src="scripts/copy-buttons.js" defer></script>
-    <script src="scripts/drawers.js" defer></script>
-    <script src="scripts/flex-box-items.js" defer></script>
-    <script src="scripts/function.js" defer></script>
-    <script src="scripts/google-search.js" defer></script>
-    <script src="scripts/shop-the-look.js" defer></script>
+
+    {% include "partials/style-imports.html" %}
+
+    <script src="/scripts/script.js" defer></script>
+    <script src="/scripts/todo.js" defer></script>
+    <script src="/scripts/cat-api.js" defer></script>
+    <script src="/scripts/copy-buttons.js" defer></script>
+    <script src="/scripts/drawers.js" defer></script>
+    <script src="/scripts/flex-box-items.js" defer></script>
+    <script src="/scripts/function.js" defer></script>
+    <script src="/scripts/google-search.js" defer></script>
+    <script src="/scripts/shop-the-look.js" defer></script>
 
     <link rel="icon" type="image/jpg" href="images/Favicon.jpg" />
     <title>Bootcamp</title>
   </head>
   <body>
-    <header class="SiteHeader">
-      <button class="Button--Icon u-HiddenDesktop" data-drawer-trigger="menu">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-menu-icon lucide-menu"
-        >
-          <path d="M4 12h16" />
-          <path d="M4 18h16" />
-          <path d="M4 6h16" />
-        </svg>
-      </button>
-
-      <button class="Button--Icon u-HiddenDesktop" data-drawer-trigger="cart">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-shopping-cart-icon lucide-shopping-cart"
-        >
-          <circle cx="8" cy="21" r="1" />
-          <circle cx="19" cy="21" r="1" />
-          <path
-            d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
-          />
-        </svg>
-      </button>
-
-      <nav class="NavigationBar">
-        <ul class="u-NoList">
-          <li><a class="Link" href="#buttons">Buttons</a></li>
-          <li><a class="Link" href="#idcards">ID Cards</a></li>
-          <li>
-            <a class="Link" href="#flags">Flags</a>
-          </li>
-          <li><a class="Link" href="#chess-board">Chessboard</a></li>
-        </ul>
-      </nav>
-    </header>
+    {% include "partials/header.html" %}
 
     <div class="Backdrop"></div>
 
@@ -222,10 +171,6 @@
         </div>
       </section>
 
-      <section id="chess-board" class="Section">
-        <div id="chessboard" class="Chessboard"></div>
-      </section>
-
       <section class="Section">
         <div class="GooglePage">
           <img class="GoogleLogo" src="images/Google.png" alt="GoogleLogo" />
@@ -280,39 +225,6 @@
           max="9"
           min="1"
         />
-      </section>
-
-      <section class="Section">
-        <div class="CalculatorGrid">
-          <div class="Output">
-            <div data-previous-operand class="PreviousOperand"></div>
-            <div data-current-operand class="CurrentOperand"></div>
-          </div>
-          <button data-all-clear class="GridItem GridItem--SpanTwo">AC</button>
-          <button class="GridItem" data-delete>DEL</button>
-          <button class="GridItem" data-operation>÷</button>
-          <button class="GridItem" data-number>1</button>
-          <button class="GridItem" data-number>2</button>
-          <button class="GridItem" data-number>3</button>
-          <button class="GridItem" data-operation>*</button>
-          <button class="GridItem" data-number>4</button>
-          <button class="GridItem" data-number>5</button>
-          <button class="GridItem" data-number>6</button>
-          <button class="GridItem" data-operation>+</button>
-          <button class="GridItem" data-number>7</button>
-          <button class="GridItem" data-number>8</button>
-          <button class="GridItem" data-number>9</button>
-          <button class="GridItem" data-operation>-</button>
-          <button class="GridItem" data-number>.</button>
-          <button class="GridItem" data-number>0</button>
-          <button
-            class="GridItem GridItem--SpanTwo"
-            data-equals
-            class="SpanTwo"
-          >
-            =
-          </button>
-        </div>
       </section>
 
       <section class="Section Section--Vertical">
