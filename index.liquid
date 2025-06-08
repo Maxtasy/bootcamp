@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    {% include "partials/style-imports.html" %}
+    {% include "partials/style-imports.html" %} 
+    {% include "partials/global-scripts.html" %}
 
     <script src="/scripts/script.js" defer></script>
     <script src="/scripts/todo.js" defer></script>
     <script src="/scripts/cat-api.js" defer></script>
     <script src="/scripts/copy-buttons.js" defer></script>
-    <script src="/scripts/drawers.js" defer></script>
     <script src="/scripts/flex-box-items.js" defer></script>
     <script src="/scripts/function.js" defer></script>
     <script src="/scripts/google-search.js" defer></script>
@@ -24,61 +24,7 @@
 
     <div class="Backdrop"></div>
 
-    <aside class="Drawer Drawer--Right PageContent" data-drawer="cart">
-      <ul class="u-NoList">
-        <li><a class="Link" href="#buttons">Buttons</a></li>
-        <li><a class="Link" href="#idcards">ID Cards</a></li>
-        <li>
-          <a class="Link" href="#flags">Flags</a>
-        </li>
-        <li><a class="Link" href="#chess-board">Chessboard</a></li>
-      </ul>
-      <button class="CloseButton Button--Icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-x-icon lucide-x"
-        >
-          <path d="M18 6 6 18" />
-          <path d="m6 6 12 12" />
-        </svg>
-      </button>
-    </aside>
-
-    <aside class="Drawer Drawer--Left PageContent" data-drawer="menu">
-      <ul class="u-NoList">
-        <li><a class="Link" href="#buttons">Buttons</a></li>
-        <li><a class="Link" href="#idcards">ID Cards</a></li>
-        <li>
-          <a class="Link" href="#flags">Flags</a>
-        </li>
-        <li><a class="Link" href="#chess-board">Chessboard</a></li>
-      </ul>
-      <button class="CloseButton Button--Icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-x-icon lucide-x"
-        >
-          <path d="M18 6 6 18" />
-          <path d="m6 6 12 12" />
-        </svg>
-      </button>
-    </aside>
+    {% include "partials/drawers.html" %}
 
     <div class="PageContent">
       <section class="Section">
