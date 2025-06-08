@@ -584,6 +584,14 @@ h2 {
   background-color: var(--background-secondary);
 }
 
+.ToDo--Success {
+  background-color: rgb(175, 253, 175);
+}
+
+.IconGroup {
+  display: flex;
+}
+
 .ToDoForm {
   display: flex;
   gap: 16px;

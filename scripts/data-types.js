@@ -57,4 +57,9 @@ const object = {
   },
 };
 
+const toDoItem = {
+  text: "Hier ist der Text",
+  done: false,
+};
+
 // console.log(object.d.x);
