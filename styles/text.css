@@ -1,0 +1,27 @@
+.Text {
+  font-size: 16px;
+}
+
+.Text--BodySmall {
+  font-size: 12px;
+}
+
+.Text--BodyMedium {
+  font-size: 16px;
+}
+
+.Text--BodyLarge {
+  font-size: 24px;
+}
+
+.Text--HeadingSmall {
+  font-size: 24px;
+}
+
+.Text--HeadingMedium {
+  font-size: 32px;
+}
+
+.Text--HeadingLarge {
+  font-size: 40px;
+}
