@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% include 'partials/global-styles.html' %}
+    {% include 'partials/global-scripts.html' %}
+
+    <script src="/scripts/script.js" defer></script>
+    <script src="/scripts/todo.js" defer></script>
+    <script src="/scripts/flex-box-items.js" defer></script>
+    <script src="/scripts/function.js" defer></script>
+
+    <link rel="icon" type="image/jpg" href="images/Favicon.jpg">
+    <title>Bootcamp</title>
+  </head>
+  <body>
+    {% include 'partials/header.html' %}
+
+    <div class="Backdrop"></div>
+
+    {% include 'partials/drawers.html' %}
+
+    <div class="PageContent">
+      <section class="Section">
+        <h1 title="im a header">Bootcamp</h1>
+      </section>
+
+      <section class="Section">
+        <section class="Container">
+          <div class="Item">1</div>
+          <div class="Item">2</div>
+          <div class="Item">3</div>
+          <div class="Item">4</div>
+          <div class="Item">5</div>
+          <div class="Item">6</div>
+          <div class="Item">7</div>
+          <div class="Item">8</div>
+          <div class="Item">9</div>
+          <div class="Item">10</div>
+          <div class="Item">11</div>
+          <div class="Item">12</div>
+        </section>
+      </section>
+
+      <section id="idcards" class="Section">
+        <div class="Box">
+          <div class="Box__Header">
+            <div class="Circle"><span>M.M.</span></div>
+            <p class="Text">Max Mustermann</p>
+          </div>
+          <p class="Text">Lorem ipsum dolor sit fuller words.</p>
+        </div>
+      </section>
+
+      <section class="Section">
+        <div class="Box">
+          <div class="Box__Header">
+            <div class="Circle">
+              <img class="Norman" src="images/norman.jpeg" alt="Norman">
+            </div>
+            <p class="Text">Norman Ritter</p>
+          </div>
+          <p class="Text">Was ist mit die Fische?</p>
+        </div>
+      </section>
+
+      <section class="Section Section--Vertical">
+        <form class="ToDoForm">
+          <input class="Input" type="text" name="" id="to-do-input">
+          <button id="to-do-save-button" class="Button Button--Primary">Save</button>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

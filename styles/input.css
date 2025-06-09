@@ -1,0 +1,45 @@
+.InputWrapper {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+}
+
+.Input {
+  height: 40px;
+  font-size: 16px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  box-shadow: 0px 2px 8px 0px rgba(60, 64, 67, 0.25);
+  background-color: #fff;
+  outline: none;
+  padding: 0 16px;
+}
+
+.Input:hover {
+  box-shadow: 0 2px 8px 1px rgba(64, 60, 67, 0.24);
+}
+
+.Input--Search {
+  width: 100%;
+}
+
+.Input--WithIcon {
+  padding-left: 48px;
+}
+
+.Input--Number {
+  max-width: 8ch;
+  padding: 0 20px;
+}
+
+.Input__Action {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+
+.Input__Action--Active {
+  display: block;
+}

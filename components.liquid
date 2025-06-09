@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% include 'partials/global-styles.html' %}
+    {% include 'partials/global-scripts.html' %}
+
+    <title>Components</title>
+  </head>
+  <body>
+    {% include 'partials/header.html' %}
+
+    <div class="Backdrop"></div>
+
+    {% include 'partials/drawers.html' %}
+
+    <div class="PageContent">
+      <h1 class="Text--HeadingLarge">Components</h1>
+
+      <section class="Section Section--Vertical">
+        <h2 class="Text--HeadingMedium">Text</h2>
+        <h2 class="Text--HeadingLarge">Heading Large</h2>
+        <h2 class="Text--HeadingMedium">Heading Medium</h2>
+        <h2 class="Text--HeadingSmall">Heading Small</h2>
+        <p class="Text--BodyLarge">Body Large</p>
+        <p class="Text--BodyMedium">Body Medium</p>
+        <p class="Text--BodySmall">Body Small</p>
+      </section>
+
+      <section class="Section Section--Vertical">
+        <h2 class="Text--HeadingMedium">Inputs</h2>
+
+        <input class="Input" type="text" name="">
+
+        <div class="InputWrapper">
+          <input class="Input Input--WithIcon" type="password">
+          <button class="Input__Action Input__Action--Active">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-eye-icon lucide-eye"
+            >
+              <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+          <button class="Input__Action">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-eye-off-icon lucide-eye-off"
+            >
+              <path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="InputWrapper">
+          <input class="Input Input--WithIcon" type="password">
+          <button class="Input__Action Input__Action--Active">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-eye-icon lucide-eye"
+            >
+              <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+          <button class="Input__Action">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-eye-off-icon lucide-eye-off"
+            >
+              <path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/>
+            </svg>
+          </button>
+        </div>
+
+        <input
+          class="Input Input--Number"
+          type="number"
+          value="1"
+          max="9"
+          min="1"
+        >
+      </section>
+
+      <section class="Section Section--Vertical">
+        <h2 class="Text--HeadingMedium">Buttons</h2>
+
+        <div class="ButtonGroup">
+          <button class="Button Button--Primary">Primary</button>
+          <button class="Button Button--Secondary">Secondary</button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

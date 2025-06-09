@@ -1,0 +1,28 @@
+{
+  "name": "bootcamp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maxtasy/bootcamp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maxtasy/bootcamp/issues"
+  },
+  "homepage": "https://github.com/Maxtasy/bootcamp#readme",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.1"
+  },
+  "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.9.3",
+    "prettier": "^3.5.3"
+  }
+}

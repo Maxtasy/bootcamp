@@ -1,0 +1,32 @@
+.Button {
+  padding: 16px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 12px;
+  transition: 0.5s;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  font-family: arial;
+  font-size: large;
+}
+
+.Button:hover {
+  color: red;
+  border-radius: 12px;
+}
+
+.Button--Primary {
+  color: var(--button-primary-text);
+  background-color: var(--button-primary-background);
+}
+
+.Button--Secondary {
+  color: var(--button-secondary-text);
+  background-color: var(--button-secondary-background);
+}
+
+.Button--Icon {
+  color: var(--icon);
+  padding: 4px;
+}

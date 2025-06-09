@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% include 'partials/global-styles.html' %}
+    {% include 'partials/global-scripts.html' %}
+
+    <script src="/scripts/google-search.js" defer></script>
+
+    <title>Google-page</title>
+  </head>
+  <body>
+    {% include 'partials/header.html' %}
+
+    <div class="Backdrop"></div>
+
+    {% include 'partials/drawers.html' %}
+
+    <div class="PageContent">
+      <section class="Section">
+        <div class="GooglePage">
+          <img class="GoogleLogo" src="/images/Google.png" alt="GoogleLogo">
+          <div class="GoogleSearch">
+            <div class="InputWrapper">
+              <input
+                id="google-input"
+                type="text"
+                class="Input Input--Search Input--WithIcon"
+                placeholder="Google-Suche"
+              >
+
+              <svg
+                class="Input__Action"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="grey"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-search-icon lucide-search"
+              >
+                <path d="m21 21-4.34-4.34" />
+                <circle cx="11" cy="11" r="8" />
+              </svg>
+            </div>
+
+            <div class="GoogleButtons">
+              <button id="google-search-button">Google-Suche</button>
+              <button>Auf gut Glück!</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
