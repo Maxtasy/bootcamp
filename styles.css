@@ -519,6 +519,12 @@ h2 {
   background-color: var(--background-secondary);
 }
 
+.editInput {
+  padding: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+
 .ToDo--Success {
   background-color: rgb(175, 253, 175);
 }
