@@ -584,3 +584,47 @@ h2 {
   color: red;
   font-size: larger;
 }
+
+#accordion {
+  width: 100%;
+}
+
+#accordion li {
+  list-style: none;
+  background-color: var(--background-secondary);
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#accordion li label {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: red;
+}
+
+#accordion li label span {
+  transform: rotate(90deg);
+  font-size: 22px;
+}
+
+#accordion label + input[type="radio"] {
+  display: none;
+}
+
+#accordion .AccordionContent {
+  line-height: 26px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-heihght 0.5s;
+}
+
+#accordion label + input[type="radio"]:checked + .AccordionContent {
+  max-height: 400px;
+}
