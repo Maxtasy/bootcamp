@@ -519,6 +519,22 @@ h2 {
   background-color: var(--background-secondary);
 }
 
+.ToDo__Text {
+  display: none;
+}
+
+.ToDo__Text--Active {
+  display: inline;
+}
+
+.ToDo__Input {
+  display: none;
+}
+
+.ToDo__Input--Active {
+  display: inline;
+}
+
 .editInput {
   padding: 4px;
   font-size: 1rem;
