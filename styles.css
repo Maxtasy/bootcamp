@@ -519,6 +519,28 @@ h2 {
   background-color: var(--background-secondary);
 }
 
+.ToDo__Text {
+  display: none;
+}
+
+.ToDo__Text--Active {
+  display: inline;
+}
+
+.ToDo__Input {
+  display: none;
+}
+
+.ToDo__Input--Active {
+  display: inline;
+}
+
+.editInput {
+  padding: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+
 .ToDo--Success {
   background-color: rgb(175, 253, 175);
 }
@@ -577,4 +599,92 @@ h2 {
 .PriceList p {
   color: red;
   font-size: larger;
+}
+
+.Accordion li {
+  list-style: none;
+  background-color: var(--background-secondary);
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.Accordion li label {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: red;
+}
+
+.Accordion li label span {
+  transform: rotate(90deg);
+  font-size: 22px;
+}
+
+.Accordion label input[type="checkbox"] {
+  display: none;
+}
+
+.Accordion .AccordionContent {
+  line-height: 26px;
+  max-height: 0;
+  overflow-y: auto;
+  transition: max-height 0.5s;
+  padding: 0 8px;
+}
+
+.Accordion li:has(input[type="checkbox"]:checked) .AccordionContent {
+  max-height: 400px;
+}
+
+.Accordion {
+  width: 100%;
+}
+
+.AccordionWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Accordion
+  li:has(input[type="checkbox"]:checked)
+  .lucide-plus-icon
+  path:last-child {
+  transform: rotate(270deg);
+}
+
+.lucide-plus-icon path:last-child {
+  transition: transform 300ms ease-in-out;
+  transform-origin: center;
+}
+
+.AccordionJS__Content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.AccordionJS__Content--Active {
+  max-height: calc(var(--content-height, 0) * 1px);
+}
+
+.AccordionJS__Label {
+  width: 100%;
+  color: var(--text-color-primary);
+  font-weight: bold;
+  padding: 1rem;
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.AccordionJS__Content p {
+  padding: 1rem;
+  margin: 0;
+  background-color: var(--background-secondary);
 }
