@@ -662,3 +662,29 @@ h2 {
   transition: transform 300ms ease-in-out;
   transform-origin: center;
 }
+
+.AccordionJS__Content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.AccordionJS__Content--Active {
+  max-height: calc(var(--content-height, 0) * 1px);
+}
+
+.AccordionJS__Label {
+  width: 100%;
+  color: var(--text-color-primary);
+  font-weight: bold;
+  padding: 1rem;
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.AccordionJS__Content p {
+  padding: 1rem;
+  margin: 0;
+  background-color: var(--background-secondary);
+}
