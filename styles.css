@@ -52,7 +52,6 @@ html {
 body {
   background-color: var(--background-primary);
   color: var(--text-color-primary);
-  font-family: arial;
   margin: 0px;
 }
 
@@ -219,7 +218,10 @@ h2 {
   background-color: red;
 }
 
-.Box {
+.IdCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   border-radius: 48px;
   background-color: var(--background-secondary);
   padding: 32px 32px;
@@ -229,7 +231,7 @@ h2 {
   transition: 0.5s;
 }
 
-.Box:hover {
+.IdCard:hover {
   transform: scale(98%);
 }
 
@@ -244,7 +246,7 @@ h2 {
   overflow: hidden;
 }
 
-.Box__Header {
+.IdCard__Header {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -342,7 +344,6 @@ h2 {
 .GooglePage {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -617,7 +618,7 @@ h2 {
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  color: red;
+  color: var(--text-color-primary);
 }
 
 .Accordion li label span {
@@ -674,6 +675,8 @@ h2 {
 }
 
 .AccordionJS__Label {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   color: var(--text-color-primary);
   font-weight: bold;

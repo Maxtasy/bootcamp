@@ -22,7 +22,7 @@ function appendToDo(toDoItem) {
   }
 
   toDoElement.innerHTML = `
-  <p class="ToDo__Text ToDo__Text--Active">${toDoItem.text}</p>
+  <p class="ToDo__Text ToDo__Text--Active Text">${toDoItem.text}</p>
   <input class="ToDo__Input" value="${toDoItem.text}" />
   <div class="IconGroup">
     <button class="CheckmarkButton Button--Icon">
