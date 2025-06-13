@@ -7,6 +7,8 @@
     {% include 'partials/global-styles.html' %}
     {% include 'partials/global-scripts.html' %}
 
+    <script src="/scripts/accordion.js" defer></script>
+
     <title>Components</title>
   </head>
   <body>
@@ -17,20 +19,20 @@
     {% include 'partials/drawers.html' %}
 
     <div class="PageContent">
-      <h1 class="Text--HeadingLarge">Components</h1>
+      <h1 class=" Text Text--HeadingLarge">Components</h1>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text--HeadingMedium">Text</h2>
-        <h2 class="Text--HeadingLarge">Heading Large</h2>
-        <h2 class="Text--HeadingMedium">Heading Medium</h2>
-        <h2 class="Text--HeadingSmall">Heading Small</h2>
-        <p class="Text--BodyLarge">Body Large</p>
-        <p class="Text--BodyMedium">Body Medium</p>
-        <p class="Text--BodySmall">Body Small</p>
+        <h2 class="Text Text--HeadingMedium">Text</h2>
+        <h2 class="Text Text--HeadingLarge">Heading Large</h2>
+        <h2 class="Text Text--HeadingMedium">Heading Medium</h2>
+        <h2 class="Text Text--HeadingSmall">Heading Small</h2>
+        <p class="Text Text--BodyLarge">Body Large</p>
+        <p class="Text Text--BodyMedium">Body Medium</p>
+        <p class="Text Text--BodySmall">Body Small</p>
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text--HeadingMedium">Inputs</h2>
+        <h2 class="Text Text--HeadingMedium">Inputs</h2>
 
         <input class="Input" type="text" name="">
 
@@ -116,11 +118,218 @@
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text--HeadingMedium">Buttons</h2>
+        <h2 class="Text Text--HeadingMedium">Buttons</h2>
 
         <div class="ButtonGroup">
           <button class="Button Button--Primary">Primary</button>
           <button class="Button Button--Secondary">Secondary</button>
+        </div>
+      </section>
+
+      <section class="Section Section--Vertical">
+        <h2 class="Text Text--HeadingMedium">Accordions</h2>
+
+        <h3 class="Text Text--HeadingSmall">Accordion with HTML and CSS</h3>
+
+        <ul class="u-NoList Accordion">
+          <div class="AccordionWrapper">
+            <li>
+              <label>
+                <p class="Text Text--BodyLarge">How to create?</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-plus-icon lucide-plus"
+                >
+                  <path d="M5 12h14"/><path d="M12 5v14"/>
+                </svg>
+                <input type="checkbox">
+              </label>
+              <div class="AccordionContent">
+                <p class="Text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+                  distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <label>
+                <p class="Text Text--BodyLarge">Where to use?</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-plus-icon lucide-plus"
+                >
+                  <path d="M5 12h14"/><path d="M12 5v14"/>
+                </svg>
+                <input type="checkbox">
+              </label>
+              <div class="AccordionContent">
+                <p class="Text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+                  distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <label>
+                <p class="Text Text--BodyLarge">What is accordion?</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-plus-icon lucide-plus"
+                >
+                  <path d="M5 12h14"/><path d="M12 5v14"/>
+                </svg>
+                <input type="checkbox">
+              </label>
+              <div class="AccordionContent">
+                <p class="Text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+                  distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
+                </p>
+              </div>
+            </li>
+          </div>
+        </ul>
+
+        <h3 class="Text Text--HeadingSmall">Accordion with HTML, CSS and JS</h3>
+
+        <div class="AccordionWrapper">
+          <div class="AccordionJS__Box">
+            <button class="AccordionJS__Label">
+              <p class="Text">List One</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-plus-icon lucide-plus"
+              >
+                <path d="M5 12h14"/><path d="M12 5v14"/>
+              </svg>
+            </button>
+
+            <div class="AccordionJS__Content">
+              <p class="Text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur rem reiciendis explicabo voluptate
+                culpa neque. Quos velit quam ullam consequatur officia eius expedita aliquam ipsa! Quasi quidem cum vel
+                distinctio!
+              </p>
+            </div>
+          </div>
+
+          <div class="AccordionJS__Box">
+            <button class="AccordionJS__Label">
+              <p class="Text">List Two</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-plus-icon lucide-plus"
+              >
+                <path d="M5 12h14"/><path d="M12 5v14"/>
+              </svg>
+            </button>
+
+            <div class="AccordionJS__Content">
+              <p class="Text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur rem reiciendis explicabo voluptate
+                culpa neque. Quos velit quam ullam consequatur officia eius expedita aliquam ipsa! Quasi quidem cum vel
+                distinctio!
+              </p>
+            </div>
+          </div>
+
+          <div class="AccordionJS__Box">
+            <button class="AccordionJS__Label">
+              <p class="Text">List Three</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-plus-icon lucide-plus"
+              >
+                <path d="M5 12h14"/><path d="M12 5v14"/>
+              </svg>
+            </button>
+
+            <div class="AccordionJS__Content">
+              <p class="Text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur rem reiciendis explicabo voluptate
+                culpa neque. Quos velit quam ullam consequatur officia eius expedita aliquam ipsa! Quasi quidem cum vel
+                distinctio!
+              </p>
+            </div>
+          </div>
+
+          <div class="AccordionJS__Box">
+            <button class="AccordionJS__Label">
+              <p class="Text">List Four</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-plus-icon lucide-plus"
+              >
+                <path d="M5 12h14"/><path d="M12 5v14"/>
+              </svg>
+            </button>
+
+            <div class="AccordionJS__Content">
+              <p class="Text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur rem reiciendis explicabo voluptate
+                culpa neque. Quos velit quam ullam consequatur officia eius expedita aliquam ipsa! Quasi quidem cum vel
+                distinctio!
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
