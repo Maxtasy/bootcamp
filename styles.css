@@ -55,7 +55,8 @@ body {
   margin: 0px;
 }
 
-button {
+button,
+button-component {
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -119,22 +120,24 @@ p {
   transform: translateX(0);
 }
 
-.CloseButton {
+.CloseButton,
+.Drawer__Close {
+  color: var(--icon);
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.NavigationBar ul {
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .NavigationBar {
   display: none;
   width: 100%;
+  padding: 20px;
+}
+
+.NavigationBar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 400px) {
@@ -152,7 +155,11 @@ p {
 }
 
 .NavigationBar li:not(:last-child) {
-  border-right: 1px solid var(--border);
+  border-right: 2px solid var(--border);
+}
+
+.NavigationBar li {
+  display: flex;
 }
 
 .Link:hover {
@@ -684,6 +691,13 @@ h2 {
   background-color: var(--background-secondary);
   border-bottom: 1px solid #ccc;
   border-radius: 8px;
+}
+
+.AccordionWrapper
+  .AccordionJS__Box:has(.AccordionJS__Content--Active)
+  .lucide-plus-icon
+  path:last-child {
+  transform: rotate(270deg);
 }
 
 .AccordionJS__Content p {

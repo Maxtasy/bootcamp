@@ -1,4 +1,4 @@
-<aside class="Drawer Drawer--Right PageContent" data-drawer="cart">
+<drawer-component class="Drawer Drawer--Right PageContent" data-drawer="cart">
   <ul class="u-NoList">
     <li>
       <a class="Link" href="/">
@@ -21,26 +21,29 @@
       </a>
     </li>
   </ul>
-  <button class="CloseButton Button--Icon">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="lucide lucide-x-icon lucide-x"
-    >
-      <path d="M18 6 6 18" />
-      <path d="m6 6 12 12" />
-    </svg>
-  </button>
-</aside>
 
-<aside class="Drawer Drawer--Left PageContent" data-drawer="menu">
+  <div class="Drawer__Close">
+    <button-component class="Button--Icon" data-action="close">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-x-icon lucide-x"
+      >
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </svg>
+    </button-component>
+  </div>
+</drawer-component>
+
+<drawer-component class="Drawer Drawer--Left PageContent" data-drawer="menu">
   <ul class="u-NoList">
     <li>
       <a class="Link" href="/">
@@ -63,21 +66,23 @@
       </a>
     </li>
   </ul>
-  <button class="CloseButton Button--Icon">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="lucide lucide-x-icon lucide-x"
-    >
-      <path d="M18 6 6 18" />
-      <path d="m6 6 12 12" />
-    </svg>
-  </button>
-</aside>
+  <div class="Drawer__Close">
+    <button-component class="Button--Icon" data-action="close">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-x-icon lucide-x"
+      >
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </svg>
+    </button-component>
+  </div>
+</drawer-component>

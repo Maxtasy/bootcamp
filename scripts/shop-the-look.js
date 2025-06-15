@@ -11,7 +11,7 @@ const nextButtonElement = document.querySelector("[data-action='next']");
 const saveIndicatorsButtonElement = document.querySelector("#save-indicators");
 const popUpElements = document.querySelectorAll(".PopUp");
 const popUpCloseButtonElements = document.querySelectorAll(
-  ".PopUp .CloseButton"
+  ".PopUp .CloseButton",
 );
 
 let activeIndicator = null;
@@ -22,7 +22,7 @@ function setActiveStates() {
     const isActiveShopTheLookElement = index === activeShopTheLookIndex;
     shopTheLookElement.classList.toggle(
       "ShopTheLook--Active",
-      isActiveShopTheLookElement
+      isActiveShopTheLookElement,
     );
   });
 
@@ -30,7 +30,7 @@ function setActiveStates() {
     const isActivePaginationItemElement = index === activeShopTheLookIndex;
     paginationItemElement.classList.toggle(
       "Pagination__Item--Active",
-      isActivePaginationItemElement
+      isActivePaginationItemElement,
     );
   });
 }
@@ -60,13 +60,15 @@ indicatorElements.forEach((indicatorElement, index) => {
     yRangeElement.value = yValue;
 
     // Show connected pop up
+    const handle = clickedIndicator.getAttribute("data-handle");
 
-    popUpElements[index].classList.add("PopUp--Active");
+    const popupShowEvent = new CustomEvent("popup:show", { detail: handle });
+    document.dispatchEvent(popupShowEvent);
 
     // Show page overlay
 
-    const backdropElement = document.querySelector(".Backdrop");
-    backdropElement.classList.add("Backdrop--Active");
+    const backdropShowEvent = new Event("backdrop:show");
+    document.dispatchEvent(backdropShowEvent);
   });
 
   const indicatorPositionsRaw = localStorage.getItem("indicator-positions");
@@ -79,11 +81,11 @@ indicatorElements.forEach((indicatorElement, index) => {
 
   indicatorElement.style.setProperty(
     "--x-position",
-    positionsForElement.xPosition
+    positionsForElement.xPosition,
   );
   indicatorElement.style.setProperty(
     "--y-position",
-    positionsForElement.yPosition
+    positionsForElement.yPosition,
   );
 });
 
@@ -130,18 +132,6 @@ saveIndicatorsButtonElement.addEventListener("click", () => {
   });
   localStorage.setItem(
     "indicator-positions",
-    JSON.stringify(indicatorPositions)
+    JSON.stringify(indicatorPositions),
   );
-});
-
-popUpCloseButtonElements.forEach((popUpCloseButtonElement) => {
-  popUpCloseButtonElement.addEventListener("click", () => {
-    const connectedPopUpElement = popUpCloseButtonElement.closest(".PopUp");
-
-    connectedPopUpElement.classList.remove("PopUp--Active");
-
-    const backdropElement = document.querySelector(".Backdrop");
-
-    backdropElement.classList.remove("Backdrop--Active");
-  });
 });
