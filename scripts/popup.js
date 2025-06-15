@@ -1,7 +1,45 @@
-// 1. Create popup component
+// Create popup component
+class Popup extends HTMLElement {
+  constructor() {
+    super();
 
-// 2. Add methods show and hide
+    this.handle = this.getAttribute("data-handle");
 
-// 3. Listen for events popup:show and popup:hide
+    // Listen for events popup:show and popup:hide
 
-// 4. On indicator click open connected popup (new Event ---> new CustomEvent)
+    document.addEventListener("popup:show", (event) => {
+      if (this.handle === event.detail) {
+        this.show();
+      }
+    });
+
+    document.addEventListener("popup:hide", () => {
+      this.hide();
+
+      const event = new Event("backdrop:hide");
+      document.dispatchEvent(event);
+    });
+
+    this.closeButtonElement.addEventListener("click", () => {
+      this.hide();
+
+      const event = new Event("backdrop:hide");
+      document.dispatchEvent(event);
+    });
+  }
+
+  // Add methods show and hide
+  show() {
+    this.classList.add("PopUp--Active");
+  }
+
+  hide() {
+    this.classList.remove("PopUp--Active");
+  }
+
+  get closeButtonElement() {
+    return this.querySelector(".CloseButton");
+  }
+}
+
+customElements.define("popup-component", Popup);

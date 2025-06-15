@@ -1,3 +1,17 @@
-// 1. Create button component
+class Button extends HTMLElement {
+  constructor() {
+    super();
+    this.addEventListener("click", () => {
+      const action = this.getAttribute("data-action");
 
-// 2. Add methods
+      this.dispatchEvent(
+        new CustomEvent(`button:click:${action}`, {
+          bubbles: true,
+          isTrusted: true,
+        }),
+      );
+    });
+  }
+}
+
+customElements.define("button-component", Button);

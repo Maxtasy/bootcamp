@@ -10,11 +10,10 @@ class Drawer extends HTMLElement {
       this.close();
     });
 
-    this.closeButtonElement.addEventListener("click", () => {
+    this.addEventListener("button:click:close", () => {
       this.close();
 
-      const event = new Event("backdrop:hide");
-      document.dispatchEvent(event);
+      document.dispatchEvent(new Event("backdrop:hide"));
     });
   }
 
@@ -24,10 +23,6 @@ class Drawer extends HTMLElement {
 
   close() {
     this.classList.remove("Drawer--Active");
-  }
-
-  get closeButtonElement() {
-    return this.querySelector(".CloseButton");
   }
 }
 
