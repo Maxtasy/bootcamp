@@ -31,24 +31,3 @@ linkElements.forEach((linkElement) => {
     document.dispatchEvent(event);
   });
 });
-
-// backdropElement.addEventListener("click", () => {
-//   const event = new Event("backdrop:hide");
-//   document.dispatchEvent(event);
-
-//   // Close all drawer Elements
-
-//   const drawerElements = document.querySelectorAll(".Drawer");
-
-//   drawerElements.forEach((drawerElement) => {
-//     drawerElement.classList.remove("Drawer--Active");
-//   });
-
-//   // Close all pop up elements (Shop-the-look)
-
-//   const popUpElements = document.querySelectorAll(".PopUp");
-
-//   popUpElements.forEach((popUpElement) => {
-//     popUpElement.classList.remove("PopUp--Active");
-//   });
-// });
