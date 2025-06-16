@@ -8,6 +8,8 @@
   --button-primary-background: rgb(0, 0, 0);
   --button-secondary-text: rgb(0, 0, 0);
   --button-secondary-background: rgb(255, 255, 255);
+
+  --surface-success: rgb(175, 253, 175);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +23,8 @@
     --button-primary-background: rgb(255, 255, 255);
     --button-secondary-text: rgb(255, 255, 255);
     --button-secondary-background: rgb(0, 0, 0);
+
+    --surface-success: rgb(0, 43, 0);
   }
 }
 
@@ -522,6 +526,7 @@ h2 {
 .ToDo {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border: 1px dashed var(--border);
   padding: 16px;
   background-color: var(--background-secondary);
@@ -537,6 +542,7 @@ h2 {
 
 .ToDo__Input {
   display: none;
+  width: 100%;
 }
 
 .ToDo__Input--Active {
@@ -550,7 +556,7 @@ h2 {
 }
 
 .ToDo--Success {
-  background-color: rgb(175, 253, 175);
+  background-color: var(--surface-success);
 }
 
 .IconGroup {
