@@ -83,15 +83,20 @@ function addEventListenersToTodo(todoElement) {
 
   removeButtonElement.addEventListener("click", () => {
     const currentTodos = getTodosFromLocalStorage();
-    const text = todoElement.querySelector(".ToDo__Text").textContent;
 
-    const toDoIndex = currentTodos.findIndex((todo) => todo.text === text);
+    const todoIndex = [...document.querySelectorAll(".ToDo")].findIndex(
+      (todo) => todo === todoElement,
+    );
 
-    const updatedTodos = currentTodos.splice(toDoIndex, 1);
-    localStorage.setItem(TODOS_LOCAL_STORAGE_KEY, JSON.stringify(updatedTodos));
+    currentTodos.splice(todoIndex, 1);
+    localStorage.setItem(TODOS_LOCAL_STORAGE_KEY, JSON.stringify(currentTodos));
 
-    // Remove the todo element from the UI.
-    todoElement.remove();
+    todoElement.classList.add("ToDo--Removing");
+
+    setTimeout(() => {
+      // Remove the todo element from the UI.
+      todoElement.remove();
+    }, 200);
   });
 }
 
@@ -99,6 +104,7 @@ function appendToDo(toDoItem) {
   const toDoElement = document.createElement("div");
 
   toDoElement.classList.add("ToDo");
+  toDoElement.classList.add("ToDo--Inserting");
 
   if (toDoItem.done) {
     toDoElement.classList.add("ToDo--Success");
@@ -129,6 +135,13 @@ function appendToDo(toDoItem) {
   `;
 
   toDoSectionElement.appendChild(toDoElement);
+
+  // Remove the "ToDo--Inserting" class after the element is added to the DOM.
+  // This is done to allow for any CSS transitions or animations to take effect.
+  // Using requestAnimationFrame to ensure the class is removed in the next frame.
+  requestAnimationFrame(() => {
+    toDoElement.classList.remove("ToDo--Inserting");
+  });
 
   return toDoElement;
 }
