@@ -3,11 +3,18 @@
   --background-primary: rgb(179, 179, 179);
   --background-secondary: rgb(255, 255, 255);
   --border: rgb(0, 0, 0);
+
   --icon: rgb(0, 0, 0);
+  --icon-destructive: rgb(255, 0, 0);
+  --icon-success: rgb(0, 128, 0);
+  --icon-warning: rgb(255, 165, 0);
+
   --button-primary-text: rgb(255, 255, 255);
   --button-primary-background: rgb(0, 0, 0);
   --button-secondary-text: rgb(0, 0, 0);
   --button-secondary-background: rgb(255, 255, 255);
+
+  --surface-success: rgb(175, 253, 175);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,11 +23,18 @@
     --background-primary: rgb(46, 46, 46);
     --background-secondary: rgb(27, 23, 23);
     --border: rgb(255, 255, 255);
+
     --icon: rgb(255, 255, 255);
+    --icon-destructive: rgb(255, 0, 0);
+    --icon-success: rgb(0, 255, 0);
+    --icon-warning: rgb(255, 165, 0);
+
     --button-primary-text: rgb(0, 0, 0);
     --button-primary-background: rgb(255, 255, 255);
     --button-secondary-text: rgb(255, 255, 255);
     --button-secondary-background: rgb(0, 0, 0);
+
+    --surface-success: rgb(0, 43, 0);
   }
 }
 
@@ -522,9 +536,20 @@ h2 {
 .ToDo {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 16px;
   border: 1px dashed var(--border);
   padding: 16px;
   background-color: var(--background-secondary);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.ToDo--Inserting {
+  transform: translateY(100%);
+}
+
+.ToDo--Removing {
+  transform: translateX(-200%);
 }
 
 .ToDo__Text {
@@ -537,20 +562,15 @@ h2 {
 
 .ToDo__Input {
   display: none;
+  width: 100%;
 }
 
 .ToDo__Input--Active {
   display: inline;
 }
 
-.editInput {
-  padding: 4px;
-  font-size: 1rem;
-  width: 100%;
-}
-
 .ToDo--Success {
-  background-color: rgb(175, 253, 175);
+  background-color: var(--surface-success);
 }
 
 .IconGroup {
@@ -561,10 +581,6 @@ h2 {
   display: flex;
   gap: 16px;
   align-items: center;
-}
-
-.ToDoForm .Input {
-  width: 100%;
 }
 
 .PopUp {
