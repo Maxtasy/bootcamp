@@ -5,18 +5,104 @@ const saveButtonElement = document.querySelector("#to-do-save-button");
 const toDoSectionElement = toDoInputElement.closest(".Section");
 const toDoFormElement = document.querySelector(".ToDoForm");
 
-const localStorageValueRaw = localStorage.getItem("todos");
-const currentToDos = localStorageValueRaw
-  ? JSON.parse(localStorageValueRaw)
-  : [];
+const TODOS_LOCAL_STORAGE_KEY = "todos";
 
-currentToDos.forEach((currentToDo) => {
-  appendToDo(currentToDo);
-});
+function getTodosFromLocalStorage() {
+  const localStorageValueRaw = localStorage.getItem(TODOS_LOCAL_STORAGE_KEY);
+
+  return localStorageValueRaw ? JSON.parse(localStorageValueRaw) : [];
+}
+
+function addEventListenersToTodo(todoElement) {
+  const checkmarkButtonElement = todoElement.querySelector(".CheckmarkButton");
+  const editButtonElement = todoElement.querySelector(".EditButton");
+  const removeButtonElement = todoElement.querySelector(".RemoveButton");
+
+  // Logic for checkmark button.
+
+  checkmarkButtonElement.addEventListener("click", () => {
+    const currentToDos = getTodosFromLocalStorage();
+    const text = todoElement.querySelector(".ToDo__Text").textContent;
+    const toDoIndex = currentToDos.findIndex((todo) => todo.text === text);
+
+    // Update the done status of the todo item in local storage.
+
+    const updatedTodos = currentToDos.map((todo, index) => {
+      if (index === toDoIndex) {
+        return {
+          ...todo,
+          done: !todo.done, // Toggle the done status.
+        };
+      }
+      return todo;
+    });
+
+    localStorage.setItem(TODOS_LOCAL_STORAGE_KEY, JSON.stringify(updatedTodos));
+
+    // Update UI state last.
+    todoElement.classList.toggle("ToDo--Success");
+  });
+
+  // Logic for edit button.
+
+  editButtonElement.addEventListener("click", () => {
+    const textElement = todoElement.querySelector(".ToDo__Text");
+    const inputElement = todoElement.querySelector(".ToDo__Input");
+
+    const currentToDos = getTodosFromLocalStorage();
+    const isEditing = inputElement.classList.contains("ToDo__Input--Active");
+
+    if (isEditing) {
+      const oldValue = textElement.textContent;
+      const newValue = inputElement.value.trim();
+
+      if (newValue !== "") {
+        textElement.textContent = newValue;
+
+        const toDoIndex = currentToDos.findIndex(
+          (todo) => todo.text === oldValue,
+        );
+
+        currentToDos[toDoIndex].text = newValue;
+
+        localStorage.setItem(
+          TODOS_LOCAL_STORAGE_KEY,
+          JSON.stringify(currentToDos),
+        );
+      }
+
+      textElement.classList.add("ToDo__Text--Active");
+      inputElement.classList.remove("ToDo__Input--Active");
+    } else {
+      inputElement.value = textElement.textContent;
+      textElement.classList.remove("ToDo__Text--Active");
+      inputElement.classList.add("ToDo__Input--Active");
+
+      inputElement.focus();
+    }
+  });
+
+  // Logic for remove button.
+
+  removeButtonElement.addEventListener("click", () => {
+    const currentTodos = getTodosFromLocalStorage();
+    const text = todoElement.querySelector(".ToDo__Text").textContent;
+
+    const toDoIndex = currentTodos.findIndex((todo) => todo.text === text);
+
+    const updatedTodos = currentTodos.splice(toDoIndex, 1);
+    localStorage.setItem(TODOS_LOCAL_STORAGE_KEY, JSON.stringify(updatedTodos));
+
+    // Remove the todo element from the UI.
+    todoElement.remove();
+  });
+}
 
 function appendToDo(toDoItem) {
   const toDoElement = document.createElement("div");
+
   toDoElement.classList.add("ToDo");
+
   if (toDoItem.done) {
     toDoElement.classList.add("ToDo--Success");
   }
@@ -38,79 +124,44 @@ function appendToDo(toDoItem) {
       </button>
     </div>
   `;
+
   toDoSectionElement.appendChild(toDoElement);
 
-  const checkmarkButtonElement = toDoElement.querySelector(".CheckmarkButton");
-  checkmarkButtonElement.addEventListener("click", () => {
-    toDoElement.classList.toggle("ToDo--Success");
-    const toDoIndex = currentToDos.findIndex((todo) => {
-      if (todo === toDoItem) {
-        return true;
-      }
-    });
-
-    currentToDos[toDoIndex].done = !currentToDos[toDoIndex].done;
-
-    localStorage.setItem("todos", JSON.stringify(currentToDos));
-  });
-
-  const editButtonElement = toDoElement.querySelector(".EditButton");
-  editButtonElement.addEventListener("click", () => {
-    const textElement = toDoElement.querySelector(".ToDo__Text");
-    const inputElement = toDoElement.querySelector(".ToDo__Input");
-
-    const isEditing = inputElement.classList.contains("ToDo__Input--Active");
-
-    if (isEditing) {
-      const newValue = inputElement.value.trim();
-      if (newValue !== "") {
-        textElement.textContent = newValue;
-
-        const toDoIndex = currentToDos.findIndex((todo) => todo === toDoItem);
-        currentToDos[toDoIndex].text = newValue;
-        localStorage.setItem("todos", JSON.stringify(currentToDos));
-      }
-
-      textElement.classList.add("ToDo__Text--Active");
-      inputElement.classList.remove("ToDo__Input--Active");
-    } else {
-      inputElement.value = textElement.textContent;
-      textElement.classList.remove("ToDo__Text--Active");
-      inputElement.classList.add("ToDo__Input--Active");
-      inputElement.focus();
-    }
-  });
-
-  const removeButtonElement = toDoElement.querySelector(".RemoveButton");
-  removeButtonElement.addEventListener("click", () => {
-    toDoElement.remove();
-    const toDoIndex = currentToDos.findIndex((todo) => {
-      if (todo === toDoItem) {
-        return true;
-      }
-    });
-    currentToDos.splice(toDoIndex, 1);
-    localStorage.setItem("todos", JSON.stringify(currentToDos));
-  });
+  return toDoElement;
 }
 
 toDoFormElement.addEventListener("submit", (event) => {
+  // Prevent the default form submission behavior.
   event.preventDefault();
-  const inputValue = toDoInputElement.value;
 
-  const toDoItem = {
+  const inputValue = toDoInputElement.value.trim();
+
+  // Ignore empty input values.
+  if (inputValue === "") return;
+
+  const newTodoItem = {
     text: inputValue,
     done: false,
   };
 
-  appendToDo(toDoItem);
+  const updatedTodos = [...getTodosFromLocalStorage(), newTodoItem];
 
-  currentToDos.push({
-    text: inputValue,
-    done: false,
-  });
+  const newTodoElement = appendToDo(newTodoItem);
 
-  localStorage.setItem("todos", JSON.stringify(currentToDos));
+  addEventListenersToTodo(newTodoElement);
 
+  localStorage.setItem(TODOS_LOCAL_STORAGE_KEY, JSON.stringify(updatedTodos));
+
+  // Clear the input field after adding the todo item.
   toDoInputElement.value = "";
+});
+
+// Load existing todos from local storage when page loads. Then append them to the Todo section.
+
+const todoData = getTodosFromLocalStorage();
+
+todoData.forEach((todo) => {
+  const newTodoElement = appendToDo(todo);
+
+  addEventListenersToTodo(newTodoElement);
 });
