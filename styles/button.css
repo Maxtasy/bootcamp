@@ -5,8 +5,6 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   font-size: 12px;
   transition: 0.5s;
-  border-top-left-radius: 50px;
-  border-bottom-right-radius: 50px;
   font-family: arial;
   font-size: large;
 }

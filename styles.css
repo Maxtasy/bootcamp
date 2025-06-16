@@ -8,6 +8,7 @@
   --button-primary-background: rgb(0, 0, 0);
   --button-secondary-text: rgb(0, 0, 0);
   --button-secondary-background: rgb(255, 255, 255);
+  --link: rgb(11, 95, 252);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,6 +35,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.u-Hidden {
+  display: none;
 }
 
 @media screen and (min-width: 400px) {
@@ -149,9 +154,7 @@ p {
 .Link {
   color: var(--text-color-primary);
   text-decoration: none;
-  font-weight: bold;
   transition: 0.5s;
-  padding: 0 16px;
 }
 
 .NavigationBar li:not(:last-child) {
@@ -163,7 +166,7 @@ p {
 }
 
 .Link:hover {
-  color: rgb(158, 158, 158);
+  color: var(--link);
   text-decoration: underline;
 }
 
@@ -557,6 +560,12 @@ h2 {
   display: flex;
 }
 
+.IconWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .ToDoForm {
   display: flex;
   gap: 16px;
@@ -704,4 +713,46 @@ h2 {
   padding: 1rem;
   margin: 0;
   background-color: var(--background-secondary);
+}
+
+.QuantitySelectorWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.QuantitySelectorItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-secondary);
+  width: 48px;
+  height: 48px;
+  font-weight: bold;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.OptionValueSelector {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.OptionValueSelector__Values {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.OptionValue {
+  width: 48px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.OptionValue:has(input:checked) {
+  border: 1px solid var(--border);
 }
