@@ -337,28 +337,26 @@
       <Section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">Links</h2>
         <h3 class="Text Text--HeadingSmall">Single link</h3>
-        <a href="/google-page" class="Link">
-          <p class="Text">This is a link to my google-page</p>
-        </a>
+        <a href="/google-page" class="Link">This is a link to my google-page</a>
 
         <h3 class="Text Text--HeadingSmall">Link-Group</h3>
-        <ul class="u-NoList">
-          <a href="" class="Link">
-            <p class="Text">Link 1</p>
-          </a>
-          <a href="" class="Link">
-            <p class="Text">Link 2</p>
-          </a>
-          <a href="" class="Link">
-            <p class="Text">Link 3</p>
-          </a>
+        <ul class="LinkGroup u-NoList">
+          <li>
+            <a href="" class="Link">Link 1</a>
+          </li>
+          <li>
+            <a href="" class="Link">Link 2</a>
+          </li>
+          <li>
+            <a href="" class="Link">Link 3</a>
+          </li>
         </ul>
       </Section>
 
       <Section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">Icon with Text</h2>
 
-        <div class="IconWrapper">
+        <div class="IconWithText">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -379,8 +377,8 @@
 
       <Section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">Quantity Selector</h2>
-        <div class="QuantitySelectorWrapper">
-          <div class="QuantitySelectorItem QuantitySelectorItem--Minus">
+        <div class="QuantitySelector">
+          <button class="Button Button--Secondary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -395,11 +393,11 @@
             >
               <path d="M5 12h14"/>
             </svg>
-          </div>
+          </button>
 
-          <div class="QuantitySelectorItem QuantitySelectorItem--Value">01</div>
+          <input class="Input Input--Number" type="number" value="1">
 
-          <div class="QuantitySelectorItem QuantitySelectorItem--Plus">
+          <button class="Button Button--Secondary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -414,23 +412,23 @@
             >
               <path d="M5 12h14"/><path d="M12 5v14"/>
             </svg>
-          </div>
+          </button>
         </div>
       </Section>
 
       <section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">Option Value Selector</h2>
 
-        <div class="OptionValueSelector">
+        <div class="OptionValueGroup">
           <p class="Text">Color</p>
-          <div class="OptionValueSelector__Values">
-            <label class="OptionValue" style="Background:Red">
+          <div class="OptionValue__Values">
+            <label class="OptionValue" style="--color: red">
               <input class="u-Hidden" type="radio" name="color" checked>
             </label>
-            <label class="OptionValue" style="Background:Blue">
+            <label class="OptionValue" style="--color: blue">
               <input class="u-Hidden" type="radio" name="color">
             </label>
-            <label class="OptionValue" style="Background:Green">
+            <label class="OptionValue" style="--color: green">
               <input class="u-Hidden" type="radio" name="color">
             </label>
           </div>
@@ -440,16 +438,34 @@
       <section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">ProductVariantSelector</h2>
 
-        <div class="OptionValueSelector">
-          <label class="OptionValue"></label>
-          <label class="OptionValue"></label>
-          <label class="OptionValue"></label>
+        <div class="OptionValueGroup">
+          <p class="Text">Color</p>
+          <div class="OptionValue__Values">
+            <label class="OptionValue" style="--color: red">
+              <input class="u-Hidden" type="radio" name="color" checked>
+            </label>
+            <label class="OptionValue" style="--color: blue">
+              <input class="u-Hidden" type="radio" name="color">
+            </label>
+            <label class="OptionValue" style="--color: green">
+              <input class="u-Hidden" type="radio" name="color">
+            </label>
+          </div>
         </div>
 
-        <div class="OptionValueSelector">
-          <label class="OptionValue"></label>
-          <label class="OptionValue"></label>
-          <label class="OptionValue"></label>
+        <div class="OptionValueGroup">
+          <p class="Text"></p>
+          <div class="OptionValue__Values">
+            <label class="OptionValue" style="--color: red">
+              <input class="u-Hidden" type="radio" name="color" checked>
+            </label>
+            <label class="OptionValue" style="--color: blue">
+              <input class="u-Hidden" type="radio" name="color">
+            </label>
+            <label class="OptionValue" style="--color: green">
+              <input class="u-Hidden" type="radio" name="color">
+            </label>
+          </div>
         </div>
       </section>
     </div>

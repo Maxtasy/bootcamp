@@ -5,23 +5,34 @@
   --border: rgb(0, 0, 0);
   --icon: rgb(0, 0, 0);
   --button-primary-text: rgb(255, 255, 255);
+  --button-primary-text-hover: rgb(211, 211, 211);
   --button-primary-background: rgb(0, 0, 0);
+  --button-primary-background-hover: rgb(63, 63, 63);
   --button-secondary-text: rgb(0, 0, 0);
+  --button-secondary-text-hover: rgb(61, 61, 61);
   --button-secondary-background: rgb(255, 255, 255);
-  --link: rgb(11, 95, 252);
+  --button-secondary-background-hover: rgb(187, 187, 187);
+  --link-color: rgb(209, 209, 209);
+  --link-color-hover: rgb(11, 95, 252);
+  --border-radius: 8px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --text-color-primary: rgb(255, 255, 255);
+    --text-color-secondary: rgb(0, 0, 0);
     --background-primary: rgb(46, 46, 46);
     --background-secondary: rgb(27, 23, 23);
     --border: rgb(255, 255, 255);
     --icon: rgb(255, 255, 255);
     --button-primary-text: rgb(0, 0, 0);
+    --button-primary-text-hover: rgb(43, 43, 43);
     --button-primary-background: rgb(255, 255, 255);
+    --button-primary-background-hover: rgb(189, 189, 189);
     --button-secondary-text: rgb(255, 255, 255);
+    --button-secondary-text-hover: rgb(194, 194, 194);
     --button-secondary-background: rgb(0, 0, 0);
+    --button-secondary-background-hover: rgb(53, 53, 53);
   }
 }
 
@@ -139,10 +150,17 @@ p {
   padding: 20px;
 }
 
-.NavigationBar ul {
+.NavigationList {
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+.NavigationList__Item {
+  padding: 0 8px;
+}
+
+.NavigationList__Item:not(:last-child) {
+  border-right: 2px solid var(--border);
 }
 
 @media screen and (min-width: 400px) {
@@ -152,22 +170,20 @@ p {
 }
 
 .Link {
-  color: var(--text-color-primary);
+  color: var(--link-color);
   text-decoration: none;
   transition: 0.5s;
-}
-
-.NavigationBar li:not(:last-child) {
-  border-right: 2px solid var(--border);
-}
-
-.NavigationBar li {
-  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .Link:hover {
-  color: var(--link);
-  text-decoration: underline;
+  color: var(--link-color-hover);
+}
+
+.LinkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .PageContent {
@@ -195,15 +211,6 @@ p {
   flex-direction: column;
   gap: 16px;
   max-width: 280px;
-}
-
-h1 {
-  text-align: center;
-  margin: 0px;
-}
-
-h2 {
-  font-size: larger;
 }
 
 .Container {
@@ -554,13 +561,14 @@ h2 {
 
 .ToDo--Success {
   background-color: rgb(175, 253, 175);
+  color: var(--text-color-secondary);
 }
 
 .IconGroup {
   display: flex;
 }
 
-.IconWrapper {
+.IconWithText {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -623,7 +631,7 @@ h2 {
   background-color: var(--background-secondary);
   width: 100%;
   padding: 8px;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
 }
 
 .Accordion li label {
@@ -699,7 +707,7 @@ h2 {
   padding: 1rem;
   background-color: var(--background-secondary);
   border-bottom: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
 }
 
 .AccordionWrapper
@@ -715,32 +723,19 @@ h2 {
   background-color: var(--background-secondary);
 }
 
-.QuantitySelectorWrapper {
+.QuantitySelector {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.QuantitySelectorItem {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--background-secondary);
-  width: 48px;
-  height: 48px;
-  font-weight: bold;
-  border: 2px solid var(--border);
-  border-radius: 12px;
-  cursor: pointer;
-}
-
-.OptionValueSelector {
+.OptionValueGroup {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.OptionValueSelector__Values {
+.OptionValue__Values {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -751,6 +746,7 @@ h2 {
   aspect-ratio: 1;
   border-radius: 50%;
   cursor: pointer;
+  background-color: var(--color);
 }
 
 .OptionValue:has(input:checked) {
