@@ -1,19 +1,13 @@
 .Button {
   padding: 16px 32px;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  font-size: 12px;
   transition: 0.5s;
-  border-top-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  font-family: arial;
-  font-size: large;
-}
-
-.Button:hover {
-  color: red;
-  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .Button--Primary {
@@ -24,6 +18,16 @@
 .Button--Secondary {
   color: var(--button-secondary-text);
   background-color: var(--button-secondary-background);
+}
+
+.Button--Primary:hover {
+  color: var(--button-primary-text-hover);
+  background-color: var(--button-primary-background-hover);
+}
+
+.Button--Secondary:hover {
+  color: var(--button-secondary-text-hover);
+  background-color: var(--button-secondary-background-hover);
 }
 
 .Button--Icon {

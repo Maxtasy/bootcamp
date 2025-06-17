@@ -10,9 +10,16 @@
   --icon-warning: rgb(255, 165, 0);
 
   --button-primary-text: rgb(255, 255, 255);
+  --button-primary-text-hover: rgb(211, 211, 211);
   --button-primary-background: rgb(0, 0, 0);
+  --button-primary-background-hover: rgb(63, 63, 63);
   --button-secondary-text: rgb(0, 0, 0);
+  --button-secondary-text-hover: rgb(61, 61, 61);
   --button-secondary-background: rgb(255, 255, 255);
+  --button-secondary-background-hover: rgb(187, 187, 187);
+  --link-color: rgb(209, 209, 209);
+  --link-color-hover: rgb(11, 95, 252);
+  --border-radius: 8px;
 
   --surface-success: rgb(175, 253, 175);
 }
@@ -20,6 +27,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --text-color-primary: rgb(255, 255, 255);
+    --text-color-secondary: rgb(0, 0, 0);
     --background-primary: rgb(46, 46, 46);
     --background-secondary: rgb(27, 23, 23);
     --border: rgb(255, 255, 255);
@@ -30,9 +38,13 @@
     --icon-warning: rgb(255, 165, 0);
 
     --button-primary-text: rgb(0, 0, 0);
+    --button-primary-text-hover: rgb(43, 43, 43);
     --button-primary-background: rgb(255, 255, 255);
+    --button-primary-background-hover: rgb(189, 189, 189);
     --button-secondary-text: rgb(255, 255, 255);
+    --button-secondary-text-hover: rgb(194, 194, 194);
     --button-secondary-background: rgb(0, 0, 0);
+    --button-secondary-background-hover: rgb(53, 53, 53);
 
     --surface-success: rgb(0, 43, 0);
   }
@@ -48,6 +60,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.u-Hidden {
+  display: none;
 }
 
 @media screen and (min-width: 400px) {
@@ -148,10 +164,17 @@ p {
   padding: 20px;
 }
 
-.NavigationBar ul {
+.NavigationList {
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+.NavigationList__Item {
+  padding: 0 8px;
+}
+
+.NavigationList__Item:not(:last-child) {
+  border-right: 2px solid var(--border);
 }
 
 @media screen and (min-width: 400px) {
@@ -161,24 +184,20 @@ p {
 }
 
 .Link {
-  color: var(--text-color-primary);
+  color: var(--link-color);
   text-decoration: none;
-  font-weight: bold;
   transition: 0.5s;
-  padding: 0 16px;
-}
-
-.NavigationBar li:not(:last-child) {
-  border-right: 2px solid var(--border);
-}
-
-.NavigationBar li {
-  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .Link:hover {
-  color: rgb(158, 158, 158);
-  text-decoration: underline;
+  color: var(--link-color-hover);
+}
+
+.LinkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .PageContent {
@@ -206,15 +225,6 @@ p {
   flex-direction: column;
   gap: 16px;
   max-width: 280px;
-}
-
-h1 {
-  text-align: center;
-  margin: 0px;
-}
-
-h2 {
-  font-size: larger;
 }
 
 .Container {
@@ -541,7 +551,9 @@ h2 {
   border: 1px dashed var(--border);
   padding: 16px;
   background-color: var(--background-secondary);
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition:
+    transform 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
 }
 
 .ToDo--Inserting {
@@ -575,6 +587,12 @@ h2 {
 
 .IconGroup {
   display: flex;
+}
+
+.IconWithText {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .ToDoForm {
@@ -630,7 +648,7 @@ h2 {
   background-color: var(--background-secondary);
   width: 100%;
   padding: 8px;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
 }
 
 .Accordion li label {
@@ -706,7 +724,14 @@ h2 {
   padding: 1rem;
   background-color: var(--background-secondary);
   border-bottom: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
+}
+
+.AccordionWrapper
+  .AccordionJS__Box:has(.AccordionJS__Content--Active)
+  .lucide-plus-icon
+  path:last-child {
+  transform: rotate(270deg);
 }
 
 .AccordionWrapper
@@ -720,4 +745,34 @@ h2 {
   padding: 1rem;
   margin: 0;
   background-color: var(--background-secondary);
+}
+
+.QuantitySelector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.OptionValueGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.OptionValue__Values {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.OptionValue {
+  width: 48px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--color);
+}
+
+.OptionValue:has(input:checked) {
+  border: 1px solid var(--border);
 }
