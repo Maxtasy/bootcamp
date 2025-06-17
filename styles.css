@@ -1,7 +1,11 @@
 :root {
+  --border-radius: 8px;
+
   --text-color-primary: rgb(0, 0, 0);
+
   --background-primary: rgb(179, 179, 179);
   --background-secondary: rgb(255, 255, 255);
+
   --border: rgb(0, 0, 0);
 
   --icon: rgb(0, 0, 0);
@@ -17,19 +21,21 @@
   --button-secondary-text-hover: rgb(61, 61, 61);
   --button-secondary-background: rgb(255, 255, 255);
   --button-secondary-background-hover: rgb(187, 187, 187);
-  --link-color: rgb(209, 209, 209);
+
+  --link-color: rgb(54, 54, 54);
   --link-color-hover: rgb(11, 95, 252);
-  --border-radius: 8px;
 
   --surface-success: rgb(175, 253, 175);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color-primary: rgb(255, 255, 255);
+    --text-color-primary: rgb(228, 228, 228);
     --text-color-secondary: rgb(0, 0, 0);
+
     --background-primary: rgb(46, 46, 46);
     --background-secondary: rgb(27, 23, 23);
+
     --border: rgb(255, 255, 255);
 
     --icon: rgb(255, 255, 255);
@@ -45,6 +51,9 @@
     --button-secondary-text-hover: rgb(194, 194, 194);
     --button-secondary-background: rgb(0, 0, 0);
     --button-secondary-background-hover: rgb(53, 53, 53);
+
+    --link-color: rgb(209, 209, 209);
+    --link-color-hover: rgb(11, 95, 252);
 
     --surface-success: rgb(0, 43, 0);
   }
@@ -64,6 +73,18 @@
 
 .u-Hidden {
   display: none;
+}
+
+.u-NoNumberControls {
+  appearance: textfield;
+  -moz-appearance: textfield;
+  text-align: center;
+}
+
+.u-NoNumberControls::-webkit-outer-spin-button,
+.u-NoNumberControls::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 @media screen and (min-width: 400px) {
@@ -753,7 +774,7 @@ p {
   gap: 8px;
 }
 
-.OptionValueGroup {
+.OptionValueSelector {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -770,9 +791,19 @@ p {
   aspect-ratio: 1;
   border-radius: 50%;
   cursor: pointer;
-  background-color: var(--color);
+  background-color: var(--background-secondary);
 }
 
 .OptionValue:has(input:checked) {
   border: 1px solid var(--border);
+}
+
+.OptionValue--Color {
+  background-color: var(--color);
+}
+
+.ProductVariantSelector {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
