@@ -1,17 +1,28 @@
-class Button extends HTMLElement {
+import { Component } from "./component.js";
+
+const componentTagName = "button-component";
+
+class Button extends Component {
   constructor() {
     super();
-    this.addEventListener("click", () => {
-      const action = this.getAttribute("data-action");
 
-      this.dispatchEvent(
-        new CustomEvent(`button:click:${action}`, {
-          bubbles: true,
-          isTrusted: true,
-        }),
-      );
+    this.enable = this.enable.bind(this);
+    this.disable = this.disable.bind(this);
+  }
+
+  connectedCallback() {
+    this.addEventListener("click", () => {
+      this.publish("button:click");
     });
+  }
+
+  enable() {
+    this.removeAttribute("disabled");
+  }
+
+  disable() {
+    this.setAttribute("disabled", "disabled");
   }
 }
 
-customElements.define("button-component", Button);
+customElements.define(componentTagName, Button);
