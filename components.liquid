@@ -130,10 +130,10 @@
         <h3 class="Text Text--HeadingSmall">Accordion with HTML and CSS</h3>
 
         <ul class="u-NoList Accordion">
-          <div class="AccordionWrapper">
-            <li>
-              <label>
-                <p class="Text Text--BodyLarge">How to create?</p>
+          <li>
+            <label>
+              <p class="Text Text--BodyLarge">How to create?</p>
+              <div class="Icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -148,19 +148,21 @@
                 >
                   <path d="M5 12h14"/><path d="M12 5v14"/>
                 </svg>
-                <input type="checkbox">
-              </label>
-              <div class="AccordionContent">
-                <p class="Text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
-                  distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
-                </p>
               </div>
-            </li>
+              <input class="u-Hidden" type="checkbox">
+            </label>
+            <div class="Accordion__Content u-NoScrollbar">
+              <p class="Text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
+              </p>
+            </div>
+          </li>
 
-            <li>
-              <label>
-                <p class="Text Text--BodyLarge">Where to use?</p>
+          <li>
+            <label>
+              <p class="Text Text--BodyLarge">Where to use?</p>
+              <div class="Icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -175,19 +177,21 @@
                 >
                   <path d="M5 12h14"/><path d="M12 5v14"/>
                 </svg>
-                <input type="checkbox">
-              </label>
-              <div class="AccordionContent">
-                <p class="Text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
-                  distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
-                </p>
               </div>
-            </li>
+              <input class="u-Hidden" type="checkbox">
+            </label>
+            <div class="Accordion__Content u-NoScrollbar">
+              <p class="Text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
+              </p>
+            </div>
+          </li>
 
-            <li>
-              <label>
-                <p class="Text Text--BodyLarge">What is accordion?</p>
+          <li>
+            <label>
+              <p class="Text Text--BodyLarge">What is accordion?</p>
+              <div class="Icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -202,16 +206,16 @@
                 >
                   <path d="M5 12h14"/><path d="M12 5v14"/>
                 </svg>
-                <input type="checkbox">
-              </label>
-              <div class="AccordionContent">
-                <p class="Text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
-                  distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
-                </p>
               </div>
-            </li>
-          </div>
+              <input class="u-Hidden" type="checkbox">
+            </label>
+            <div class="Accordion__Content u-NoScrollbar">
+              <p class="Text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
+              </p>
+            </div>
+          </li>
         </ul>
 
         <h3 class="Text Text--HeadingSmall">Accordion with HTML, CSS and JS</h3>
@@ -423,11 +427,32 @@
       </section>
 
       <section class="Section Section--Vertical">
+        <h2 class="Text Text--HeadingMedium">Option Value</h2>
+
+        <h3 class="Text Text--HeadingSmall">Default</h3>
+        <label class="OptionValue">
+          <span class="Text">10ml</span>
+          <input class="u-Hidden" type="radio" name="plain" checked>
+        </label>
+
+        <h3 class="Text Text--HeadingSmall">Color</h3>
+        <label class="OptionValue OptionValue--Color" style="--color: red">
+          <input class="u-Hidden" type="radio" name="color_2" checked>
+        </label>
+
+        <h3 class="Text Text--HeadingSmall">Size</h3>
+        <label class="OptionValue OptionValue--Size"
+          ><span class="Text">S</span>
+          <input class="u-Hidden" type="radio" name="size_1" checked>
+        </label>
+      </section>
+
+      <section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">Option Value Selector</h2>
 
         <div class="OptionValueSelector">
           <p class="Text">Color</p>
-          <div class="OptionValue__Values">
+          <div class="OptionValueSelector__Values">
             <label class="OptionValue OptionValue--Color" style="--color: red">
               <input class="u-Hidden" type="radio" name="color" checked>
             </label>
@@ -442,12 +467,12 @@
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">ProductVariantSelector</h2>
+        <h2 class="Text Text--HeadingMedium">Product Variant Selector</h2>
         <div class="ProductVariantSelector">
           <div class="OptionValueSelector">
             <p class="Text">Color</p>
 
-            <div class="OptionValue__Values">
+            <div class="OptionValueSelector__Values">
               <label class="OptionValue OptionValue--Color" style="--color: red">
                 <input class="u-Hidden" type="radio" name="color_1" checked>
               </label>
@@ -463,7 +488,7 @@
           <div class="OptionValueSelector">
             <p class="Text">Size</p>
 
-            <div class="OptionValue__Values">
+            <div class="OptionValueSelector__Values">
               <label class="OptionValue OptionValue--Size"
                 ><span class="Text">S</span>
                 <input class="u-Hidden" type="radio" name="size" checked>
@@ -475,64 +500,6 @@
               <label class="OptionValue OptionValue--Size"
                 ><span class="Text">L</span>
                 <input class="u-Hidden" type="radio" name="size">
-              </label>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Option Value</h2>
-        <div class="ProductVariantSelector">
-          <p class="Text">Plain</p>
-          <div class="OptionValueSeclector">
-            <div class="OptionValue__Values">
-              <label class="OptionValue">
-                <span class="Text">10ml</span>
-                <input class="u-Hidden" type="radio" name="plain" checked>
-              </label>
-              <label class="OptionValue">
-                <span class="Text">20ml</span>
-                <input class="u-Hidden" type="radio" name="plain">
-              </label>
-              <label class="OptionValue">
-                <span class="Text">30ml</span>
-                <input class="u-Hidden" type="radio" name="plain">
-              </label>
-            </div>
-          </div>
-
-          <div class="OptionValueSelector">
-            <p class="Text">Color</p>
-
-            <div class="OptionValue__Values">
-              <label class="OptionValue OptionValue--Color" style="--color: red">
-                <input class="u-Hidden" type="radio" name="color_2" checked>
-              </label>
-              <label class="OptionValue OptionValue--Color" style="--color: blue">
-                <input class="u-Hidden" type="radio" name="color_2">
-              </label>
-              <label class="OptionValue OptionValue--Color" style="--color: green">
-                <input class="u-Hidden" type="radio" name="color_2">
-              </label>
-            </div>
-          </div>
-
-          <div class="OptionValueSelector">
-            <p class="Text">Size</p>
-
-            <div class="OptionValue__Values">
-              <label class="OptionValue OptionValue--Size"
-                ><span class="Text">S</span>
-                <input class="u-Hidden" type="radio" name="size_1" checked>
-              </label>
-              <label class="OptionValue OptionValue--Size"
-                ><span class="Text">M</span>
-                <input class="u-Hidden" type="radio" name="size_1">
-              </label>
-              <label class="OptionValue OptionValue--Size"
-                ><span class="Text">L</span>
-                <input class="u-Hidden" type="radio" name="size_1">
               </label>
             </div>
           </div>

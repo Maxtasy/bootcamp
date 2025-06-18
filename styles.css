@@ -87,6 +87,17 @@
   margin: 0;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.u-NoScrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.u-NoScrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 @media screen and (min-width: 400px) {
   .u-HiddenDesktop {
     display: none !important;
@@ -584,68 +595,6 @@ p {
   font-size: larger;
 }
 
-.Accordion li {
-  list-style: none;
-  background-color: var(--background-secondary);
-  width: 100%;
-  padding: 8px;
-  border-radius: var(--border-radius);
-}
-
-.Accordion li label {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-  color: var(--text-color-primary);
-}
-
-.Accordion li label span {
-  transform: rotate(90deg);
-  font-size: 22px;
-}
-
-.Accordion label input[type="checkbox"] {
-  display: none;
-}
-
-.Accordion .AccordionContent {
-  line-height: 26px;
-  max-height: 0;
-  overflow-y: auto;
-  transition: max-height 0.5s;
-  padding: 0 8px;
-}
-
-.Accordion li:has(input[type="checkbox"]:checked) .AccordionContent {
-  max-height: 400px;
-}
-
-.Accordion {
-  width: 100%;
-}
-
-.AccordionWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.Accordion
-  li:has(input[type="checkbox"]:checked)
-  .lucide-plus-icon
-  path:last-child {
-  transform: rotate(270deg);
-}
-
-.lucide-plus-icon path:last-child {
-  transition: transform 300ms ease-in-out;
-  transform-origin: center;
-}
-
 .AccordionJS__Content {
   max-height: 0;
   overflow: hidden;
@@ -686,49 +635,4 @@ p {
   padding: 1rem;
   margin: 0;
   background-color: var(--background-secondary);
-}
-
-.OptionValueSelector {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.OptionValue {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  aspect-ratio: 2/1;
-  cursor: pointer;
-  background-color: var(--background-secondary);
-}
-
-.OptionValue__Values {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.OptionValue:has(input:checked) {
-  border: 1px solid var(--border);
-}
-
-.OptionValue--Color {
-  width: 48px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: var(--color);
-}
-
-.OptionValue--Size {
-  width: 48px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-}
-
-.ProductVariantSelector {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
 }
