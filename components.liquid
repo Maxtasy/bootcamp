@@ -7,9 +7,6 @@
     {% include 'partials/global-styles.html' %}
     {% include 'partials/global-scripts.html' %}
 
-    <script src="/scripts/accordion.js" defer></script>
-    <script src="/scripts/quantity-selector.js" defer></script>
-
     <title>Components</title>
   </head>
   <body>
@@ -334,7 +331,7 @@
         </div>
       </section>
 
-      <Section class="Section Section--Vertical">
+      <section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">Links</h2>
         <h3 class="Text Text--HeadingSmall">Single link</h3>
         <a href="/google-page" class="Link">This is a link to my google-page</a>
@@ -351,9 +348,9 @@
             <a href="" class="Link">Link 3</a>
           </li>
         </ul>
-      </Section>
+      </section>
 
-      <Section class="Section Section--Vertical">
+      <section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">Icon with Text</h2>
 
         <div class="IconWithText">
@@ -373,12 +370,15 @@
           </svg>
           <p class="Text">Icon with Text</p>
         </div>
-      </Section>
+      </section>
 
-      <Section class="Section Section--Vertical">
+      <section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">Quantity Selector</h2>
-        <div class="QuantitySelector">
-          <button class="Button Button--Secondary Button--Icon" disabled="disabled">
+
+        <quantity-selector-component
+          class="QuantitySelector"
+        >
+          <button-component class="Button Button--Secondary Button--Icon" data-action="decrease">
             <div class="Icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -395,13 +395,13 @@
                 <path d="M5 12h14"/>
               </svg>
             </div>
-          </button>
+          </button-component>
 
-          <form class="QuantitySelector__Form">
-            <input class="Input Input--Number u-NoNumberControls" type="number" value="1" min="1">
+          <form>
+            <input class="Input Input--Number u-NoNumberControls" type="number" value="1" min="1" max="9">
           </form>
 
-          <button class="Button Button--Secondary Button--Icon">
+          <button-component class="Button Button--Secondary Button--Icon" data-action="increase">
             <div class="Icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -418,9 +418,9 @@
                 <path d="M5 12h14"/><path d="M12 5v14"/>
               </svg>
             </div>
-          </button>
-        </div>
-      </Section>
+          </button-component>
+        </quantity-selector-component>
+      </section>
 
       <section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">Option Value Selector</h2>

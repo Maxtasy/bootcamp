@@ -688,12 +688,6 @@ p {
   background-color: var(--background-secondary);
 }
 
-.QuantitySelector {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
 .OptionValueSelector {
   display: flex;
   flex-direction: column;
