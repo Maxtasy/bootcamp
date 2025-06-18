@@ -425,16 +425,16 @@
       <section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">Option Value Selector</h2>
 
-        <div class="OptionValueGroup">
+        <div class="OptionValueSelector">
           <p class="Text">Color</p>
           <div class="OptionValue__Values">
-            <label class="OptionValue" style="--color: red">
+            <label class="OptionValue OptionValue--Color" style="--color: red">
               <input class="u-Hidden" type="radio" name="color" checked>
             </label>
-            <label class="OptionValue" style="--color: blue">
+            <label class="OptionValue OptionValue--Color" style="--color: blue">
               <input class="u-Hidden" type="radio" name="color">
             </label>
-            <label class="OptionValue" style="--color: green">
+            <label class="OptionValue OptionValue--Color" style="--color: green">
               <input class="u-Hidden" type="radio" name="color">
             </label>
           </div>
@@ -443,36 +443,104 @@
 
       <section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">ProductVariantSelector</h2>
+        <div class="ProductVariantSelector">
+          <div class="OptionValueSelector">
+            <p class="Text">Color</p>
 
-        <div class="OptionValueGroup">
-          <p class="Text">Color</p>
-          <div class="OptionValue__Values">
-            <label class="OptionValue" style="--color: red">
-              <input class="u-Hidden" type="radio" name="color" checked>
-            </label>
-            <label class="OptionValue" style="--color: blue">
-              <input class="u-Hidden" type="radio" name="color">
-            </label>
-            <label class="OptionValue" style="--color: green">
-              <input class="u-Hidden" type="radio" name="color">
-            </label>
+            <div class="OptionValue__Values">
+              <label class="OptionValue OptionValue--Color" style="--color: red">
+                <input class="u-Hidden" type="radio" name="color_1" checked>
+              </label>
+              <label class="OptionValue OptionValue--Color" style="--color: blue">
+                <input class="u-Hidden" type="radio" name="color_1">
+              </label>
+              <label class="OptionValue OptionValue--Color" style="--color: green">
+                <input class="u-Hidden" type="radio" name="color_1">
+              </label>
+            </div>
+          </div>
+
+          <div class="OptionValueSelector">
+            <p class="Text">Size</p>
+
+            <div class="OptionValue__Values">
+              <label class="OptionValue OptionValue--Size"
+                ><span class="Text">S</span>
+                <input class="u-Hidden" type="radio" name="size" checked>
+              </label>
+              <label class="OptionValue OptionValue--Size"
+                ><span class="Text">M</span>
+                <input class="u-Hidden" type="radio" name="size">
+              </label>
+              <label class="OptionValue OptionValue--Size"
+                ><span class="Text">L</span>
+                <input class="u-Hidden" type="radio" name="size">
+              </label>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="OptionValueGroup">
-          <p class="Text"></p>
-          <div class="OptionValue__Values">
-            <label class="OptionValue" style="--color: red">
-              <input class="u-Hidden" type="radio" name="color" checked>
-            </label>
-            <label class="OptionValue" style="--color: blue">
-              <input class="u-Hidden" type="radio" name="color">
-            </label>
-            <label class="OptionValue" style="--color: green">
-              <input class="u-Hidden" type="radio" name="color">
-            </label>
+      <section class="Section Section--Vertical">
+        <h2 class="Text Text--HeadingMedium">Option Value</h2>
+        <div class="ProductVariantSelector">
+          <p class="Text">Plain</p>
+          <div class="OptionValueSeclector">
+            <div class="OptionValue__Values">
+              <label class="OptionValue">
+                <span class="Text">10ml</span>
+                <input class="u-Hidden" type="radio" name="plain" checked>
+              </label>
+              <label class="OptionValue">
+                <span class="Text">20ml</span>
+                <input class="u-Hidden" type="radio" name="plain">
+              </label>
+              <label class="OptionValue">
+                <span class="Text">30ml</span>
+                <input class="u-Hidden" type="radio" name="plain">
+              </label>
+            </div>
+          </div>
+
+          <div class="OptionValueSelector">
+            <p class="Text">Color</p>
+
+            <div class="OptionValue__Values">
+              <label class="OptionValue OptionValue--Color" style="--color: red">
+                <input class="u-Hidden" type="radio" name="color_2" checked>
+              </label>
+              <label class="OptionValue OptionValue--Color" style="--color: blue">
+                <input class="u-Hidden" type="radio" name="color_2">
+              </label>
+              <label class="OptionValue OptionValue--Color" style="--color: green">
+                <input class="u-Hidden" type="radio" name="color_2">
+              </label>
+            </div>
+          </div>
+
+          <div class="OptionValueSelector">
+            <p class="Text">Size</p>
+
+            <div class="OptionValue__Values">
+              <label class="OptionValue OptionValue--Size"
+                ><span class="Text">S</span>
+                <input class="u-Hidden" type="radio" name="size_1" checked>
+              </label>
+              <label class="OptionValue OptionValue--Size"
+                ><span class="Text">M</span>
+                <input class="u-Hidden" type="radio" name="size_1">
+              </label>
+              <label class="OptionValue OptionValue--Size"
+                ><span class="Text">L</span>
+                <input class="u-Hidden" type="radio" name="size_1">
+              </label>
+            </div>
           </div>
         </div>
+      </section>
+
+      <section class="Section Section--Vertical">
+        <h2 class="Text Text--HeadingMedium">Price List</h2>
       </section>
     </div>
   </body>
