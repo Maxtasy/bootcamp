@@ -34,3 +34,7 @@
   color: var(--icon);
   padding: 4px;
 }
+
+.Button[disabled] {
+  opacity: 0.25;
+}

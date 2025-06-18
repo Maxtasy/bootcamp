@@ -66,6 +66,18 @@
   display: none;
 }
 
+.u-NoNumberControls {
+  appearance: textfield;;
+  -moz-appearance: textfield;
+  text-align: center;
+}
+
+.u-NoNumberControls::-webkit-inner-spin-button,
+.u-NoNumberControls::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 @media screen and (min-width: 400px) {
   .u-HiddenDesktop {
     display: none !important;
@@ -745,12 +757,6 @@ p {
   padding: 1rem;
   margin: 0;
   background-color: var(--background-secondary);
-}
-
-.QuantitySelector {
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
 .OptionValueGroup {
