@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% include 'partials/global-styles.html' %}
+    {% include 'partials/global-scripts.html' %}
+
+    <link rel="stylesheet" href="/styles/id-card.css">
+
+    <title>ID Cards</title>
+  </head>
+  <body>
+    {% include 'partials/header.html' %}
+
+    <backdrop-component class="Backdrop"></backdrop-component>
+
+    {% include 'partials/drawers.html' %}
+
+    <div class="PageContent">
+      <section class="Section">
+        <div class="IdCard">
+          <div class="IdCard__Header">
+            <div class="Circle"><span class="Text">M.M.</span></div>
+            <p class="Text">Max Mustermann</p>
+          </div>
+          <p class="Text">Lorem ipsum dolor sit fuller words.</p>
+        </div>
+      </section>
+
+      <section class="Section">
+        <div class="IdCard">
+          <div class="IdCard__Header">
+            <div class="Circle">
+              <img class="Norman" src="/images/norman.jpeg" alt="Norman">
+            </div>
+            <p class="Text">Norman Ritter</p>
+          </div>
+          <p class="Text">Was ist mit die Fische?</p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
