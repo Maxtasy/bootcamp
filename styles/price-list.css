@@ -1,9 +1,9 @@
 .PriceList {
   display: flex;
   gap: 8px;
+  align-items: center;
 }
 
-.PriceList p {
-  color: red;
-  font-size: larger;
+.PriceList strong {
+  color: var(--sale-color);
 }

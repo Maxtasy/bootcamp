@@ -26,6 +26,8 @@
   --link-color-hover: rgb(11, 95, 252);
 
   --surface-success: rgb(175, 253, 175);
+
+  --sale-color: rgb(182, 0, 0);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -56,6 +58,8 @@
     --link-color-hover: rgb(11, 95, 252);
 
     --surface-success: rgb(0, 43, 0);
+
+    --sale-color: rgb(255, 65, 65);
   }
 }
 
