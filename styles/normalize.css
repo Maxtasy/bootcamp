@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 40px;
+}
+
+body {
+  background-color: var(--background-primary);
+  color: var(--text-color-primary);
+  margin: 0px;
+}
+
+button,
+button-component {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}

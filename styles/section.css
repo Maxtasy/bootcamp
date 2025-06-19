@@ -1,0 +1,9 @@
+.Section {
+  padding: 24px 0;
+}
+
+.Section--Vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

@@ -1,0 +1,9 @@
+.PageContent {
+  padding: 32px 16px;
+}
+
+@media screen and (min-width: 400px) {
+  .PageContent {
+    padding: 64px 32px;
+  }
+}

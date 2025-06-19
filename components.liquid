@@ -130,10 +130,10 @@
         <h3 class="Text Text--HeadingSmall">Accordion with HTML and CSS</h3>
 
         <ul class="u-NoList Accordion">
-          <div class="AccordionWrapper">
-            <li>
-              <label>
-                <p class="Text Text--BodyLarge">How to create?</p>
+          <li>
+            <label>
+              <p class="Text Text--BodyLarge">How to create?</p>
+              <div class="Icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -148,19 +148,21 @@
                 >
                   <path d="M5 12h14"/><path d="M12 5v14"/>
                 </svg>
-                <input type="checkbox">
-              </label>
-              <div class="AccordionContent">
-                <p class="Text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
-                  distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
-                </p>
               </div>
-            </li>
+              <input class="u-Hidden" type="checkbox">
+            </label>
+            <div class="Accordion__Content u-NoScrollbar">
+              <p class="Text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
+              </p>
+            </div>
+          </li>
 
-            <li>
-              <label>
-                <p class="Text Text--BodyLarge">Where to use?</p>
+          <li>
+            <label>
+              <p class="Text Text--BodyLarge">Where to use?</p>
+              <div class="Icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -175,19 +177,21 @@
                 >
                   <path d="M5 12h14"/><path d="M12 5v14"/>
                 </svg>
-                <input type="checkbox">
-              </label>
-              <div class="AccordionContent">
-                <p class="Text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
-                  distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
-                </p>
               </div>
-            </li>
+              <input class="u-Hidden" type="checkbox">
+            </label>
+            <div class="Accordion__Content u-NoScrollbar">
+              <p class="Text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
+              </p>
+            </div>
+          </li>
 
-            <li>
-              <label>
-                <p class="Text Text--BodyLarge">What is accordion?</p>
+          <li>
+            <label>
+              <p class="Text Text--BodyLarge">What is accordion?</p>
+              <div class="Icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -202,38 +206,41 @@
                 >
                   <path d="M5 12h14"/><path d="M12 5v14"/>
                 </svg>
-                <input type="checkbox">
-              </label>
-              <div class="AccordionContent">
-                <p class="Text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
-                  distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
-                </p>
               </div>
-            </li>
-          </div>
+              <input class="u-Hidden" type="checkbox">
+            </label>
+            <div class="Accordion__Content u-NoScrollbar">
+              <p class="Text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
+              </p>
+            </div>
+          </li>
         </ul>
 
         <h3 class="Text Text--HeadingSmall">Accordion with HTML, CSS and JS</h3>
 
-        <div class="AccordionWrapper">
-          <div class="AccordionJS__Box">
+        <div class="AccordionJS">
+          <div class="AccordionJS__Item">
             <button class="AccordionJS__Label">
               <p class="Text">List One</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-plus-icon lucide-plus"
-              >
-                <path d="M5 12h14"/><path d="M12 5v14"/>
-              </svg>
+
+              <div class="Icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-plus-icon lucide-plus"
+                >
+                  <path d="M5 12h14"/><path d="M12 5v14"/>
+                </svg>
+              </div>
             </button>
 
             <div class="AccordionJS__Content">
@@ -245,23 +252,26 @@
             </div>
           </div>
 
-          <div class="AccordionJS__Box">
+          <div class="AccordionJS__Item">
             <button class="AccordionJS__Label">
               <p class="Text">List Two</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-plus-icon lucide-plus"
-              >
-                <path d="M5 12h14"/><path d="M12 5v14"/>
-              </svg>
+
+              <div class="Icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-plus-icon lucide-plus"
+                >
+                  <path d="M5 12h14"/><path d="M12 5v14"/>
+                </svg>
+              </div>
             </button>
 
             <div class="AccordionJS__Content">
@@ -273,23 +283,26 @@
             </div>
           </div>
 
-          <div class="AccordionJS__Box">
+          <div class="AccordionJS__Item">
             <button class="AccordionJS__Label">
               <p class="Text">List Three</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-plus-icon lucide-plus"
-              >
-                <path d="M5 12h14"/><path d="M12 5v14"/>
-              </svg>
+
+              <div class="Icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-plus-icon lucide-plus"
+                >
+                  <path d="M5 12h14"/><path d="M12 5v14"/>
+                </svg>
+              </div>
             </button>
 
             <div class="AccordionJS__Content">
@@ -301,23 +314,26 @@
             </div>
           </div>
 
-          <div class="AccordionJS__Box">
+          <div class="AccordionJS__Item">
             <button class="AccordionJS__Label">
               <p class="Text">List Four</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-plus-icon lucide-plus"
-              >
-                <path d="M5 12h14"/><path d="M12 5v14"/>
-              </svg>
+
+              <div class="Icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-plus-icon lucide-plus"
+                >
+                  <path d="M5 12h14"/><path d="M12 5v14"/>
+                </svg>
+              </div>
             </button>
 
             <div class="AccordionJS__Content">
@@ -423,11 +439,32 @@
       </section>
 
       <section class="Section Section--Vertical">
+        <h2 class="Text Text--HeadingMedium">Option Value</h2>
+
+        <h3 class="Text Text--HeadingSmall">Default</h3>
+        <label class="OptionValue">
+          <span class="Text">10ml</span>
+          <input class="u-Hidden" type="radio" name="plain" checked>
+        </label>
+
+        <h3 class="Text Text--HeadingSmall">Color</h3>
+        <label class="OptionValue OptionValue--Color" style="--color: red">
+          <input class="u-Hidden" type="radio" name="color_2" checked>
+        </label>
+
+        <h3 class="Text Text--HeadingSmall">Size</h3>
+        <label class="OptionValue OptionValue--Size"
+          ><span class="Text">S</span>
+          <input class="u-Hidden" type="radio" name="size_1" checked>
+        </label>
+      </section>
+
+      <section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">Option Value Selector</h2>
 
         <div class="OptionValueSelector">
           <p class="Text">Color</p>
-          <div class="OptionValue__Values">
+          <div class="OptionValueSelector__Values">
             <label class="OptionValue OptionValue--Color" style="--color: red">
               <input class="u-Hidden" type="radio" name="color" checked>
             </label>
@@ -442,12 +479,12 @@
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">ProductVariantSelector</h2>
+        <h2 class="Text Text--HeadingMedium">Product Variant Selector</h2>
         <div class="ProductVariantSelector">
           <div class="OptionValueSelector">
             <p class="Text">Color</p>
 
-            <div class="OptionValue__Values">
+            <div class="OptionValueSelector__Values">
               <label class="OptionValue OptionValue--Color" style="--color: red">
                 <input class="u-Hidden" type="radio" name="color_1" checked>
               </label>
@@ -463,7 +500,7 @@
           <div class="OptionValueSelector">
             <p class="Text">Size</p>
 
-            <div class="OptionValue__Values">
+            <div class="OptionValueSelector__Values">
               <label class="OptionValue OptionValue--Size"
                 ><span class="Text">S</span>
                 <input class="u-Hidden" type="radio" name="size" checked>
@@ -482,65 +519,60 @@
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Option Value</h2>
-        <div class="ProductVariantSelector">
-          <p class="Text">Plain</p>
-          <div class="OptionValueSeclector">
-            <div class="OptionValue__Values">
-              <label class="OptionValue">
-                <span class="Text">10ml</span>
-                <input class="u-Hidden" type="radio" name="plain" checked>
-              </label>
-              <label class="OptionValue">
-                <span class="Text">20ml</span>
-                <input class="u-Hidden" type="radio" name="plain">
-              </label>
-              <label class="OptionValue">
-                <span class="Text">30ml</span>
-                <input class="u-Hidden" type="radio" name="plain">
-              </label>
-            </div>
-          </div>
+        <h2 class="Text Text--HeadingMedium">Image</h2>
 
-          <div class="OptionValueSelector">
-            <p class="Text">Color</p>
+        <h3 class="Text Text--HeadingSmall">Portrait</h3>
+        <div class="Image Image--Portrait">
+          <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-1.jpg" alt="portrait">
+        </div>
 
-            <div class="OptionValue__Values">
-              <label class="OptionValue OptionValue--Color" style="--color: red">
-                <input class="u-Hidden" type="radio" name="color_2" checked>
-              </label>
-              <label class="OptionValue OptionValue--Color" style="--color: blue">
-                <input class="u-Hidden" type="radio" name="color_2">
-              </label>
-              <label class="OptionValue OptionValue--Color" style="--color: green">
-                <input class="u-Hidden" type="radio" name="color_2">
-              </label>
-            </div>
-          </div>
+        <h3 class="Text Text--HeadingSmall">Landscape</h3>
+        <div class="Image Image--Landscape">
+          <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-2.jpg" alt="landscape">
+        </div>
 
-          <div class="OptionValueSelector">
-            <p class="Text">Size</p>
-
-            <div class="OptionValue__Values">
-              <label class="OptionValue OptionValue--Size"
-                ><span class="Text">S</span>
-                <input class="u-Hidden" type="radio" name="size_1" checked>
-              </label>
-              <label class="OptionValue OptionValue--Size"
-                ><span class="Text">M</span>
-                <input class="u-Hidden" type="radio" name="size_1">
-              </label>
-              <label class="OptionValue OptionValue--Size"
-                ><span class="Text">L</span>
-                <input class="u-Hidden" type="radio" name="size_1">
-              </label>
-            </div>
-          </div>
+        <h3 class="Text Text--HeadingSmall">Square</h3>
+        <div class="Image Image--Square">
+          <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-3.jpg" alt="square">
         </div>
       </section>
 
       <section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">Price List</h2>
+
+        <div class="PriceList">
+          <del class="Text Text--BodySmall">49,99€</del>
+          <strong class="Text Text--BodyMedium">39,99€</strong>
+        </div>
+      </section>
+
+      <section class="Section Section--Vertical">
+        <h2 class="Text Text--HeadingMedium">Product Card</h2>
+
+        <div class="ProductCard">
+          <div class="Image Image--Square">
+            <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-1.jpg" alt="">
+          </div>
+
+          <p class="Text Text--BodyLarge">Chair</p>
+
+          <div class="PriceList">
+            <del class="Text Text--BodySmall">49,99€</del>
+            <strong class="Text">39,99€</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="Section Section--Vertical">
+        <h2 class="Text Text--HeadingMedium">Collection Card</h2>
+
+        <div class="CollectionCard">
+          <div class="Image Image--Square">
+            <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-2.jpg" alt="">
+          </div>
+
+          <p class="Text Text--BodyLarge">Summer 2025</p>
+        </div>
       </section>
     </div>
   </body>

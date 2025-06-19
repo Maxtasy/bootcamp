@@ -1,0 +1,24 @@
+.NavigationBar {
+  display: none;
+  width: 100%;
+  padding: 20px;
+}
+
+.NavigationList {
+  display: flex;
+  justify-content: center;
+}
+
+.NavigationList__Item {
+  padding: 0 8px;
+}
+
+.NavigationList__Item:not(:last-child) {
+  border-right: 2px solid var(--border);
+}
+
+@media screen and (min-width: 400px) {
+  .NavigationBar {
+    display: block;
+  }
+}

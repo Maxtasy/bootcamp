@@ -1,0 +1,26 @@
+.OptionValue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  width: fit-content;
+  background-color: var(--background-secondary);
+  cursor: pointer;
+}
+
+.OptionValue:has(input:checked) {
+  border: 1px solid var(--border);
+}
+
+.OptionValue--Color {
+  width: 48px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color);
+}
+
+.OptionValue--Size {
+  width: 48px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
