@@ -1,0 +1,45 @@
+.AccordionJS {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.AccordionJS__Item {
+  border-radius: var(--border-radius);
+  background-color: var(--background-secondary);
+}
+
+.AccordionJS__Label {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--text-color-primary);
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.AccordionJS__Content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.AccordionJS__Content--Active {
+  max-height: calc(var(--content-height, 0) * 1px);
+}
+
+.AccordionJS__Content p {
+  padding: 1rem;
+}
+
+.AccordionJS .Icon path:last-child {
+  transition: transform 300ms ease-in-out;
+  transform-origin: center;
+}
+
+.AccordionJS
+  .AccordionJS__Box:has(.AccordionJS__Content--Active)
+  .Icon
+  path:last-child {
+  transform: rotate(270deg);
+}
