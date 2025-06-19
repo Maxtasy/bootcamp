@@ -1,0 +1,9 @@
+.PriceList {
+  display: flex;
+  gap: 8px;
+}
+
+.PriceList p {
+  color: red;
+  font-size: larger;
+}
