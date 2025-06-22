@@ -34,6 +34,12 @@
           <button id="to-do-save-button" class="Button Button--Primary">Save</button>
         </form>
       </section>
+
+      {% render 'components/product-card/product-card',
+        title: "Some Product",
+        image: "https://via.placeholder.com/150",
+        price: 9999,
+      %}
     </div>
   </body>
 </html>
