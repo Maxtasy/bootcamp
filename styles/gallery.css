@@ -1,0 +1,36 @@
+.Gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.Gallery__Main {
+}
+
+.Gallery__Item {
+  display: none;
+}
+
+.Gallery__Item--Active {
+  display: block;
+}
+
+.Gallery__Navigation {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.Gallery__Pagination {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.Gallery__PaginationItem {
+  width: 48px;
+}
+
+.Gallery__PaginationItem--Active {
+  outline: 2px solid var(--border);
+}
