@@ -1,0 +1,32 @@
+{
+  "price-list": {
+    "description": "Price List",
+    "params": {
+      "price": {
+        "type": "string",
+        "description": "Price in cents"
+      },
+      "compare_at_price": {
+        "type": "string",
+        "description": "Compare at price in cents"
+      }
+    }
+  },
+  "product-card": {
+    "description": "Product Card",
+    "params": {
+      "title": {
+        "type": "string",
+        "description": "Product title"
+      },
+      "image": {
+        "type": "string",
+        "description": "Product image URL"
+      },
+      "price": {
+        "type": "number",
+        "description": "Product price in cents"
+      }
+    }
+  }
+}
