@@ -15,6 +15,8 @@ class Backdrop extends HTMLElement {
 
       const event = new Event("drawer:close");
       document.dispatchEvent(event);
+      const popupCloseEvent = new Event("popup:hide");
+      document.dispatchEvent(popupCloseEvent);
     });
   }
 
