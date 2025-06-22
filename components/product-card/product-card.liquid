@@ -4,13 +4,16 @@
   @param {string} title - Product title
   @param {string} image - Product image URL
   @param {number} price - Product price in cents
+  @param {number} compare_at_price - Product price in cents
   @param {string} [tag] - Optional product tag
 {% enddoc %}
 
 <article class="ProductCard">
-  {{ title }}
+  <div class="Image Image--Square">
+    <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-1.jpg" alt="">
+  </div>
 
-  {{ image }}
+  <p class="Text Text--BodyLarge">Chair</p>
 
-  {{ price }}
+  {% render 'components/price-list/price-list', price: price, compare_at_price: compare_at_price %}
 </article>

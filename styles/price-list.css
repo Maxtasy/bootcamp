@@ -1,9 +1,0 @@
-.PriceList {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.PriceList strong {
-  color: var(--sale-color);
-}

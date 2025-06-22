@@ -26,6 +26,10 @@
       "price": {
         "type": "number",
         "description": "Product price in cents"
+      },
+      "compare_at_price": {
+        "type": "number",
+        "description": "Product price in cents"
       }
     }
   }

@@ -35,10 +35,13 @@
         </form>
       </section>
 
+      {% render 'components/price-list/price-list', price: '9.99 €', compare_at_price: '19.99 €' %}
+
       {% render 'components/product-card/product-card',
-        title: "Some Product",
-        image: "https://via.placeholder.com/150",
-        price: 9999,
+        title: 'Some Product',
+        image: 'https://via.placeholder.com/150',
+        price: '9.99 €',
+        compare_at_price: '19.99 €'
       %}
     </div>
   </body>
