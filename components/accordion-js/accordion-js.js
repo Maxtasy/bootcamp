@@ -1,4 +1,4 @@
-const accordionBoxElements = document.querySelectorAll(".AccordionJS__Box");
+const accordionBoxElements = document.querySelectorAll(".AccordionJS__Item");
 
 accordionBoxElements.forEach((accordionBoxElement) => {
   const labelElement = accordionBoxElement.querySelector(".AccordionJS__Label");

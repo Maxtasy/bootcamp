@@ -10,10 +10,6 @@ export default function (eleventyConfig) {
 
   // Add a passthrough for all .js files inside ./components/{COMPONENT_NAME}
   eleventyConfig.addPassthroughCopy({
-    "components/*/*.js": true,
-  });
-  // Add a passthrough for all .css files inside ./components/{COMPONENT_NAME}
-  eleventyConfig.addPassthroughCopy({
-    "components/*/*.css": true,
+    components: true,
   });
 }
