@@ -1,4 +1,17 @@
 {
+  "badge": {
+    "description": "Badge",
+    "params": {
+      "text": {
+        "type": "string",
+        "description": "Badge text"
+      },
+      "variant": {
+        "type": "string",
+        "description": "Badge variant ('sale')"
+      }
+    }
+  },
   "price-list": {
     "description": "Price List",
     "params": {

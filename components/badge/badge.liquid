@@ -1,0 +1,10 @@
+{% doc %}
+  Badge
+
+  @param {string} text - Badge text
+  @param {string} variant - Badge variant ('sale')
+{% enddoc %}
+
+<div class="Badge {% if variant == 'sale' %}Badge--Sale{% endif %}">
+  <p class="Text">{{ text }}</p>
+</div>
