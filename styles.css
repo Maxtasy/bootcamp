@@ -2,11 +2,13 @@
   --border-radius: 8px;
 
   --text-color-primary: rgb(0, 0, 0);
+  --text-color-primary-inverted: rgb(255, 255, 255);
 
   --background-primary: rgb(179, 179, 179);
   --background-secondary: rgb(255, 255, 255);
 
   --border: rgb(0, 0, 0);
+  --border-inverted: rgb(255, 255, 255);
 
   --icon: rgb(0, 0, 0);
   --icon-destructive: rgb(255, 0, 0);
@@ -33,12 +35,13 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --text-color-primary: rgb(228, 228, 228);
-    --text-color-secondary: rgb(0, 0, 0);
+    --text-color-primary-inverted: rgb(0, 0, 0);
 
     --background-primary: rgb(46, 46, 46);
     --background-secondary: rgb(27, 23, 23);
 
     --border: rgb(255, 255, 255);
+    --border-inverted: rgb(0, 0, 0);
 
     --icon: rgb(255, 255, 255);
     --icon-destructive: rgb(255, 0, 0);

@@ -662,6 +662,16 @@
           </div>
         </div>
       </section>
+
+      <section class="Section Section--Vertical">
+        <h3 class="Text Text--HeadingMedium">Badge</h3>
+
+        {% render 'components/badge/badge', text: 'Bestseller' %}
+
+        {% render 'components/badge/badge', text: 'New' %}
+
+        {% render 'components/badge/badge', text: 'Sale', variant: 'sale' %}
+      </section>
     </div>
   </body>
 </html>
