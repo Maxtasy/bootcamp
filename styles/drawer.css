@@ -1,0 +1,29 @@
+.Drawer {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 80%;
+  background-color: var(--background-secondary);
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+}
+
+.Drawer--Left {
+  transform: translateX(-100%);
+}
+
+.Drawer--Right {
+  transform: translateX(100%);
+  right: 0;
+}
+
+.Drawer--Active {
+  transform: translateX(0);
+}
+
+.Drawer__Close {
+  color: var(--icon);
+  position: absolute;
+  top: 0;
+  right: 0;
+}

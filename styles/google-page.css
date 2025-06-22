@@ -1,0 +1,40 @@
+.GooglePage {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  background-color: white;
+}
+
+.GoogleLogo {
+  width: 272px;
+  margin-bottom: 30px;
+}
+
+.GoogleSearch {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.GoogleButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.GoogleButtons button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+}
+
+.GoogleButtons button:hover {
+  border: 1px solid #c6c6c6;
+}

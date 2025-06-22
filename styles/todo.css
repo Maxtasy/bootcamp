@@ -1,0 +1,41 @@
+.ToDo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border: 1px dashed var(--border);
+  padding: 16px;
+  background-color: var(--background-secondary);
+  transition:
+    transform 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
+}
+
+.ToDo--Inserting {
+  transform: translateY(100%);
+}
+
+.ToDo--Removing {
+  transform: translateX(-200%);
+}
+
+.ToDo__Text {
+  display: none;
+}
+
+.ToDo__Text--Active {
+  display: inline;
+}
+
+.ToDo__Input {
+  display: none;
+  width: 100%;
+}
+
+.ToDo__Input--Active {
+  display: inline;
+}
+
+.ToDo--Success {
+  background-color: var(--surface-success);
+}

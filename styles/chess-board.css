@@ -1,0 +1,27 @@
+.Chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  border: 4px solid black;
+}
+
+.Square {
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+@media screen and (min-width: 400px) {
+  .Square {
+    font-size: 48px;
+  }
+}
+
+.Square--White {
+  background-color: lightgray;
+}
+
+.Square--Black {
+  background-color: brown;
+}
