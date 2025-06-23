@@ -12,16 +12,34 @@
       }
     }
   },
+  "badge-group": {
+    "description": "Badge Group",
+    "params": {
+      "badge_list": {
+        "type": "array",
+        "description": "List of strings"
+      }
+    }
+  },
+  "collection-card": {
+    "description": "Collection Card",
+    "params": {
+      "image": {
+        "type": "string",
+        "description": "Collection image URL"
+      },
+      "title": {
+        "type": "string",
+        "description": "Collection Title"
+      }
+    }
+  },
   "price-list": {
     "description": "Price List",
     "params": {
       "price": {
-        "type": "string",
+        "type": "number",
         "description": "Price in cents"
-      },
-      "compare_at_price": {
-        "type": "string",
-        "description": "Compare at price in cents"
       }
     }
   },
@@ -37,10 +55,6 @@
         "description": "Product image URL"
       },
       "price": {
-        "type": "number",
-        "description": "Product price in cents"
-      },
-      "compare_at_price": {
         "type": "number",
         "description": "Product price in cents"
       }

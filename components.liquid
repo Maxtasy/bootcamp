@@ -542,39 +542,35 @@
       <section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">Price List</h2>
 
-        <div class="PriceList">
-          <del class="Text Text--BodySmall">49,99€</del>
-          <strong class="Text Text--BodyMedium">39,99€</strong>
-        </div>
+        {% render 'components/price-list/price-list', price: 2999, compare_at_price: 4999 %}
       </section>
 
       <section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">Product Card</h2>
 
-        <div class="ProductCard">
-          <div class="Image Image--Square">
-            <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-1.jpg" alt="">
-          </div>
+        {% render 'components/product-card/product-card',
+          title: 'Chair',
+          image: '/images/shop-the-look/shop_the_look-1.jpg',
+          price: 2999,
+          compare_at_price: 4999,
+          badge: 'New'
+        %}
 
-          <p class="Text Text--BodyLarge">Chair</p>
-
-          <div class="PriceList">
-            <del class="Text Text--BodySmall">49,99€</del>
-            <strong class="Text">39,99€</strong>
-          </div>
-        </div>
+        {% render 'components/product-card/product-card',
+          title: 'Table',
+          image: '/images/shop-the-look/shop_the_look-2.jpg',
+          price: 2999,
+          badge: 'Bestseller'
+        %}
       </section>
 
       <section class="Section Section--Vertical">
         <h2 class="Text Text--HeadingMedium">Collection Card</h2>
 
-        <div class="CollectionCard">
-          <div class="Image Image--Square">
-            <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-2.jpg" alt="">
-          </div>
-
-          <p class="Text Text--BodyLarge">Summer 2025</p>
-        </div>
+        {% render 'components/collection-card/collection-card',
+          image: '/images/shop-the-look/shop_the_look-2.jpg',
+          title: 'Summer 2025'
+        %}
       </section>
 
       <section class="Section Section--Vertical">

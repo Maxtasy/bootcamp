@@ -3,3 +3,14 @@
   flex-direction: column;
   gap: 4px;
 }
+
+.ProductCard__Image {
+  position: relative;
+}
+
+.ProductCard__Badges {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px;
+}

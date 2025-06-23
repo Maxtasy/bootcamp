@@ -1,0 +1,17 @@
+{% doc %}
+  Badge Group
+
+  @param {array} badge_list - List of strings
+{% enddoc %}
+
+<ul class="BadgeGroup u-NoList">
+  {% for badge in badge_list %}
+    {% if badge == 'Sale' %}
+      {% assign variant = 'sale' %}
+    {% endif %}
+
+    <li>
+      {% render 'components/badge/badge', text: badge, variant: variant %}
+    </li>
+  {% endfor %}
+</ul>

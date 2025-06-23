@@ -1,0 +1,14 @@
+{% doc %}
+  Collection Card
+
+  @param {string} image - Collection image URL
+  @param {string} title - Collection Title
+{% enddoc %}
+
+<article class="ProductCard">
+  <div class="Image Image--Square">
+    <img class="Image__Inner" src="{{ image }}" alt="">
+  </div>
+
+  <p class="Text Text--BodyLarge">{{ title }}</p>
+</article>
