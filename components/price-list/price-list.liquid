@@ -1,11 +1,14 @@
 {% doc %}
   Price List
 
-  @param {string} price - Price in cents
-  @param {string} compare_at_price - Compare at price in cents
+  @param {number} price - Price in cents
+  @param {number} [compare_at_price] - Compare at price in cents
 {% enddoc %}
 
 <div class="PriceList">
-  <del class="Text Text--BodySmall">{{ price }}</del>
-  <strong class="Text">{{ compare_at_price }}</strong>
+  {% if compare_at_price %}
+    <del class="Text Text--BodySmall">{{ compare_at_price | divided_by: 100.0 | append: '€' }}</del>
+  {% endif %}
+
+  <strong class="Text">{{ price | divided_by: 100.0 | append: '€' }}</strong>
 </div>

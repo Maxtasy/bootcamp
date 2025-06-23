@@ -4,16 +4,32 @@
   @param {string} title - Product title
   @param {string} image - Product image URL
   @param {number} price - Product price in cents
-  @param {number} compare_at_price - Product price in cents
-  @param {string} [tag] - Optional product tag
+  @param {number} [compare_at_price] - Product price in cents
+  @param {string} [badge] - Optional product badge
 {% enddoc %}
 
 <article class="ProductCard">
-  <div class="Image Image--Square">
-    <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-1.jpg" alt="">
+  <div class="ProductCard__Image">
+    <div class="Image Image--Square">
+      <img class="Image__Inner" src="{{ image }}" alt="">
+    </div>
+
+    <div class="ProductCard__Badges">
+      {% assign badge_list = badge %}
+
+      {% if compare_at_price > price %}
+        {% assign badge_list = badge_list | append: ',' | append: 'Sale' %}
+      {% endif %}
+
+      {% assign badge_list = badge_list | split: ',' %}
+
+      {% if badge_list.size > 0 %}
+        {% render 'components/badge-group/badge-group', badge_list: badge_list %}
+      {% endif %}
+    </div>
   </div>
 
-  <p class="Text Text--BodyLarge">Chair</p>
+  <p class="Text Text--BodyLarge">{{ title }}</p>
 
   {% render 'components/price-list/price-list', price: price, compare_at_price: compare_at_price %}
 </article>
