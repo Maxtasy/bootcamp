@@ -6,7 +6,7 @@ const COMPONENT_DIR = "./components";
 const OUTPUT_FILE = "./component-docs.json";
 
 const DOC_BLOCK_REGEX = /{%\s*doc\s*%}([\s\S]*?){%\s*enddoc\s*%}/i;
-const PARAM_REGEX = /@param\s+{(\w+)}\s+(\w+)\s*-\s*(.*)/g;
+const PARAM_REGEX = /@param\s+{([^}]+)}\s+(\[?\w+\]?)\s*-\s*(.*)/g;
 
 async function extractDocs() {
   // Updated glob pattern: match any .liquid file in any subfolder of components
@@ -31,8 +31,16 @@ async function extractDocs() {
 
     let paramMatch;
     while ((paramMatch = PARAM_REGEX.exec(docContent)) !== null) {
-      const [, type, paramName, desc] = paramMatch;
-      params[paramName] = { type, description: desc };
+      const [, type, rawName, desc] = paramMatch;
+
+      const optional = rawName.startsWith("[") && rawName.endsWith("]");
+      const name = optional ? rawName.slice(1, -1) : rawName;
+
+      params[name] = {
+        type: type.trim(),
+        description: desc.trim(),
+        optional,
+      };
     }
 
     docs[name] = { description, params };
