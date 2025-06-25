@@ -1,0 +1,17 @@
+{% doc %}
+  Link
+
+  @param {string} text - Link text
+  @param {string} url - The URL of the link
+  @param {boolean} external - Whether the link should be opened in a new window
+{% enddoc %}
+
+<a
+  class="Link"
+  href="{{ url }}"
+  {% if external %}
+    target="_blank"
+  {% endif %}
+>
+  {{- text -}}
+</a>

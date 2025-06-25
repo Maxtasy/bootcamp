@@ -1,0 +1,11 @@
+{% doc %}
+  Icon Group
+
+  @param {array} icon_list - List of strings
+{% enddoc %}
+
+<div class="IconGroup">
+  {% for icon in icon_list %}
+    {% render 'components/icon/icon', icon: icon %}
+  {% endfor %}
+</div>

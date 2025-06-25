@@ -1,4 +1,26 @@
 {
+  "accordion": {
+    "description": "Accordion",
+    "params": {
+      "text": {
+        "type": "string",
+        "description": "Button text"
+      },
+      "variant": {
+        "type": "string",
+        "description": "Button variant ('Primary', 'Secondary')"
+      }
+    }
+  },
+  "badge-group": {
+    "description": "Badge Group",
+    "params": {
+      "badge_list": {
+        "type": "array",
+        "description": "List of strings"
+      }
+    }
+  },
   "badge": {
     "description": "Badge",
     "params": {
@@ -12,12 +34,16 @@
       }
     }
   },
-  "badge-group": {
-    "description": "Badge Group",
+  "button-group": {
+    "description": "Button Group",
     "params": {
-      "badge_list": {
-        "type": "array",
-        "description": "List of strings"
+      "text": {
+        "type": "string",
+        "description": "Button text"
+      },
+      "variant": {
+        "type": "string",
+        "description": "Button variant ('Primary', 'Secondary')"
       }
     }
   },
@@ -31,6 +57,67 @@
       "title": {
         "type": "string",
         "description": "Collection Title"
+      }
+    }
+  },
+  "button": {
+    "description": "Button",
+    "params": {
+      "text": {
+        "type": "string",
+        "description": "Button text"
+      },
+      "variant": {
+        "type": "string",
+        "description": "Button variant ('Primary', 'Secondary')"
+      }
+    }
+  },
+  "icon-group": {
+    "description": "Icon Group",
+    "params": {
+      "icon_list": {
+        "type": "array",
+        "description": "List of strings"
+      }
+    }
+  },
+  "icon-with-text": {
+    "description": "Icon with text",
+    "params": {
+      "icon": {
+        "type": "string",
+        "description": "The handle of the icon to render"
+      },
+      "text": {
+        "type": "string",
+        "description": "The text to render"
+      }
+    }
+  },
+  "icon": {
+    "description": "Icon",
+    "params": {
+      "icon": {
+        "type": "string",
+        "description": "The handle of the icon to render"
+      }
+    }
+  },
+  "link": {
+    "description": "Link",
+    "params": {
+      "text": {
+        "type": "string",
+        "description": "Link text"
+      },
+      "url": {
+        "type": "string",
+        "description": "The URL of the link"
+      },
+      "external": {
+        "type": "boolean",
+        "description": "Whether the link should be opened in a new window"
       }
     }
   },
@@ -57,6 +144,23 @@
       "price": {
         "type": "number",
         "description": "Product price in cents"
+      }
+    }
+  },
+  "quantity-selector": {
+    "description": "Quantity Selector",
+    "params": {}
+  },
+  "text": {
+    "description": "Text",
+    "params": {
+      "text": {
+        "type": "string",
+        "description": "text"
+      },
+      "variant": {
+        "type": "string",
+        "description": "Text variant ('HeadingLarge', 'HeadingMedium', 'HeadingSmall', 'BodyLarge', 'BodyMedium', 'BodySmall')"
       }
     }
   }

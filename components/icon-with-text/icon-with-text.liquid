@@ -1,0 +1,12 @@
+{% doc %}
+  Icon with text
+
+  @param {string} icon - The handle of the icon to render
+  @param {string} text - The text to render
+{% enddoc %}
+
+<div class="IconWithText">
+  {% render 'components/icon/icon', icon: icon %}
+
+  {% render 'components/text/text', text: text %}
+</div>

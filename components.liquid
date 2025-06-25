@@ -19,20 +19,20 @@
     {% include 'partials/drawers.html' %}
 
     <div class="PageContent">
-      <h1 class=" Text Text--HeadingLarge">Components</h1>
+      {% render 'components/text/text', as: 'h1', text: 'Components', variant: 'HeadingLarge' %}
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Text</h2>
-        <h2 class="Text Text--HeadingLarge">Heading Large</h2>
-        <h2 class="Text Text--HeadingMedium">Heading Medium</h2>
-        <h2 class="Text Text--HeadingSmall">Heading Small</h2>
-        <p class="Text Text--BodyLarge">Body Large</p>
-        <p class="Text Text--BodyMedium">Body Medium</p>
-        <p class="Text Text--BodySmall">Body Small</p>
+        {% render 'components/text/text', as: 'h2', text: 'Text', variant: 'HeadingMedium' %}
+        {% render 'components/text/text', as: 'h2', text: 'Heading Large', variant: 'HeadingLarge' %}
+        {% render 'components/text/text', as: 'h2', text: 'Heading Medium', variant: 'HeadingMedium' %}
+        {% render 'components/text/text', as: 'h2', text: 'Heading Small', variant: 'HeadingSmall' %}
+        {% render 'components/text/text', text: 'Body Large', variant: 'BodyLarge' %}
+        {% render 'components/text/text', text: 'Body Medium', variant: 'BodyMedium' %}
+        {% render 'components/text/text', text: 'Body Small', variant: 'BodySmall' %}
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Inputs</h2>
+        {% render 'components/text/text', as: 'h2', text: 'Input', variant: 'HeadingMedium' %}
 
         <input class="Input" type="text" name="">
 
@@ -118,7 +118,14 @@
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Buttons</h2>
+        {% render 'components/text/text', as: 'h2', text: 'Button', variant: 'HeadingMedium' %}
+
+        {% render 'components/button/button', text: 'Primary', variant: 'Primary' %}
+        {% render 'components/button/button', text: 'Secondary', variant: 'Secondary' %}
+      </section>
+
+      <section class="Section Section--Vertical">
+        {% render 'components/text/text', as: 'h2', text: 'Button Group', variant: 'HeadingMedium' %}
 
         <div class="ButtonGroup">
           <button class="Button Button--Primary">Primary</button>
@@ -127,14 +134,14 @@
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Accordions</h2>
+        {% render 'components/text/text', as: 'h2', text: 'Accordion', variant: 'HeadingMedium' %}
 
-        <h3 class="Text Text--HeadingSmall">Accordion with HTML and CSS</h3>
+        {% render 'components/text/text', as: 'h3', text: 'Accordion with HTML and CSS', variant: 'HeadingSmall' %}
 
         <ul class="u-NoList Accordion">
           <li>
             <label>
-              <p class="Text Text--BodyLarge">How to create?</p>
+              {% render 'components/text/text', text: 'How to create?', variant: 'BodyLarge' %}
               <div class="Icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -154,16 +161,16 @@
               <input class="u-Hidden" type="checkbox">
             </label>
             <div class="Accordion__Content u-NoScrollbar">
-              <p class="Text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
-                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
-              </p>
+              {% render 'components/text/text',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
+              %}
             </div>
           </li>
 
           <li>
             <label>
-              <p class="Text Text--BodyLarge">Where to use?</p>
+              {% render 'components/text/text', text: 'Where to use?', variant: 'BodyLarge' %}
               <div class="Icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -183,16 +190,16 @@
               <input class="u-Hidden" type="checkbox">
             </label>
             <div class="Accordion__Content u-NoScrollbar">
-              <p class="Text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
-                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
-              </p>
+              {% render 'components/text/text',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
+              %}
             </div>
           </li>
 
           <li>
             <label>
-              <p class="Text Text--BodyLarge">What is accordion?</p>
+              {% render 'components/text/text', text: 'What is accordion?', variant: 'BodyLarge' %}
               <div class="Icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -212,20 +219,20 @@
               <input class="u-Hidden" type="checkbox">
             </label>
             <div class="Accordion__Content u-NoScrollbar">
-              <p class="Text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
-                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?
-              </p>
+              {% render 'components/text/text',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
+              %}
             </div>
           </li>
         </ul>
 
-        <h3 class="Text Text--HeadingSmall">Accordion with HTML, CSS and JS</h3>
+        {% render 'components/text/text', as: 'h3', text: 'Accordion with HTML, CSS and JS', variant: 'HeadingSmall' %}
 
         <div class="AccordionJS">
           <div class="AccordionJS__Item">
             <button class="AccordionJS__Label">
-              <p class="Text">List One</p>
+              {% render 'components/text/text', text: 'List One' %}
 
               <div class="Icon">
                 <svg
@@ -246,17 +253,16 @@
             </button>
 
             <div class="AccordionJS__Content">
-              <p class="Text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur rem reiciendis explicabo voluptate
-                culpa neque. Quos velit quam ullam consequatur officia eius expedita aliquam ipsa! Quasi quidem cum vel
-                distinctio!
-              </p>
+              {% render 'components/text/text',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
+              %}
             </div>
           </div>
 
           <div class="AccordionJS__Item">
             <button class="AccordionJS__Label">
-              <p class="Text">List Two</p>
+              {% render 'components/text/text', text: 'List Two' %}
 
               <div class="Icon">
                 <svg
@@ -277,17 +283,16 @@
             </button>
 
             <div class="AccordionJS__Content">
-              <p class="Text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur rem reiciendis explicabo voluptate
-                culpa neque. Quos velit quam ullam consequatur officia eius expedita aliquam ipsa! Quasi quidem cum vel
-                distinctio!
-              </p>
+              {% render 'components/text/text',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
+              %}
             </div>
           </div>
 
           <div class="AccordionJS__Item">
             <button class="AccordionJS__Label">
-              <p class="Text">List Three</p>
+              {% render 'components/text/text', text: 'List Three' %}
 
               <div class="Icon">
                 <svg
@@ -308,17 +313,16 @@
             </button>
 
             <div class="AccordionJS__Content">
-              <p class="Text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur rem reiciendis explicabo voluptate
-                culpa neque. Quos velit quam ullam consequatur officia eius expedita aliquam ipsa! Quasi quidem cum vel
-                distinctio!
-              </p>
+              {% render 'components/text/text',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
+              %}
             </div>
           </div>
 
           <div class="AccordionJS__Item">
             <button class="AccordionJS__Label">
-              <p class="Text">List Four</p>
+              {% render 'components/text/text', text: 'List Four' %}
 
               <div class="Icon">
                 <svg
@@ -339,105 +343,61 @@
             </button>
 
             <div class="AccordionJS__Content">
-              <p class="Text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur rem reiciendis explicabo voluptate
-                culpa neque. Quos velit quam ullam consequatur officia eius expedita aliquam ipsa! Quasi quidem cum vel
-                distinctio!
-              </p>
+              {% render 'components/text/text',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
+              %}
             </div>
           </div>
         </div>
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Links</h2>
-        <h3 class="Text Text--HeadingSmall">Single link</h3>
-        <a href="/google-page" class="Link">This is a link to my google-page</a>
+        {% render 'components/text/text', as: 'h2', text: 'Link', variant: 'HeadingMedium' %}
 
-        <h3 class="Text Text--HeadingSmall">Link-Group</h3>
+        {% render 'components/link/link', text: 'This a link to my google-page', url: '/google-page' %}
+      </section>
+
+      <section class="Section Section--Vertical">
+        {% render 'components/text/text', as: 'h2', text: 'Link Group', variant: 'HeadingMedium' %}
+
         <ul class="LinkGroup u-NoList">
           <li>
-            <a href="" class="Link">Link 1</a>
+            {% render 'components/link/link', text: 'Link 1', url: '#' %}
           </li>
           <li>
-            <a href="" class="Link">Link 2</a>
+            {% render 'components/link/link', text: 'Link 2', url: '#' %}
           </li>
           <li>
-            <a href="" class="Link">Link 3</a>
+            {% render 'components/link/link', text: 'Link 3', url: '#', external: true %}
           </li>
         </ul>
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Icon with Text</h2>
+        {% render 'components/text/text', as: 'h2', text: 'Icon', variant: 'HeadingMedium' %}
 
-        <div class="IconWithText">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-landmark-icon lucide-landmark"
-          >
-            <path d="M10 18v-7"/><path d="M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M3 22h18"/><path d="M6 18v-7"/>
-          </svg>
-          <p class="Text">Icon with Text</p>
-        </div>
+        {% render 'components/icon/icon', icon: 'utensils-crossed' %}
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Quantity Selector</h2>
+        {% render 'components/text/text', as: 'h2', text: 'Icon Group', variant: 'HeadingMedium' %}
 
-        <quantity-selector-component
-          class="QuantitySelector"
-        >
-          <button-component class="Button Button--Secondary Button--Icon" data-action="decrease">
-            <div class="Icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-minus-icon lucide-minus"
-              >
-                <path d="M5 12h14"/>
-              </svg>
-            </div>
-          </button-component>
+        {% assign icon_list = 'leafy-green, utensils-crossed' | split: ', ' %}
 
-          <form>
-            <input class="Input Input--Number u-NoNumberControls" type="number" value="1" min="1" max="9">
-          </form>
+        {% render 'components/icon-group/icon-group', icon_list: icon_list %}
+      </section>
 
-          <button-component class="Button Button--Secondary Button--Icon" data-action="increase">
-            <div class="Icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-plus-icon lucide-plus"
-              >
-                <path d="M5 12h14"/><path d="M12 5v14"/>
-              </svg>
-            </div>
-          </button-component>
-        </quantity-selector-component>
+      <section class="Section Section--Vertical">
+        {% render 'components/text/text', as: 'h2', text: 'Icon with Text', variant: 'HeadingMedium' %}
+
+        {% render 'components/icon-with-text/icon-with-text', icon: 'landmark', text: 'Icon with text' %}
+      </section>
+
+      <section class="Section Section--Vertical">
+        {% render 'components/text/text', as: 'h2', text: 'Quantity Selector', variant: 'HeadingMedium' %}
+
+        {% render 'components/quantity-selector/quantity-selector' %}
       </section>
 
       <section class="Section Section--Vertical">

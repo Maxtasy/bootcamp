@@ -1,0 +1,10 @@
+{% doc %}
+  Button
+
+  @param {string} text - Button text
+  @param {string} variant - Button variant ('Primary', 'Secondary')
+{% enddoc %}
+
+<button class="Button{% if variant %} Button--{{ variant }}{% endif %}">
+  {{ text }}
+</button>
