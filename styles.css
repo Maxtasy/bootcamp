@@ -66,13 +66,6 @@
   }
 }
 
-.CloseButton {
-  color: var(--icon);
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 .ToDoForm {
   display: flex;
   gap: 16px;

@@ -9,10 +9,6 @@ const paginationItemElements = document.querySelectorAll(".Pagination__Item");
 const previousButtonElement = document.querySelector("[data-action='prev']");
 const nextButtonElement = document.querySelector("[data-action='next']");
 const saveIndicatorsButtonElement = document.querySelector("#save-indicators");
-const popUpElements = document.querySelectorAll(".PopUp");
-const popUpCloseButtonElements = document.querySelectorAll(
-  ".PopUp .CloseButton",
-);
 
 let activeIndicator = null;
 let activeShopTheLookIndex = 0;
@@ -36,33 +32,33 @@ function setActiveStates() {
 }
 
 indicatorElements.forEach((indicatorElement, index) => {
-  indicatorElement.addEventListener("click", (event) => {
-    const clickedIndicator = event.target;
-
+  indicatorElement.addEventListener("click", () => {
     // Handle active state for each indicator element
 
     indicatorElements.forEach((element) => {
       const shouldBeActive =
-        element === clickedIndicator &&
+        element === indicatorElement &&
         !element.classList.contains("Indicator--Active");
       if (shouldBeActive) {
-        activeIndicator = clickedIndicator;
+        activeIndicator = indicatorElement;
       }
       element.classList.toggle("Indicator--Active", shouldBeActive);
     });
 
     // Set controls to clicked indicator element
 
-    const xValue = clickedIndicator.style.getPropertyValue("--x-position");
-    const yValue = clickedIndicator.style.getPropertyValue("--y-position");
+    const xValue = indicatorElement.style.getPropertyValue("--x-position");
+    const yValue = indicatorElement.style.getPropertyValue("--y-position");
 
     xRangeElement.value = xValue;
     yRangeElement.value = yValue;
 
     // Show connected pop up
-    const handle = clickedIndicator.getAttribute("data-handle");
+    const handle = indicatorElement.getAttribute("data-handle");
 
-    const popupShowEvent = new CustomEvent("popup:show", { detail: handle });
+    const popupShowEvent = new CustomEvent("popup:show", {
+      detail: { handle },
+    });
     document.dispatchEvent(popupShowEvent);
 
     // Show page overlay

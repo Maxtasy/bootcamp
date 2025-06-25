@@ -1,4 +1,4 @@
-.PopUp {
+.Popup {
   display: none;
   gap: 16px;
   width: 75%;
@@ -12,20 +12,26 @@
   z-index: 10;
 }
 
-.PopUp--Active {
+.Popup--Active {
   display: flex;
 }
 
-.PopUp__Details {
+.Popup__Details {
   display: flex;
   flex-direction: column;
   gap: 16px;
   justify-content: space-between;
 }
 
-.PopUp__Image {
+.Popup__Image {
   flex-shrink: 0;
   width: 120px;
   aspect-ratio: 2/3;
   object-fit: cover;
+}
+
+.Popup__Close {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
