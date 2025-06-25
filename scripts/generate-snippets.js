@@ -15,8 +15,9 @@ async function generateSnippets() {
     ];
 
     const paramEntries = Object.entries(info.params || {});
-    paramEntries.forEach(([param, { type }], index) => {
-      bodyLines.push(`  ${param}: \${${index + 1}:${type}},`);
+    paramEntries.forEach(([param, { type, optional }], index) => {
+      const placeholderValue = optional ? `[${type}]` : `${type}`;
+      bodyLines.push(`  ${param}: \${${index + 1}:${placeholderValue}},`);
     });
 
     bodyLines.push("%}");
