@@ -1,0 +1,57 @@
+{% doc %}
+  Input
+
+  @param {string} [type] - Input type (password, text, number)
+  @param {string} [value] - Input value
+  @param {string} [min] - Input minimum
+  @param {string} [max] - Input maximum
+  @param {string} [step] - Step amount
+  @param {boolean} [full_width] - Whether to render the input as full width
+{% enddoc %}
+
+{% assign type = type | default: 'text' %}
+{% assign class_name = 'Input' %}
+
+{% case type %}
+  {% when 'number' %}
+    {% assign value = value | default: 1 %}
+    {% assign _min = min %}
+    {% assign _max = max %}
+    {% assign _step = step %}
+    {% assign class_name = class_name | append: ' ' | append: 'Input--Number' %}
+
+  {% when 'password' %}
+    {% assign class_name = class_name | append: ' ' | append: 'Input--WithIcon' %}
+
+  {% else %}
+
+{% endcase %}
+
+<div class="InputWrapper {% if full_width %}InputWrapper--FullWidth{% endif %}">
+  <input
+    class="{{ class_name }}"
+    type="{{ type }}"
+    value="{{ value }}"
+    {% if _min %}
+      min="{{ _min }}"
+    {% endif %}
+
+    {% if _max %}
+      max="{{ _max }}"
+    {% endif %}
+
+    {% if _step %}
+      step="{{ _step }}"
+    {% endif %}
+  >
+
+  {% if type == 'password' %}
+    <button class="Input__Action Input__Action--Active">
+      {% render 'components/icon/icon', icon: 'eye' %}
+    </button>
+
+    <button class="Input__Action">
+      {% render 'components/icon/icon', icon: 'eye-off' %}
+    </button>
+  {% endif %}
+</div>

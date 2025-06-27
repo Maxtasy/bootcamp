@@ -1,0 +1,23 @@
+{% doc %}
+  Button
+
+  @param {string} [text] - Button text
+  @param {string} variant - Button variant ('Primary', 'Secondary', 'Icon')
+  @param {string} [icon] - Icon handle
+  @param {string} [action] - The action attribute
+{% enddoc %}
+
+<button
+  class="Button{% if variant %} Button--{{ variant }}{% endif %}"
+  {% if action %}
+    data-action="{{ action }}"
+  {% endif %}
+>
+  {% if text %}
+    {{ text }}
+  {% endif %}
+
+  {% if icon %}
+    {% render 'components/icon/icon', icon: icon %}
+  {% endif %}
+</button>

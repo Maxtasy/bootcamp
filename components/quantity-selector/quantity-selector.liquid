@@ -1,0 +1,33 @@
+{% doc %}
+  Quantity Selector
+
+  @param {string|number} [value] - Initial value
+  @param {string|number} [min] - Minimum value
+  @param {string|number} [max] - Maximum value
+{% enddoc %}
+
+<quantity-selector-component
+  class="QuantitySelector"
+>
+  <button-component class="Button Button--Secondary Button--Icon" data-action="decrease">
+    {% render 'components/icon/icon', icon: 'minus' %}
+  </button-component>
+
+  <form>
+    <input
+      class="Input Input--Number u-NoNumberControls"
+      type="number"
+      value="{{ value | default: 1 }}"
+      {% if min %}
+        min="{{ min }}"
+      {% endif %}
+      {% if max %}
+        max="{{ max }}"
+      {% endif %}
+    >
+  </form>
+
+  <button-component class="Button Button--Secondary Button--Icon" data-action="increase">
+    {% render 'components/icon/icon', icon: 'plus' %}
+  </button-component>
+</quantity-selector-component>

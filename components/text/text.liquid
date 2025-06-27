@@ -1,0 +1,14 @@
+{% doc %}
+  Text
+
+  @param {string} [as] - The HTML tag to use. Defaults to p
+  @param {string} text - text
+  @param {string} variant - Text variant ('HeadingLarge', 'HeadingMedium', 'HeadingSmall', 'BodyLarge', 'BodyMedium', 'BodySmall')
+{% enddoc %}
+
+{% assign as = as | default: 'p' %}
+{% assign variant = variant | default: 'BodyMedium' %}
+
+<{{ as }} class="Text{% if variant %} Text--{{ variant }}{% endif %}">
+  {{ text }}
+</{{ as }}>

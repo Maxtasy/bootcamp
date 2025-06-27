@@ -1,0 +1,18 @@
+{% doc %}
+  Accordion JS Item
+
+  @param {string} label - Label text
+  @param {string} content - Hidden content by default
+{% enddoc %}
+
+<div class="AccordionJS__Item">
+  <button class="AccordionJS__Label">
+    {% render 'components/text/text', text: label, variant: 'BodyMedium' %}
+
+    {% render 'components/icon/icon', icon: 'plus' %}
+  </button>
+
+  <div class="AccordionJS__Content">
+    {% render 'components/text/text', text: content %}
+  </div>
+</div>
