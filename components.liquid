@@ -310,21 +310,24 @@
         <div class="Gallery">
           <div class="Gallery__Main">
             <div class="Gallery__Item Gallery__Item--Active">
-              <div class="Image Image--Landscape">
-                <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-1.jpg" alt="">
-              </div>
+              {% render 'components/image/image',
+                image: '/images/shop-the-look/shop_the_look-1.jpg',
+                alt: 'Gallery Image 1'
+              %}
             </div>
 
             <div class="Gallery__Item">
-              <div class="Image Image--Landscape">
-                <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-2.jpg" alt="">
-              </div>
+              {% render 'components/image/image',
+                image: '/images/shop-the-look/shop_the_look-2.jpg',
+                alt: 'Gallery Image 2'
+              %}
             </div>
 
             <div class="Gallery__Item">
-              <div class="Image Image--Landscape">
-                <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-3.jpg" alt="">
-              </div>
+              {% render 'components/image/image',
+                image: '/images/shop-the-look/shop_the_look-3.jpg',
+                alt: 'Gallery Image 3'
+              %}
             </div>
           </div>
 
@@ -333,42 +336,31 @@
 
             <div class="Gallery__Pagination">
               <button class="Gallery__PaginationItem Gallery__PaginationItem--Active">
-                <div class="Image Image--Square">
-                  <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-1.jpg" alt="">
-                </div>
+                {% render 'components/image/image',
+                  image: '/images/shop-the-look/shop_the_look-1.jpg',
+                  alt: 'Gallery Image 1',
+                  variant: 'Square'
+                %}
               </button>
 
               <button class="Gallery__PaginationItem">
-                <div class="Image Image--Square">
-                  <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-2.jpg" alt="">
-                </div>
+                {% render 'components/image/image',
+                  image: '/images/shop-the-look/shop_the_look-2.jpg',
+                  alt: 'Gallery Image 2',
+                  variant: 'Square'
+                %}
               </button>
 
               <button class="Gallery__PaginationItem">
-                <div class="Image Image--Square">
-                  <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-3.jpg" alt="">
-                </div>
+                {% render 'components/image/image',
+                  image: '/images/shop-the-look/shop_the_look-3.jpg',
+                  alt: 'Gallery Image 3',
+                  variant: 'Square'
+                %}
               </button>
             </div>
 
-            <button class="Button--Icon" data-action="next">
-              <div class="Icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-square-arrow-right-icon lucide-square-arrow-right"
-                >
-                  <rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 12h8"/><path d="m12 16 4-4-4-4"/>
-                </svg>
-              </div>
-            </button>
+            {% render 'components/button/button', variant: 'Icon', action: 'next', icon: 'square-arrow-right' %}
           </div>
         </div>
       </section>
