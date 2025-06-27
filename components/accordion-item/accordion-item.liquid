@@ -1,0 +1,19 @@
+{% doc %}
+  Accordion Item
+
+  @param {string} label - Label text
+  @param {string} content - Hidden content by default
+{% enddoc %}
+
+<li>
+  <label>
+    {% render 'components/text/text', text: label, variant: 'BodyLarge' %}
+    {% render 'components/icon/icon', icon: 'plus' %}
+
+    <input class="u-Hidden" type="checkbox">
+  </label>
+
+  <div class="Accordion__Content u-NoScrollbar">
+    {% render 'components/text/text', text: content %}
+  </div>
+</li>

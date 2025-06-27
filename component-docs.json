@@ -1,23 +1,27 @@
 {
-  "accordion": {
-    "description": "Accordion",
+  "accordion-item": {
+    "description": "Accordion Item",
     "params": {
-      "text": {
+      "label": {
         "type": "string",
-        "description": "Button text"
+        "description": "Label text"
       },
-      "variant": {
+      "content": {
         "type": "string",
-        "description": "Button variant ('Primary', 'Secondary')"
+        "description": "Hidden content by default"
       }
     }
   },
-  "badge-group": {
-    "description": "Badge Group",
+  "accordion-js-item": {
+    "description": "Accordion JS Item",
     "params": {
-      "badge_list": {
-        "type": "array",
-        "description": "List of strings"
+      "label": {
+        "type": "string",
+        "description": "Label text"
+      },
+      "content": {
+        "type": "string",
+        "description": "Hidden content by default"
       }
     }
   },
@@ -34,16 +38,21 @@
       }
     }
   },
-  "button-group": {
-    "description": "Button Group",
+  "button": {
+    "description": "Button",
     "params": {
-      "text": {
-        "type": "string",
-        "description": "Button text"
-      },
       "variant": {
         "type": "string",
-        "description": "Button variant ('Primary', 'Secondary')"
+        "description": "Button variant ('Primary', 'Secondary', 'Icon')"
+      }
+    }
+  },
+  "badge-group": {
+    "description": "Badge Group",
+    "params": {
+      "badge_list": {
+        "type": "array",
+        "description": "List of strings"
       }
     }
   },
@@ -60,16 +69,12 @@
       }
     }
   },
-  "button": {
-    "description": "Button",
+  "icon": {
+    "description": "Icon",
     "params": {
-      "text": {
+      "icon": {
         "type": "string",
-        "description": "Button text"
-      },
-      "variant": {
-        "type": "string",
-        "description": "Button variant ('Primary', 'Secondary')"
+        "description": "The handle of the icon to render"
       }
     }
   },
@@ -95,14 +100,22 @@
       }
     }
   },
-  "icon": {
-    "description": "Icon",
+  "image": {
+    "description": "Image",
     "params": {
-      "icon": {
+      "image": {
         "type": "string",
-        "description": "The handle of the icon to render"
+        "description": "URL of the image"
+      },
+      "alt": {
+        "type": "string",
+        "description": "Alt attribute for the image"
       }
     }
+  },
+  "input": {
+    "description": "Input",
+    "params": {}
   },
   "link": {
     "description": "Link",

@@ -10,9 +10,7 @@
 
 <article class="ProductCard">
   <div class="ProductCard__Image">
-    <div class="Image Image--Square">
-      <img class="Image__Inner" src="{{ image }}" alt="">
-    </div>
+    {% render 'components/image/image', image: image, alt: title %}
 
     <div class="ProductCard__Badges">
       {% assign badge_list = badge %}
@@ -29,7 +27,7 @@
     </div>
   </div>
 
-  <p class="Text Text--BodyLarge">{{ title }}</p>
+  {% render 'components/text/text', text: title, variant: 'BodyLarge' %}
 
   {% render 'components/price-list/price-list', price: price, compare_at_price: compare_at_price %}
 </article>

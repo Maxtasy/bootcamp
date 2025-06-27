@@ -34,87 +34,13 @@
       <section class="Section Section--Vertical">
         {% render 'components/text/text', as: 'h2', text: 'Input', variant: 'HeadingMedium' %}
 
-        <input class="Input" type="text" name="">
+        {% render 'components/input/input', full_width: true %}
 
-        <div class="InputWrapper">
-          <input class="Input Input--WithIcon" type="password">
-          <button class="Input__Action Input__Action--Active">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-eye-icon lucide-eye"
-            >
-              <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/>
-            </svg>
-          </button>
-          <button class="Input__Action">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-eye-off-icon lucide-eye-off"
-            >
-              <path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/>
-            </svg>
-          </button>
-        </div>
+        {% render 'components/input/input', type: 'password' %}
 
-        <div class="InputWrapper">
-          <input class="Input Input--WithIcon" type="password">
-          <button class="Input__Action Input__Action--Active">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-eye-icon lucide-eye"
-            >
-              <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/>
-            </svg>
-          </button>
-          <button class="Input__Action">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-eye-off-icon lucide-eye-off"
-            >
-              <path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/>
-            </svg>
-          </button>
-        </div>
+        {% render 'components/input/input', type: 'number' %}
 
-        <input
-          class="Input Input--Number"
-          type="number"
-          value="1"
-          max="9"
-          min="1"
-        >
+        {% render 'components/input/input', type: 'number', step: '2', value: '5', min: '1', max: '20' %}
       </section>
 
       <section class="Section Section--Vertical">
@@ -128,8 +54,8 @@
         {% render 'components/text/text', as: 'h2', text: 'Button Group', variant: 'HeadingMedium' %}
 
         <div class="ButtonGroup">
-          <button class="Button Button--Primary">Primary</button>
-          <button class="Button Button--Secondary">Secondary</button>
+          {% render 'components/button/button', text: 'Primary', variant: 'Primary' %}
+          {% render 'components/button/button', text: 'Secondary', variant: 'Secondary' %}
         </div>
       </section>
 
@@ -139,216 +65,48 @@
         {% render 'components/text/text', as: 'h3', text: 'Accordion with HTML and CSS', variant: 'HeadingSmall' %}
 
         <ul class="u-NoList Accordion">
-          <li>
-            <label>
-              {% render 'components/text/text', text: 'How to create?', variant: 'BodyLarge' %}
-              <div class="Icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-plus-icon lucide-plus"
-                >
-                  <path d="M5 12h14"/><path d="M12 5v14"/>
-                </svg>
-              </div>
-              <input class="u-Hidden" type="checkbox">
-            </label>
-            <div class="Accordion__Content u-NoScrollbar">
-              {% render 'components/text/text',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
-                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
-              %}
-            </div>
-          </li>
+          {% render 'components/accordion-item/accordion-item',
+            label: 'How to create?',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
+          %}
 
-          <li>
-            <label>
-              {% render 'components/text/text', text: 'Where to use?', variant: 'BodyLarge' %}
-              <div class="Icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-plus-icon lucide-plus"
-                >
-                  <path d="M5 12h14"/><path d="M12 5v14"/>
-                </svg>
-              </div>
-              <input class="u-Hidden" type="checkbox">
-            </label>
-            <div class="Accordion__Content u-NoScrollbar">
-              {% render 'components/text/text',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
-                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
-              %}
-            </div>
-          </li>
+          {% render 'components/accordion-item/accordion-item',
+            label: 'Where to use?',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
+          %}
 
-          <li>
-            <label>
-              {% render 'components/text/text', text: 'What is accordion?', variant: 'BodyLarge' %}
-              <div class="Icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-plus-icon lucide-plus"
-                >
-                  <path d="M5 12h14"/><path d="M12 5v14"/>
-                </svg>
-              </div>
-              <input class="u-Hidden" type="checkbox">
-            </label>
-            <div class="Accordion__Content u-NoScrollbar">
-              {% render 'components/text/text',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
-                distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
-              %}
-            </div>
-          </li>
+          {% render 'components/accordion-item/accordion-item',
+            label: 'What is accordion?',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
+          %}
         </ul>
 
         {% render 'components/text/text', as: 'h3', text: 'Accordion with HTML, CSS and JS', variant: 'HeadingSmall' %}
 
         <div class="AccordionJS">
-          <div class="AccordionJS__Item">
-            <button class="AccordionJS__Label">
-              {% render 'components/text/text', text: 'List One' %}
-
-              <div class="Icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-plus-icon lucide-plus"
-                >
-                  <path d="M5 12h14"/><path d="M12 5v14"/>
-                </svg>
-              </div>
-            </button>
-
-            <div class="AccordionJS__Content">
-              {% render 'components/text/text',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+          {% render 'components/accordion-js-item/accordion-js-item',
+            label: 'List One',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
                 distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
-              %}
-            </div>
-          </div>
+          %}
 
-          <div class="AccordionJS__Item">
-            <button class="AccordionJS__Label">
-              {% render 'components/text/text', text: 'List Two' %}
-
-              <div class="Icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-plus-icon lucide-plus"
-                >
-                  <path d="M5 12h14"/><path d="M12 5v14"/>
-                </svg>
-              </div>
-            </button>
-
-            <div class="AccordionJS__Content">
-              {% render 'components/text/text',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+          {% render 'components/accordion-js-item/accordion-js-item',
+            label: 'List Two',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
                 distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
-              %}
-            </div>
-          </div>
+          %}
 
-          <div class="AccordionJS__Item">
-            <button class="AccordionJS__Label">
-              {% render 'components/text/text', text: 'List Three' %}
-
-              <div class="Icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-plus-icon lucide-plus"
-                >
-                  <path d="M5 12h14"/><path d="M12 5v14"/>
-                </svg>
-              </div>
-            </button>
-
-            <div class="AccordionJS__Content">
-              {% render 'components/text/text',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+          {% render 'components/accordion-js-item/accordion-js-item',
+            label: 'List Three',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
                 distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
-              %}
-            </div>
-          </div>
+          %}
 
-          <div class="AccordionJS__Item">
-            <button class="AccordionJS__Label">
-              {% render 'components/text/text', text: 'List Four' %}
-
-              <div class="Icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-plus-icon lucide-plus"
-                >
-                  <path d="M5 12h14"/><path d="M12 5v14"/>
-                </svg>
-              </div>
-            </button>
-
-            <div class="AccordionJS__Content">
-              {% render 'components/text/text',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
+          {% render 'components/accordion-js-item/accordion-js-item',
+            label: 'List Four',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, soluta dignissimos error cumque ab
                 distinctio iusto, adipisci ea, dolorem molestiae culpa rerum sint vel recusandae?'
-              %}
-            </div>
-          </div>
+          %}
         </div>
       </section>
 
@@ -401,38 +159,46 @@
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Option Value</h2>
+        {% render 'components/text/text', text: 'Option Value', variant: 'HeadingMedium' %}
 
-        <h3 class="Text Text--HeadingSmall">Default</h3>
+        {% render 'components/text/text', text: 'Default', variant: 'HeadingSmall', as: 'h3' %}
+
         <label class="OptionValue">
-          <span class="Text">10ml</span>
+          {% render 'components/text/text', text: '10ml', as: 'span' %}
+
           <input class="u-Hidden" type="radio" name="plain" checked>
         </label>
 
-        <h3 class="Text Text--HeadingSmall">Color</h3>
+        {% render 'components/text/text', text: 'Color', variant: 'HeadingSmall', as: 'h3' %}
+
         <label class="OptionValue OptionValue--Color" style="--color: red">
           <input class="u-Hidden" type="radio" name="color_2" checked>
         </label>
 
-        <h3 class="Text Text--HeadingSmall">Size</h3>
-        <label class="OptionValue OptionValue--Size"
-          ><span class="Text">S</span>
+        {% render 'components/text/text', text: 'Size', variant: 'HeadingSmall', as: 'h3' %}
+
+        <label class="OptionValue OptionValue--Size">
+          {% render 'components/text/text', text: 'S', as: 'span' %}
+
           <input class="u-Hidden" type="radio" name="size_1" checked>
         </label>
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Option Value Selector</h2>
+        {% render 'components/text/text', text: 'Option Value Selector', variant: 'HeadingMedium' %}
 
         <div class="OptionValueSelector">
-          <p class="Text">Color</p>
+          {% render 'components/text/text', text: 'Color' %}
+
           <div class="OptionValueSelector__Values">
             <label class="OptionValue OptionValue--Color" style="--color: red">
               <input class="u-Hidden" type="radio" name="color" checked>
             </label>
+
             <label class="OptionValue OptionValue--Color" style="--color: blue">
               <input class="u-Hidden" type="radio" name="color">
             </label>
+
             <label class="OptionValue OptionValue--Color" style="--color: green">
               <input class="u-Hidden" type="radio" name="color">
             </label>
@@ -441,18 +207,21 @@
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Product Variant Selector</h2>
+        {% render 'components/text/text', text: 'Product Variant Selector', variant: 'HeadingMedium' %}
+
         <div class="ProductVariantSelector">
           <div class="OptionValueSelector">
-            <p class="Text">Color</p>
+            {% render 'components/text/text', text: 'Color' %}
 
             <div class="OptionValueSelector__Values">
               <label class="OptionValue OptionValue--Color" style="--color: red">
                 <input class="u-Hidden" type="radio" name="color_1" checked>
               </label>
+
               <label class="OptionValue OptionValue--Color" style="--color: blue">
                 <input class="u-Hidden" type="radio" name="color_1">
               </label>
+
               <label class="OptionValue OptionValue--Color" style="--color: green">
                 <input class="u-Hidden" type="radio" name="color_1">
               </label>
@@ -460,19 +229,24 @@
           </div>
 
           <div class="OptionValueSelector">
-            <p class="Text">Size</p>
+            {% render 'components/text/text', text: 'Size' %}
 
             <div class="OptionValueSelector__Values">
-              <label class="OptionValue OptionValue--Size"
-                ><span class="Text">S</span>
+              <label class="OptionValue OptionValue--Size">
+                {% render 'components/text/text', text: 'S', as: 'span' %}
+
                 <input class="u-Hidden" type="radio" name="size" checked>
               </label>
-              <label class="OptionValue OptionValue--Size"
-                ><span class="Text">M</span>
+
+              <label class="OptionValue OptionValue--Size">
+                {% render 'components/text/text', text: 'M', as: 'span' %}
+
                 <input class="u-Hidden" type="radio" name="size">
               </label>
-              <label class="OptionValue OptionValue--Size"
-                ><span class="Text">L</span>
+
+              <label class="OptionValue OptionValue--Size">
+                {% render 'components/text/text', text: 'L', as: 'span' %}
+
                 <input class="u-Hidden" type="radio" name="size">
               </label>
             </div>
@@ -481,32 +255,29 @@
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Image</h2>
+        {% render 'components/text/text', text: 'Image', variant: 'HeadingMedium' %}
 
-        <h3 class="Text Text--HeadingSmall">Portrait</h3>
-        <div class="Image Image--Portrait">
-          <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-1.jpg" alt="portrait">
-        </div>
+        {% render 'components/text/text', text: 'Portrait', variant: 'HeadingSmall', as: 'h3' %}
 
-        <h3 class="Text Text--HeadingSmall">Landscape</h3>
-        <div class="Image Image--Landscape">
-          <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-2.jpg" alt="landscape">
-        </div>
+        {% render 'components/image/image', image: '/images/shop-the-look/shop_the_look-1.jpg', variant: 'Portrait' %}
 
-        <h3 class="Text Text--HeadingSmall">Square</h3>
-        <div class="Image Image--Square">
-          <img class="Image__Inner" src="/images/shop-the-look/shop_the_look-3.jpg" alt="square">
-        </div>
+        {% render 'components/text/text', text: 'Landscape', variant: 'HeadingSmall', as: 'h3' %}
+
+        {% render 'components/image/image', image: '/images/shop-the-look/shop_the_look-2.jpg', variant: 'Landscape' %}
+
+        {% render 'components/text/text', text: 'Square', variant: 'HeadingSmall', as: 'h3' %}
+
+        {% render 'components/image/image', image: '/images/shop-the-look/shop_the_look-3.jpg', variant: 'Square' %}
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Price List</h2>
+        {% render 'components/text/text', text: 'Price List', variant: 'HeadingMedium' %}
 
         {% render 'components/price-list/price-list', price: 2999, compare_at_price: 4999 %}
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Product Card</h2>
+        {% render 'components/text/text', text: 'Product Card', variant: 'HeadingMedium' %}
 
         {% render 'components/product-card/product-card',
           title: 'Chair',
@@ -525,7 +296,7 @@
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Collection Card</h2>
+        {% render 'components/text/text', text: 'Collection Card', variant: 'HeadingMedium' %}
 
         {% render 'components/collection-card/collection-card',
           image: '/images/shop-the-look/shop_the_look-2.jpg',
@@ -534,7 +305,7 @@
       </section>
 
       <section class="Section Section--Vertical">
-        <h2 class="Text Text--HeadingMedium">Gallery</h2>
+        {% render 'components/text/text', text: 'Gallery', variant: 'HeadingMedium' %}
 
         <div class="Gallery">
           <div class="Gallery__Main">
@@ -558,24 +329,7 @@
           </div>
 
           <div class="Gallery__Navigation">
-            <button class="Button--Icon" data-action="prev">
-              <div class="Icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-square-arrow-left-icon lucide-square-arrow-left"
-                >
-                  <rect width="18" height="18" x="3" y="3" rx="2"/><path d="m12 8-4 4 4 4"/><path d="M16 12H8"/>
-                </svg>
-              </div>
-            </button>
+            {% render 'components/button/button', variant: 'Icon', action: 'prev', icon: 'square-arrow-left' %}
 
             <div class="Gallery__Pagination">
               <button class="Gallery__PaginationItem Gallery__PaginationItem--Active">
@@ -620,7 +374,7 @@
       </section>
 
       <section class="Section Section--Vertical">
-        <h3 class="Text Text--HeadingMedium">Badge</h3>
+        {% render 'components/text/text', text: 'Badge', variant: 'HeadingMedium' %}
 
         {% render 'components/badge/badge', text: 'Bestseller' %}
 

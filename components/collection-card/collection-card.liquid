@@ -6,9 +6,7 @@
 {% enddoc %}
 
 <article class="ProductCard">
-  <div class="Image Image--Square">
-    <img class="Image__Inner" src="{{ image }}" alt="">
-  </div>
+  {% render 'components/image/image', image: image, alt: title %}
 
-  <p class="Text Text--BodyLarge">{{ title }}</p>
+  {% render 'components/text/text', text: title, variant: 'BodyLarge' %}
 </article>

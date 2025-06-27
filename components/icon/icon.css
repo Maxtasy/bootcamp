@@ -1,7 +1,6 @@
 .Icon {
   width: 24px;
   height: 24px;
-  color: var(--icon);
   transition: opacity 0.2s ease-in-out;
 }
 
