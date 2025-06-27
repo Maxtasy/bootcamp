@@ -1,8 +1,8 @@
-import { Component } from "../component/component.js";
+import { ButtonComponent, defineComponent } from "../component/component.js";
 
 const componentTagName = "button-component";
 
-class Button extends Component {
+class Button extends ButtonComponent {
   constructor() {
     super();
 
@@ -25,4 +25,4 @@ class Button extends Component {
   }
 }
 
-customElements.define(componentTagName, Button);
+defineComponent(componentTagName, Button, "button");

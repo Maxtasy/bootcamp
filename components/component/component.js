@@ -9,9 +9,52 @@ export class Component extends HTMLElement {
 
   disconnectedCallback() {}
 
-  on(eventName, callbackFunction) {
+  subscribe(eventName, callbackFunction) {
     this.addEventListener(eventName, (event) => {
-      e.preventDefault();
+      event.preventDefault();
+
+      if (event instanceof CustomEvent) {
+        callbackFunction(event.detail);
+      } else {
+        console.warn(`Event ${eventName} is not a CustomEvent.`);
+      }
+    });
+  }
+
+  publish(eventName, data) {
+    // For components that have an action attribute (e.g. Button), we want to append it to the event
+    // name.
+
+    let eventNameWithAction = eventName;
+
+    if (this.parsedData.action) {
+      eventNameWithAction += `:${this.parsedData.action}`;
+    }
+
+    const eventObject = new CustomEvent(eventNameWithAction, {
+      bubbles: true,
+      composed: true,
+      detail: data,
+    });
+
+    this.dispatchEvent(eventObject);
+  }
+}
+
+export class ButtonComponent extends HTMLButtonElement {
+  constructor() {
+    super();
+
+    this.parsedData = parseDataAttributes(this);
+  }
+
+  connectedCallback() {}
+
+  disconnectedCallback() {}
+
+  subscribe(eventName, callbackFunction) {
+    this.addEventListener(eventName, (event) => {
+      event.preventDefault();
 
       if (event instanceof CustomEvent) {
         callbackFunction(event.detail);
@@ -57,11 +100,11 @@ function parseDataAttributes(element) {
   return data;
 }
 
-export function defineComponent(tagName, componentClass) {
+export function defineComponent(tagName, componentClass, extendsElement) {
   if (customElements.get(tagName)) {
     console.warn(`Component with tag name ${tagName} is already defined.`);
     return;
   }
 
-  customElements.define(tagName, componentClass);
+  customElements.define(tagName, componentClass, { extends: extendsElement });
 }

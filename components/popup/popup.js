@@ -1,14 +1,13 @@
-// Create popup component
-class Popup extends HTMLElement {
+import { Component, defineComponent } from "../component/component.js";
+class Popup extends Component {
   constructor() {
     super();
 
     this.handle = this.getAttribute("data-handle");
 
-    // Listen for events popup:show and popup:hide
-
     document.addEventListener("popup:show", (event) => {
-      if (this.handle === event.detail) {
+      if (this.handle === event.detail.handle) {
+        console.log("showing myself!");
         this.show();
       }
     });
@@ -20,26 +19,20 @@ class Popup extends HTMLElement {
       document.dispatchEvent(event);
     });
 
-    this.closeButtonElement.addEventListener("click", () => {
+    this.subscribe("button:click:close", () => {
       this.hide();
 
       const event = new Event("backdrop:hide");
       document.dispatchEvent(event);
     });
   }
-
-  // Add methods show and hide
   show() {
-    this.classList.add("PopUp--Active");
+    this.classList.add("Popup--Active");
   }
 
   hide() {
-    this.classList.remove("PopUp--Active");
-  }
-
-  get closeButtonElement() {
-    return this.querySelector(".CloseButton");
+    this.classList.remove("Popup--Active");
   }
 }
 
-customElements.define("popup-component", Popup);
+defineComponent("popup-component", Popup);

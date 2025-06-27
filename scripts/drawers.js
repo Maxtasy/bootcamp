@@ -3,7 +3,6 @@
 const drawerTriggerElements = document.querySelectorAll(
   "[data-drawer-trigger]",
 );
-const closeButtonElements = document.querySelectorAll(".Drawer .CloseButton");
 const linkElements = document.querySelectorAll(".Drawer .Link");
 const backdropElement = document.querySelector(".Backdrop");
 

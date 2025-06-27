@@ -1,4 +1,4 @@
-import { Component, defineComponent } from "./component.js";
+import { Component, defineComponent } from "../component/component.js";
 
 const componentTagName = "quantity-selector-component";
 
@@ -18,8 +18,19 @@ class QuantitySelector extends Component {
 
   connectedCallback() {
     this.currentValue = parseInt(this.inputElement.value) || 0;
-    this.minValue = parseInt(this.inputElement.min) || 0;
-    this.maxValue = parseInt(this.inputElement.max) || Infinity;
+
+    if (this.inputElement.min) {
+      this.minValue = parseInt(this.inputElement.min);
+    } else {
+      this.minValue = -Infinity;
+    }
+
+    if (this.inputElement.max) {
+      this.maxValue = parseInt(this.inputElement.max);
+    } else {
+      this.maxValue = Infinity;
+    }
+
     this.stepValue = parseInt(this.inputElement.step) || 1;
     this.inputElement.value = this.currentValue;
 

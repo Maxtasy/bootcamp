@@ -8,7 +8,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("styles");
 
-  // Add a passthrough for all .js files inside ./components/{COMPONENT_NAME}
+  // Add a passthrough for all components (./components/{COMPONENT_NAME})
   eleventyConfig.addPassthroughCopy({
     components: true,
   });

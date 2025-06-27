@@ -54,42 +54,51 @@
               style="--x-position: 25; --y-position: 25"
               data-handle="0-0"
             ></button>
+
             <popup-component
-              class="PopUp"
+              class="Popup"
               data-handle="0-0"
             >
               <img
-                class="PopUp__Image"
+                class="Popup__Image"
                 src="/images/shop-the-look/shop_the_look-1.jpg"
                 alt="image"
               >
-              <button class="CloseButton">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-x-icon lucide-x"
-                >
-                  <path d="M18 6 6 18" />
-                  <path d="m6 6 12 12" />
-                </svg>
-              </button>
-              <div class="PopUp__Details">
+
+              <div class="Popup__Close">
+                <button is="button-component" class="Button Button--Icon" data-action="close">
+                  <div class="Icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-x-icon lucide-x"
+                    >
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+
+              <div class="Popup__Details">
                 <p class="Text">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis nesciunt ipsum ducimus voluptatum
                   laboriosam eum
                 </p>
-                <div class="PriceList">
-                  <del>49,99€</del>
-                  <p>39,99€</p>
-                </div>
-                <button class="Button Button--Primary">To product</button>
+
+                {% render 'components/price-list/price-list',
+                  price: 1999,
+                  compare_at_price: 2999,
+                %}
+
+                <button is="button-component" class="Button Button--Primary">To product</button>
               </div>
             </popup-component>
 
@@ -98,85 +107,104 @@
               style="--x-position: 50; --y-position: 50"
               data-handle="0-1"
             ></button>
+
             <popup-component
-              class="PopUp"
+              class="Popup"
               data-handle="0-1"
             >
               <img
-                class="PopUp__Image"
+                class="Popup__Image"
                 src="/images/shop-the-look/shop_the_look-1.jpg"
                 alt="image"
               >
-              <button class="CloseButton">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-x-icon lucide-x"
-                >
-                  <path d="M18 6 6 18" />
-                  <path d="m6 6 12 12" />
-                </svg>
-              </button>
-              <div class="PopUp__Details">
+
+              <div class="Popup__Close">
+                <button is="button-component" class="Button Button--Icon" data-action="close">
+                  <div class="Icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-x-icon lucide-x"
+                    >
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+
+              <div class="Popup__Details">
                 <p class="Text">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis nesciunt ipsum ducimus voluptatum
                   laboriosam eum
                 </p>
+
                 <div class="PriceList">
                   <del>49,99€</del>
                   <p>39,99€</p>
                 </div>
-                <button class="Button Button--Primary">To product</button>
+
+                <button is="button-component" class="Button Button--Primary">To product</button>
               </div>
             </popup-component>
+
             <button
               class="Indicator"
               style="--x-position: 75; --y-position: 75"
               data-handle="0-2"
             ></button>
+
             <popup-component
-              class="PopUp"
+              class="Popup"
               data-handle="0-2"
             >
               <img
-                class="PopUp__Image"
+                class="Popup__Image"
                 src="/images/shop-the-look/shop_the_look-1.jpg"
                 alt="image"
               >
-              <button class="CloseButton">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-x-icon lucide-x"
-                >
-                  <path d="M18 6 6 18" />
-                  <path d="m6 6 12 12" />
-                </svg>
-              </button>
-              <div class="PopUp__Details">
+
+              <div class="Popup__Close">
+                <button is="button-component" class="Button Button--Icon" data-action="close">
+                  <div class="Icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-x-icon lucide-x"
+                    >
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+
+              <div class="Popup__Details">
                 <p class="Text">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis nesciunt ipsum ducimus voluptatum
                   laboriosam eum
                 </p>
+
                 <div class="PriceList">
                   <del>49,99€</del>
                   <p>39,99€</p>
                 </div>
-                <button class="Button Button--Primary">To product</button>
+
+                <button is="button-component" class="Button Button--Primary">To product</button>
               </div>
             </popup-component>
           </div>
@@ -193,128 +221,157 @@
               style="--x-position: 25; --y-position: 25"
               data-handle="1-0"
             ></button>
+
             <popup-component
-              class="PopUp"
+              class="Popup"
               data-handle="1-0"
             >
               <img
-                class="PopUp__Image"
+                class="Popup__Image"
                 src="/images/shop-the-look/shop_the_look-1.jpg"
                 alt="image"
               >
-              <button class="CloseButton">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-x-icon lucide-x"
-                >
-                  <path d="M18 6 6 18" />
-                  <path d="m6 6 12 12" />
-                </svg>
-              </button>
-              <div class="PopUp__Details">
+
+              <div class="Popup__Close">
+                <button is="button-component" class="Button Button--Icon" data-action="close">
+                  <div class="Icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-x-icon lucide-x"
+                    >
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+
+              <div class="Popup__Details">
                 <p class="Text">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis nesciunt ipsum ducimus voluptatum
                   laboriosam eum
                 </p>
+
                 <div class="PriceList">
                   <del>49,99€</del>
                   <p>39,99€</p>
                 </div>
-                <button class="Button Button--Primary">To product</button>
+
+                <button is="button-component" class="Button Button--Primary">To product</button>
               </div>
             </popup-component>
+
             <button
               class="Indicator"
               style="--x-position: 50; --y-position: 50"
               data-handle="1-1"
             ></button>
+
             <popup-component
-              class="PopUp"
+              class="Popup"
               data-handle="1-1"
             >
               <img
-                class="PopUp__Image"
+                class="Popup__Image"
                 src="/images/shop-the-look/shop_the_look-1.jpg"
                 alt="image"
               >
-              <button class="CloseButton">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-x-icon lucide-x"
-                >
-                  <path d="M18 6 6 18" />
-                  <path d="m6 6 12 12" />
-                </svg>
-              </button>
-              <div class="PopUp__Details">
+
+              <div class="Popup__Close">
+                <button is="button-component" class="Button Button--Icon" data-action="close">
+                  <div class="Icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-x-icon lucide-x"
+                    >
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+
+              <div class="Popup__Details">
                 <p class="Text">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis nesciunt ipsum ducimus voluptatum
                   laboriosam eum
                 </p>
+
                 <div class="PriceList">
                   <del>49,99€</del>
                   <p>39,99€</p>
                 </div>
-                <button class="Button Button--Primary">To product</button>
+
+                <button is="button-component" class="Button Button--Primary">To product</button>
               </div>
             </popup-component>
+
             <button
               class="Indicator"
               style="--x-position: 75; --y-position: 75"
               data-handle="1-2"
             ></button>
+
             <popup-component
-              class="PopUp"
+              class="Popup"
               data-handle="1-2"
             >
               <img
-                class="PopUp__Image"
+                class="Popup__Image"
                 src="/images/shop-the-look/shop_the_look-1.jpg"
                 alt="image"
               >
-              <button class="CloseButton">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-x-icon lucide-x"
-                >
-                  <path d="M18 6 6 18" />
-                  <path d="m6 6 12 12" />
-                </svg>
-              </button>
-              <div class="PopUp__Details">
+
+              <div class="Popup__Close">
+                <button is="button-component" class="Button Button--Icon" data-action="close">
+                  <div class="Icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-x-icon lucide-x"
+                    >
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+
+              <div class="Popup__Details">
                 <p class="Text">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis nesciunt ipsum ducimus voluptatum
                   laboriosam eum
                 </p>
+
                 <div class="PriceList">
                   <del>49,99€</del>
                   <p>39,99€</p>
                 </div>
-                <button class="Button Button--Primary">To product</button>
+
+                <button is="button-component" class="Button Button--Primary">To product</button>
               </div>
             </popup-component>
           </div>
@@ -331,128 +388,157 @@
               style="--x-position: 25; --y-position: 25"
               data-handle="2-0"
             ></button>
+
             <popup-component
-              class="PopUp"
+              class="Popup"
               data-handle="2-0"
             >
               <img
-                class="PopUp__Image"
+                class="Popup__Image"
                 src="/images/shop-the-look/shop_the_look-1.jpg"
                 alt="image"
               >
-              <button class="CloseButton">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-x-icon lucide-x"
-                >
-                  <path d="M18 6 6 18" />
-                  <path d="m6 6 12 12" />
-                </svg>
-              </button>
-              <div class="PopUp__Details">
+
+              <div class="Popup__Close">
+                <button is="button-component" class="Button Button--Icon" data-action="close">
+                  <div class="Icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-x-icon lucide-x"
+                    >
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+
+              <div class="Popup__Details">
                 <p class="Text">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis nesciunt ipsum ducimus voluptatum
                   laboriosam eum
                 </p>
+
                 <div class="PriceList">
                   <del>49,99€</del>
                   <p>39,99€</p>
                 </div>
-                <button class="Button Button--Primary">To product</button>
+
+                <button is="button-component" class="Button Button--Primary">To product</button>
               </div>
             </popup-component>
+
             <button
               class="Indicator"
               style="--x-position: 50; --y-position: 50"
               data-handle="2-1"
             ></button>
+
             <popup-component
-              class="PopUp"
+              class="Popup"
               data-handle="2-1"
             >
               <img
-                class="PopUp__Image"
+                class="Popup__Image"
                 src="/images/shop-the-look/shop_the_look-1.jpg"
                 alt="image"
               >
-              <button class="CloseButton">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-x-icon lucide-x"
-                >
-                  <path d="M18 6 6 18" />
-                  <path d="m6 6 12 12" />
-                </svg>
-              </button>
-              <div class="PopUp__Details">
+
+              <div class="Popup__Close">
+                <button is="button-component" class="Button Button--Icon" data-action="close">
+                  <div class="Icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-x-icon lucide-x"
+                    >
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+
+              <div class="Popup__Details">
                 <p class="Text">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis nesciunt ipsum ducimus voluptatum
                   laboriosam eum
                 </p>
+
                 <div class="PriceList">
                   <del>49,99€</del>
                   <p>39,99€</p>
                 </div>
-                <button class="Button Button--Primary">To product</button>
+
+                <button is="button-component" class="Button Button--Primary">To product</button>
               </div>
             </popup-component>
+
             <button
               class="Indicator"
               style="--x-position: 75; --y-position: 75"
               data-handle="2-2"
             ></button>
+
             <popup-component
-              class="PopUp"
+              class="Popup"
               data-handle="2-2"
             >
               <img
-                class="PopUp__Image"
+                class="Popup__Image"
                 src="/images/shop-the-look/shop_the_look-1.jpg"
                 alt="image"
               >
-              <button class="CloseButton">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-x-icon lucide-x"
-                >
-                  <path d="M18 6 6 18" />
-                  <path d="m6 6 12 12" />
-                </svg>
-              </button>
-              <div class="PopUp__Details">
+
+              <div class="Popup__Close">
+                <button is="button-component" class="Button Button--Icon" data-action="close">
+                  <div class="Icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-x-icon lucide-x"
+                    >
+                      <path d="M18 6 6 18" />
+                      <path d="m6 6 12 12" />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+
+              <div class="Popup__Details">
                 <p class="Text">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis nesciunt ipsum ducimus voluptatum
                   laboriosam eum
                 </p>
+
                 <div class="PriceList">
                   <del>49,99€</del>
                   <p>39,99€</p>
                 </div>
-                <button class="Button Button--Primary">To product</button>
+
+                <button is="button-component" class="Button Button--Primary">To product</button>
               </div>
             </popup-component>
           </div>

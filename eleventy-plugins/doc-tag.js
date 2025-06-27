@@ -3,29 +3,23 @@
  * for documentation that doesn't output HTML
  */
 export default function docTagPlugin(eleventyConfig) {
-  // Create a paired tag: {% doc %}...{% enddoc %}
-  eleventyConfig.addLiquidTag("doc", function (liquidTagToken) {
-    let content = "";
-
+  // Register the {% doc %} paired tag
+  eleventyConfig.addLiquidTag("doc", () => {
     return {
       parse(tagToken, remainingTokens) {
         this.tokens = [];
 
-        let token;
-        while ((token = remainingTokens.shift())) {
+        while (remainingTokens.length) {
+          const token = remainingTokens.shift();
           if (token.name === "enddoc") break;
           this.tokens.push(token);
         }
       },
-
-      async render(scope, hash) {
-        // Ignore content — documentation only
-        return "";
-      },
+      render: async () => "", // No HTML output
     };
   });
 
-  // Register the paired end tag to avoid errors
+  // Prevent Liquid from complaining about unmatched {% enddoc %}
   eleventyConfig.addLiquidTag("enddoc", () => ({
     render: async () => "",
   }));
