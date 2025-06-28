@@ -163,25 +163,21 @@
 
         {% render 'components/text/text', text: 'Default', variant: 'HeadingSmall', as: 'h3' %}
 
-        <label class="OptionValue">
-          {% render 'components/text/text', text: '10ml', as: 'span' %}
-
-          <input class="u-Hidden" type="radio" name="plain" checked>
-        </label>
+        {% render 'components/option-value/option-value', value: '10ml', checked: true, name: 'plain' %}
 
         {% render 'components/text/text', text: 'Color', variant: 'HeadingSmall', as: 'h3' %}
 
-        <label class="OptionValue OptionValue--Color" style="--color: red">
-          <input class="u-Hidden" type="radio" name="color_2" checked>
-        </label>
+        {% render 'components/option-value/option-value',
+          variant: 'Color',
+          value: 'red',
+          color: 'red',
+          checked: true,
+          name: 'color_2'
+        %}
 
         {% render 'components/text/text', text: 'Size', variant: 'HeadingSmall', as: 'h3' %}
 
-        <label class="OptionValue OptionValue--Size">
-          {% render 'components/text/text', text: 'S', as: 'span' %}
-
-          <input class="u-Hidden" type="radio" name="size_1" checked>
-        </label>
+        {% render 'components/option-value/option-value', variant: 'Size', value: 'S', checked: true, name: 'size_1' %}
       </section>
 
       <section class="Section Section--Vertical">
@@ -191,17 +187,27 @@
           {% render 'components/text/text', text: 'Color' %}
 
           <div class="OptionValueSelector__Values">
-            <label class="OptionValue OptionValue--Color" style="--color: red">
-              <input class="u-Hidden" type="radio" name="color" checked>
-            </label>
+            {% render 'components/option-value/option-value',
+              variant: 'Color',
+              value: 'red',
+              color: 'red',
+              checked: true,
+              name: 'color'
+            %}
 
-            <label class="OptionValue OptionValue--Color" style="--color: blue">
-              <input class="u-Hidden" type="radio" name="color">
-            </label>
+            {% render 'components/option-value/option-value',
+              variant: 'Color',
+              value: 'blue',
+              color: 'blue',
+              name: 'color'
+            %}
 
-            <label class="OptionValue OptionValue--Color" style="--color: green">
-              <input class="u-Hidden" type="radio" name="color">
-            </label>
+            {% render 'components/option-value/option-value',
+              variant: 'Color',
+              value: 'green',
+              color: 'green',
+              name: 'color'
+            %}
           </div>
         </div>
       </section>
@@ -214,17 +220,27 @@
             {% render 'components/text/text', text: 'Color' %}
 
             <div class="OptionValueSelector__Values">
-              <label class="OptionValue OptionValue--Color" style="--color: red">
-                <input class="u-Hidden" type="radio" name="color_1" checked>
-              </label>
+              {% render 'components/option-value/option-value',
+                variant: 'Color',
+                value: 'red',
+                color: 'red',
+                checked: true,
+                name: 'color_1'
+              %}
 
-              <label class="OptionValue OptionValue--Color" style="--color: blue">
-                <input class="u-Hidden" type="radio" name="color_1">
-              </label>
+              {% render 'components/option-value/option-value',
+                variant: 'Color',
+                value: 'blue',
+                color: 'blue',
+                name: 'color_1'
+              %}
 
-              <label class="OptionValue OptionValue--Color" style="--color: green">
-                <input class="u-Hidden" type="radio" name="color_1">
-              </label>
+              {% render 'components/option-value/option-value',
+                variant: 'Color',
+                value: 'green',
+                color: 'green',
+                name: 'color_1'
+              %}
             </div>
           </div>
 
@@ -232,23 +248,16 @@
             {% render 'components/text/text', text: 'Size' %}
 
             <div class="OptionValueSelector__Values">
-              <label class="OptionValue OptionValue--Size">
-                {% render 'components/text/text', text: 'S', as: 'span' %}
+              {% render 'components/option-value/option-value',
+                variant: 'Size',
+                value: 'S',
+                checked: true,
+                name: 'size'
+              %}
 
-                <input class="u-Hidden" type="radio" name="size" checked>
-              </label>
+              {% render 'components/option-value/option-value', variant: 'Size', value: 'M', name: 'size' %}
 
-              <label class="OptionValue OptionValue--Size">
-                {% render 'components/text/text', text: 'M', as: 'span' %}
-
-                <input class="u-Hidden" type="radio" name="size">
-              </label>
-
-              <label class="OptionValue OptionValue--Size">
-                {% render 'components/text/text', text: 'L', as: 'span' %}
-
-                <input class="u-Hidden" type="radio" name="size">
-              </label>
+              {% render 'components/option-value/option-value', variant: 'Size', value: 'L', name: 'size' %}
             </div>
           </div>
         </div>
