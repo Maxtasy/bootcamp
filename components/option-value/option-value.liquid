@@ -1,0 +1,31 @@
+{% doc %}
+  Option Value
+
+  @param {"Color" | "Size"} [variant] - The variant
+
+  @param {string} value - Value of the option
+  @param {string} [color] - Used for the background
+  @param {boolean} [checked] - Whether the input should be checked
+  @param {string} name - The name of the input
+{% enddoc %}
+
+<label
+  class="OptionValue{% if variant %} OptionValue--{{ variant }}{% endif %}"
+  {% if variant == 'Color' and color %}
+    style="--color: {{ color }}"
+  {% endif %}
+>
+  {% if variant != 'Color' %}
+    {% render 'components/text/text', text: value, as: 'span' %}
+  {% endif %}
+
+  <input
+    class="u-Hidden"
+    type="radio"
+    name="{{ name }}"
+    value="{{ value }}"
+    {% if checked %}
+      checked
+    {% endif %}
+  >
+</label>

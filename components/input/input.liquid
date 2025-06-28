@@ -27,7 +27,7 @@
 
 {% endcase %}
 
-<div class="InputWrapper {% if full_width %}InputWrapper--FullWidth{% endif %}">
+<div class="InputWrapper{% if full_width %} InputWrapper--FullWidth{% endif %}">
   <input
     class="{{ class_name }}"
     type="{{ type }}"
