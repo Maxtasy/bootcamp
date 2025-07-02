@@ -10,7 +10,6 @@
   --border: rgb(0, 0, 0);
   --border-inverted: rgb(255, 255, 255);
 
-  --icon: rgb(0, 0, 0);
   --icon-destructive: rgb(255, 0, 0);
   --icon-success: rgb(0, 128, 0);
   --icon-warning: rgb(255, 165, 0);
@@ -43,7 +42,6 @@
     --border: rgb(255, 255, 255);
     --border-inverted: rgb(0, 0, 0);
 
-    --icon: rgb(255, 255, 255);
     --icon-destructive: rgb(255, 0, 0);
     --icon-success: rgb(0, 255, 0);
     --icon-warning: rgb(255, 165, 0);
